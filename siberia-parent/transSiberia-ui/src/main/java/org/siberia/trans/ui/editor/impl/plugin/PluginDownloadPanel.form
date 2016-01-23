@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="currentBuildLabel" min="-2" pref="341" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="buildDownloadedCountLabel" pref="57" max="32767" attributes="0"/>
+          </Group>
+          <Component id="mainLabel" alignment="0" pref="404" max="32767" attributes="0"/>
+          <Component id="currentTaskProgressBar" alignment="0" pref="404" max="32767" attributes="0"/>
+          <Component id="generalProgressBar" alignment="1" pref="404" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="labelInformation" pref="330" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="stopButton" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Component id="mainLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="currentBuildLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buildDownloadedCountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="currentTaskProgressBar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <Component id="generalProgressBar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="stopButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelInformation" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="mainLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Plugins installation"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="currentBuildLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Siberia-types (0.0.2)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="buildDownloadedCountLabel">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="11"/>
+        <Property name="text" type="java.lang.String" value="[1/7]"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JProgressBar" name="currentTaskProgressBar">
+    </Component>
+    <Component class="javax.swing.JProgressBar" name="generalProgressBar">
+    </Component>
+    <Component class="javax.swing.JButton" name="stopButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Stop"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelInformation">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

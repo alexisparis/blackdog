@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module xmlns="http://perso.wanadoo.fr/alexis.paris">
+    <groupId>org.siberia</groupId>
+    <artifactId>siberia-bars</artifactId>
+    <version>0.0.1</version>
+    <description><![CDATA[Plugin that allows to use menu bar, tool bar and that define a
+                          framework to merge several xml declaration]]></description>
+    <name>siberia bars</name>
+    <url>http://perso.wanadoo.fr/alexis.paris/project/siberia-bars.html</url>
+    <checksum>sha1</checksum>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.siberia</groupId>
+            <artifactId>siberia-resources</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.siberia</groupId>
+            <artifactId>siberia-types</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.siberia</groupId>
+            <artifactId>siberia-utilities</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+    
+    <repositories>
+        <repository>
+            <id>siberia</id>
+            <name>siberia repository</name>
+            <url>http://perso.wanadoo.fr/alexis.paris/siberia</url>
+        </repository>
+    </repositories>
+
+</module>

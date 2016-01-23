@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<toolbar xmlns="http://temp">
+    <check actionClass="org.siberia.bar.action.NullAction" mnemonic="A" label="Save as" order="1"/>
+    <button actionClass="org.siberia.bar.action.NullAction" mnemonic="A" label="Select all" order="9"/>
+    <button actionClass="org.siberia.bar.action.NullAction" mnemonic="R" label="Redo" order="11"/>
+    <separator order="30"/>
+    <button actionClass="org.siberia.bar.action.NullAction" mnemonic="S" label="Save" order="40">
+        <parameter name="a">fre</parameter>
+    </button>
+    <sizedSeparator width="7" height="4" order="45"/>
+    <separator order="60"/>
+    <button actionClass="org.siberia.bar.action.NullAction" mnemonic="P" label="Print..." order="100"/>
+    <combo actionClass="org.siberia.bar.action.NullAction" mnemonic="X" label="Exit" order="200"/>
+</toolbar>
+

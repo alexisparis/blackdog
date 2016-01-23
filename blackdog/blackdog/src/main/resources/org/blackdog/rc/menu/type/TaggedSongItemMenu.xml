@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp" inherit="true">
+    <items>
+	
+	<menu i18nref="tag.update" order="500">
+	    <item i18nref="update.item" order="10" 
+		  actionClass="siberia-gui::org.blackdog.action.impl.tag.UpdateTagsItemsAction"/>
+	</menu>
+	    
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">blackdog;1::menu/type/TaggedSongItem.properties</i18nResource>
+	
+    </i18nResources>
+    
+</typeMenu>

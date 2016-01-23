@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventdeclaration>
+    <eventcontext type="org.siberia.kernel.eventsystem.LoadingContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <eventcontext type="org.siberia.kernel.eventsystem.ReinitProjectContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <!--eventcontext type="org.siberia.kernel.eventsystem.ImportContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext-->
+    <eventcontext type="org.siberia.kernel.eventsystem.StructureModificationContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <eventcontext type="org.siberia.kernel.eventsystem.EntityModificationContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <eventcontext type="org.siberia.kernel.eventsystem.CurrentEntityChangedContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <eventcontext type="org.siberia.kernel.eventsystem.CurrentEditorChangedContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+</eventdeclaration>

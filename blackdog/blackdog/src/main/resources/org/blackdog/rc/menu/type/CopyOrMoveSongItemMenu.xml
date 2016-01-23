@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp" inherit="true">
+    <items>
+	
+	<separator order="999"/>
+	      
+	<item i18nref="songs.move" order="1000" 
+	      actionClass="siberia-gui::org.blackdog.action.impl.MoveSongsToAction"/>
+	<item i18nref="songs.copy" order="1001" 
+	      actionClass="siberia-gui::org.blackdog.action.impl.CopySongsToAction"/>
+	    
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">blackdog;1::menu/type/CopyOrMoveSongsToAction.properties</i18nResource>
+	
+    </i18nResources>
+    
+</typeMenu>

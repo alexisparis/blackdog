@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>ColdEnumeration mapping</description>
+    <include href="ColdConfigurable.xml"/>
+    <class name="org.siberia.type.ColdEnumeration" extends="org.siberia.type.ColdConfigurable">
+        <map-to xml="coldEnumeration"/>
+        <field name="selectionMode" type="integer">
+            <bind-xml name="selectionMode" node="attribute" get-method="getSelectionMode" 
+                                                            set-method="setSelectionMode"/>
+        </field>
+        <field name="manageName" type="boolean" get-method="manageName" set-method="shouldManageName">
+            <bind-xml name="manageName" node="attribute"/>
+        </field>
+        <field name="selectionImperative" type="boolean" get-method="isSelectionImperative" set-method="setSelectionImperative">
+            <bind-xml name="selectionImperative" node="attribute"/>
+        </field>
+        <field name="entries" collection="collection" type="org.siberia.type.ColdBoolean" set-method="add" get-method="values">
+            <bind-xml auto-naming="deriveByClass" node="element"/><!-- location="content" name="item" -->
+        </field>
+    </class>
+</mapping>

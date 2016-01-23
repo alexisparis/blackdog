@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Siberia platform">
+  <bannerLeft>
+      <src></src>
+  </bannerLeft>
+  <bannerRight>
+      <src>http://perso.wanadoo.fr/alexis.paris/siberia.png</src>
+  </bannerRight>
+  <publishDate position="bottom" format="dd/MM/yyyy"/>  
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-stylus-skin</artifactId>
+  </skin>
+  <body>
+    <links>
+      <item name="Apache" href="http://www.apache.org/" />
+      <item name="Maven 2" href="http://maven.apache.org/maven2/"/>
+      <item name="Netbeans" href="http://www.netbeans.org/"/>
+    </links>
+
+    <menu name="Plateforme Siberia">
+      <item name="Informations générales" href="index.html"/>
+      <item name="Télécharger" href="download.html"/>
+      <item name="Plugins" href="plugins.html"/>
+      <item name="Documentation" href="documentation.html"/>
+      <item name="Applications" href="applications.html"/>
+      <item name="Road Map" href="roadmap.html" />
+    </menu>
+    
+    <menu ref="reports"/>
+
+    <menu name="Langues">
+      <item name="Anglais" href="../index.html"/>
+    </menu>
+    
+  </body>
+</project>

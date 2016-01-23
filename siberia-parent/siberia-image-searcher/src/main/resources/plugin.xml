@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-image-searcher" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category"     value="laf"/>
+            <attribute id="rebootNeeded" value="true"/>
+            <attribute id="checkMode"    value="md5"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <!--requires>
+                <import plugin-id="siberia-image-searcher" plugin-version="0.0.1"/>
+        </requires-->
+        
+	<runtime>
+		<library id="siberia-image-searcher-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+		<library id="commons-httpclient" path="libs/commons-httpclient-3.0.1.jar" type="code"/>
+		<library id="commons-codec"      path="libs/commons-codec-1.2.jar"        type="code"/>
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ###########################################################
+             ############### extension definitions #####################
+             ###########################################################
+             ########################################################### -->
+	
+	<extension-point id="ImageSearcher">
+            <parameter-def id="name">
+                <doc>
+                    <doc-text>
+                        Define the name of the searcher
+                    </doc-text>
+                </doc>
+            </parameter-def>
+            <parameter-def id="class">
+                <doc>
+                    <doc-text>
+                        Define the class reference of the searcherfor example : 'siberia-image-searcher::org.A.B.C'
+                    </doc-text>
+                </doc>
+            </parameter-def>
+	</extension-point>
+	
+	<extension plugin-id="siberia-image-searcher" point-id="ImageSearcher" id="GoogleImageSearcher">
+            <parameter id="name" value="google"/>
+            <parameter id="class" value="siberia-image-searcher::org.siberia.image.searcher.impl.GoogleImageSearcher"/>
+	</extension>
+	     
+        
+</plugin>

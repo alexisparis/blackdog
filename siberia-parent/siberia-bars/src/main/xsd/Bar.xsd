@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://temp" 
+           xmlns="http://temp"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+    <!-- root elements -->
+    
+    <xs:element name="menubar">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="priorityElement">
+		    <xs:all minOccurs="0">
+			
+			<xs:element name="menus" maxOccurs="1" minOccurs="1">
+			    <xs:complexType>
+				<xs:sequence>
+				    <xs:choice maxOccurs="unbounded" minOccurs="0">
+					<xs:element ref="menu"/>
+				    </xs:choice>
+				</xs:sequence>
+			    </xs:complexType>
+			</xs:element>
+			
+			<xs:element ref="i18nResources"/>
+			
+		    </xs:all>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="typeMenu">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="priorityElement">
+                    <xs:all minOccurs="0">
+			
+			<xs:element name="items" maxOccurs="1" minOccurs="1">
+			    <xs:complexType>
+				<xs:sequence>
+				    <xs:choice maxOccurs="unbounded" minOccurs="0">
+					<xs:element ref="menu"/>
+					<xs:element name="item"     type="menuItem"/>
+					<xs:element name="check"      type="checkMenuItem"/>
+					<xs:element ref="separator"/>
+				    </xs:choice>
+				</xs:sequence>
+			    </xs:complexType>
+			</xs:element>
+			
+			<xs:element ref="i18nResources"/>
+			
+		    </xs:all>
+		    
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="toolbar">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="priorityElement">
+                    <xs:all minOccurs="0">
+			
+			<xs:element name="items" maxOccurs="1" minOccurs="1">
+			    <xs:complexType>
+				<xs:sequence>
+				    <xs:choice maxOccurs="unbounded" minOccurs="0">
+					<xs:element ref="button"/>
+					<xs:element ref="check"/>
+					<xs:element ref="combo"/>
+					<xs:element ref="separator"/>
+					<xs:element ref="sizedSeparator"/>
+				    </xs:choice>
+				</xs:sequence>
+			    </xs:complexType>
+			</xs:element>
+			
+			<xs:element ref="i18nResources"/>
+			
+		    </xs:all>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="priorityElement">
+        <xs:attribute name="priority" type="xs:int" use="optional" default="0">
+            <xs:annotation>
+                <xs:documentation><![CDATA[this attribute is used to determine the order when merging PriorityElement. If we have two PriorityElements to merge,
+                                    one with priority equals to zero and one with priority equals to 500, the second will be consider
+                                    as master PriorityElement, the first as a servant. that means that if the two element define the same
+                                    item, then the item of the servant won't appear. this element is also important when two different items from different
+                                    declaration use the same shortcut, then the item from the servant will loose its shortcut. Therefore,
+                                    Defining Toolbar as a priorityElement is required.]]>
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <!-- internationalization references -->
+			
+    <xs:element name="i18nResources">
+	<xs:complexType>
+	    <xs:sequence>
+		<xs:choice maxOccurs="unbounded" minOccurs="0">
+		    <xs:element ref="i18nResource"/>
+		</xs:choice>
+	    </xs:sequence>
+	</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="i18nResource">
+	<xs:complexType>
+	    <xs:simpleContent>
+		<xs:extension base="xs:string">
+		    <xs:attribute name="priority" type="xs:int" use="optional" default="100"/>
+		</xs:extension>
+	    </xs:simpleContent>
+	</xs:complexType>
+    </xs:element>
+    
+    <!-- sub items for tool -->
+    
+    <xs:element name="sizedSeparator" type="separatorSizedElement"/>
+    
+    <xs:complexType name="separatorSizedElement">
+        <xs:complexContent>
+            <xs:extension base="separatorElement">
+                <xs:attribute name="height" type="xs:int" use="required"/>
+                <xs:attribute name="width"  type="xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="button" type="buttonType"/>
+           
+    <xs:complexType name="buttonType">
+        <xs:complexContent>
+            <xs:extension base="actionableElement"/>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="check" type="checkType"/>
+  
+    <xs:complexType name="checkType">
+        <xs:complexContent>
+            <xs:extension base="actionableElement"/>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="combo" type="comboType"/>
+
+    <xs:complexType name="comboType">
+        <xs:complexContent>
+            <xs:extension base="actionableElement">
+                <xs:sequence maxOccurs="unbounded">
+                  <xs:element name="element" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <!-- sub items for menu -->
+    
+    <xs:element name="menu" type="menuType"/>
+    
+    <xs:complexType name="menuType">
+        <xs:complexContent>
+            <xs:extension base="actionableElement">
+                <xs:sequence>
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="menu"/>
+                        <xs:element name="item"     type="menuItem"/>
+                        <xs:element name="check"      type="checkMenuItem"/>
+                        <xs:element ref="separator"/>
+                    </xs:choice>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+           
+    <xs:complexType name="menuItem">
+        <xs:complexContent>
+            <xs:extension base="actionableShortcutedElement"/>
+        </xs:complexContent>
+    </xs:complexType>
+  
+    <xs:complexType name="checkMenuItem">
+        <xs:complexContent>
+            <xs:extension base="actionableShortcutedElement"/>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <!-- generic sub items -->
+    
+    <xs:complexType name="orderedElement">
+        <xs:attribute name="order"    type="xs:int" use="optional"/>
+    </xs:complexType>
+    
+    <xs:element name="separator" type="separatorElement"/>
+    
+    <xs:complexType name="separatorElement">
+        <xs:complexContent>
+            <xs:extension base="orderedElement"/>
+        </xs:complexContent>
+    </xs:complexType>
+           
+    <xs:complexType name="abstractElement">
+        <xs:complexContent>
+            <xs:extension base="orderedElement">
+                <xs:sequence>
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="parameter"/>
+                    </xs:choice>
+                </xs:sequence>
+                <xs:attribute name="i18nref"  type="xs:string" use="optional"/>
+                <xs:attribute name="label"    type="xs:string" use="optional"/>
+                <xs:attribute name="icon"     type="xs:string" use="optional"/>
+                <xs:attribute name="mnemonic" type="xs:string" use="optional"/>
+                <xs:attribute name="tooltip"  type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:element name="parameter" type="parameterType"/>
+    
+    <xs:complexType name="parameterType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="name"    type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+           
+    <xs:complexType name="actionableElement">
+        <xs:complexContent>
+            <xs:extension base="abstractElement">
+                <xs:attribute name="actionClass" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+           
+    <xs:complexType name="actionableShortcutedElement">
+        <xs:complexContent>
+            <xs:extension base="actionableElement">
+                <xs:attribute name="shortcut" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    
+</xs:schema>

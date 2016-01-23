@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta name="copyright" content="2008 by Alexis PARIS"/>
+	<meta name="robots" content="all"/>
+	<meta name="author" content="Alexis PARIS"/>
+	<meta name="subject" content="Java wizard assistant"/>
+	<meta name="topic" content="Metas"/>
+	<meta name="expires" content="never"/>
+	<meta name="keywords" content="Awl Java wizard assistant page"/>
+	
+	<title><h1>Fonctionnalités de Blackdog</h1></title>
+	
+    </header> 
+    <body>
+	<br/>
+	<section id="functionnalities" name="">
+	    <p>
+		<ul>
+		    <li><b><u>Sources audios</u></b> :
+			<ul>
+			    <li>Gestion des principaux type de flux audios existants (mp3, ogg, flac, etc...).</li>
+			    <li>Gestion des radio webs.</li>
+			    <li>Gestion des informations suivantes sur les morceaux :
+				<ul>
+				    <li>Note</li>
+				    <li>Date de création</li>
+				    <li>Date de dernière lecture</li>
+				    <li>Nombre de lectures depuis sa création</li>
+				</ul>
+
+				en plus des informations traditionnels :
+				<ul>
+				    <li>Titre</li>
+				    <li>Artiste</li>
+				    <li>Album</li>
+				    <li>Catégorie</li>
+				    <li>Numéro de piste</li>
+				    <li>Auteur</li>
+				    <li>Commentaire</li>
+				</ul>
+				Ces informations sont présentes et modifiables quelques soit le type du fichier.
+			    </li>
+			    <li>Modification des attributs d'une chanson possible sans avoir besoin d'ouvrir une boîte de dialogue.</li>
+			    <li>Modifications de l'attribut de plusieurs chansons en une seule saisie.</li>
+			    <li>Modifications à la volée des tags des fichiers audio.</li>
+			    <li>Déplacement/copie d'un ensemble de fichiers audio vers un autre répertoire.</li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Lecteurs</u></b> :
+			<ul>
+			    <li>Possibilité de choisir l'outil de lecture. Aujourd'hui deux lecteurs sont disponibles :
+				<ul>
+				    <li>Lecteur basé sur MPlayer (lecteur par défaut).</li>
+				    <li>Lecteur basé sur le framework audio de l'api Java standard (permet uniquement la lecture des formats les plus répandus).</li>
+				</ul>
+			    </li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Editeurs</u></b> :
+			<ul>
+			    <li>Editeurs de playlist permettant :
+				<ul>
+				    <li>Filtrage des éléments de la playlist éditée au travers de critères de saisie : permet de retrouver rapidement
+					le titre que l'on souhaite écouter.</li>
+				    <li>Possiblité de modifier à tous moments les informations affichées par la table.</li>
+				    <li>Tri (permet par exemple, de trier les morceaux de la playlist en fonction de leur note).</li>
+				    <li>Ajout d'éléments audio par drag'n drop.</li>
+				</ul>
+			    </li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Outils diverses</u></b> :
+			<ul>
+			    
+			    <li>Editeur permettant la visualisation d'images relatives au morceau en cours de lecture :
+				<ul>
+				    <li>Utilisation d'images présentes dans le répertoire.</li>
+				    <li>Permet d'indiquer une image par défaut.</li>
+				    <li>Recherche d'images sur le web :
+					<ul>
+					    <li>Récupération en temps réel</li>
+					    <li>Possibilité de sauvegarder les images dans le répertoire du morceau courant.</li>
+					    <li>Choix de la source; aujourd'hui le seul plugin existant dans cette catégorie recherche les images en s'appuyant
+						sur le moteur de recherche <b>Google</b>. Il est possible de modifier ce choix au travers des options du logiciel.
+					    </li>
+					</ul>
+
+					Paramètrages possibles :
+					<ul>
+					    <li>Nombre d'images maximum récupérées.</li>
+					    <li>Taille des images récupérées.</li>
+					</ul>
+				    </li>
+				</ul>
+			    </li>
+			    
+			    <li>Outils de recherche des paroles d'un titre sur le site <a href="http://www.leoslyrics.com/">leo'lyrics</a>.<br/>
+				Comme pour la récupération d'images, il est possible d'ajouter d'autres plugins permettant l'utilisation d'autres moteurs de recherche.
+			    </li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Scan</u></b> : <br/>Blackdog a besoin que l'on lui indique un ensemble de répertoires contenant vos fichiers audios.
+			Ces paramètres vous sont demandés lors du premier lancement de Blackdog, il vous suffit alors de renseigner le répertoire principal
+			puis le scan s'occupera de collecter l'ensemble des fichiers audios s'y trouvant.<br/>
+			
+			A noter qu'il est possible de déclarer plusieurs répertoires de scan. Il est également possible de déclarer des répertoires ignorés
+			qui ne seront pas scannés par Blackdog même s'il se trouvent eux-mêmes dans des répertories de scan.<br/>
+			A tous moments, vous pouvez visualiser ou modifier ce paramètrage en vous rendant dans l'onglet 'Scan'.<br/>
+			
+			Au final, ce paramètrage vous permet de simplement relancer le scan de vos répertoires si jamais vous veniez à ajouter de nouveaux fichiers.
+			Blackdog ajoute ainsi à la librairie principal les nouveaus fichiers trouvés et vous évite d'ajouter à la main les nouveaux fichiers.
+		    </li>
+		</ul>
+		
+	    </p>
+	</section>
+    </body>
+</document>

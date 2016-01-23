@@ -1,0 +1,19 @@
+<projectDescription>
+  <name>blackdog-mplayer</name>
+  <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>blackdog-player</project>
+    <project>blackdog-types</project>
+    <project>siberia-resources</project>
+    <project>siberia-types</project>
+    <project>siberia-utilities</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

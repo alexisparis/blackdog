@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-editor" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="editor"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-types"      plugin-version="0.5.0"/>
+                <import plugin-id="siberia-components" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-editor-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+		<library id="jgoodies-forms"     path="libs/forms-1.0.5.jar" type="code">
+			<export prefix="*"/>
+		</library>
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+        
+	<extension-point id="Editor">
+            <parameter-def id="class"/>
+            <parameter-def id="enabled" type="boolean"/>
+            <parameter-def id="eventDeclaration" multiplicity="none-or-one"/>
+	</extension-point>
+        
+</plugin>

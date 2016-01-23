@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document> 
+  <header> 
+    <title><h1>Bienvenu sur le site de TransSiberia</h1></title> 
+  </header> 
+  <body> 
+    <section id="intro" name="introduction">
+      <p>TransSiberia est une librairie associé à la plateforme Siberia.
+        Elle permet la gestion des différents modules par :
+          <ul>
+            <li>le rapatriement des modules requis par une application Siberia</li>
+            <li>la mise à jour des modules</li>
+          </ul>
+      </p>
+    </section>
+
+    <section id="principe" name="principe">
+      <title>Principe</title>
+      <p>
+        TransSiberia s'appuie fortement sur les concepts, simplifiés, de 'repository' distant et local définis par Maven 2.
+        Pour l'installation d'une application, il n'est théoriquement nécessaire que de télécharger l'application désirée.
+        Chaque application définit un certains nombres de plugins dits nécessaires à son lancement. 
+        Au premier lancement de cette application, TransSiberia se charge du téléchargement de ces plugins dans la version désirée.
+        Ceci permet également une mise à jour simplifiée des plugins et même de l'application.
+        TransSiberia est également utilisé lors de l'installation d'un module optionnel.
+        Tout comme Maven, TransSiberia nécessite la déclaration de différents éléments.
+      </p>
+
+      <section id="properties" name="propriete">
+        <title>Propriétés</title>
+        <p>Chaque logiciel définit les différents repositories sur lesquels TransSiberia devra rechercher les modules.
+           Cela passe par un fichier transsiberia.properties qui peut être définit de cette façon : 
+           
+           <code>
+               org.siberia.transsiberia.remoteRepositories=http://perso.wanadoo.fr/alexis.paris/siberia
+               org.siberia.transsiberia.automaticLocalBackUp=true
+           </code>
+           
+           Plusieurs repositories peuvent être spécifiés dans l'élément remoteRepositories en les séparant par une virgule.
+           Le second élément permet de sécuriser le déploiement. Si pour une quelconque raison, un module ne peut être rapatrié
+           que ce soit pour des raisons d'indisponibilité d'un serveur ou par une mauvaise configuration d'un repository, TransSiberia
+           détectera l'impossibilité de déployer les nouvelles mises à jour et laissera la version qui était en cours d'utilisation, laissant ainsi
+           tout loisir à l'utilisateur de remettre à jour son application dès que les éventuels problèmes de serveurs seront résolus.
+        </p>
+      </section>
+      <section id="requiredPlugin" name="requiredPlugin">
+        <title>Plugins indispensables</title>
+        <p>Chaque logiciel dans Siberia est considéré comme un module à part entière de la plateforme Siberia.
+           Il est dès lors possible de spécifier les modules indispensables au bon fonctionnement du logiciel.
+           Au démarrage d'une application, TransSiberia se base essentiellement sur cette déclaration de dépendances
+           pour télécharger les modules requis.
+           Vous trouverez des exemples de déclaration dans la tutoriel.
+        </p>
+      </section>
+      <section id="repository" name="repository">
+        <title>'Remote Repository'</title>
+        <p>Dans l'absolu, les repository distant peuvent être de différents types :<br/>
+           <ul>
+               <li>Répertoires placés sur un serveur http</li>
+               <li>Fichiers sur un serveur ftp</li>
+               <li>etc...</li>
+           </ul>
+           
+           Actuellement, seul le transfert via serveurs http est implémenté.<br/>
+           La structure d'un repository Siberia est semblable à l'architecture des repository Maven 2 tel que
+           <a href="http://www.ibiblio.org/maven2">ibiblio</a>.<br/>
+           Prenons l'exemple du module Siberia permettant le support des diverses toolbars, menubars dans sa version 1.0.0. :<br/>
+           La déclaration de ce plugin est la suivante : <br/>
+           <table>
+               <tr><td>groupId</td><td>org.siberia</td></tr>
+               <tr><td>artifactId</td><td>bars</td></tr>
+               <tr><td>version</td><td>0.0.1</td></tr>
+           </table>
+           
+           Si ce plugin se trouve sur <a href="http://perso.wanadoo.fr/alexis.paris/siberia">le premier serveur historique </a>
+           , nous devrions trouver le plugin en considérant l'url
+           <code>http://perso.wanadoo.fr/alexis.paris/siberia/org.siberia/bars/0.0.1/bars-0.0.1.sbp</code>.<br/>
+           Il est dès lors facile de créer son propre repository de plugin à partir du moment où l'on dispose
+           d'un espace disponible sur un serveur http.
+        </p>
+      </section>
+    </section>
+  </body>
+</document>

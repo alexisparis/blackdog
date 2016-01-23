@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<menubar xmlns="http://temp">
+    <menus>
+	<menu i18nref="tools" order="100">
+	    <item i18nref="pluginManager" order="100" actionClass="transSiberia-ui::org.siberia.trans.ui.action.impl.PluginManagerAction"/>
+	</menu>
+    </menus>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">transSiberia-ui;1::menu/main.properties</i18nResource>
+	
+    </i18nResources>
+    
+</menubar>

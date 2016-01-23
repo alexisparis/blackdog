@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp">
+    <items>
+	<menu label="Edit" order="20">
+	    <item label="Redo"               order="11"  shortcut="control U"    mnemonic="R" actionClass="org.siberia.bar.action.NullAction"/>
+	    <item label="Select all"         order="80"  shortcut="control A"    mnemonic="A" actionClass="org.siberia.bar.action.NullAction"/>
+	    <separator order="30"/>
+	</menu>
+	<item label="Redo"               order="11"  shortcut="control D"
+		mnemonic="R" actionClass="org.siberia.bar.action.NullAction"/>
+	<separator order="60"/>
+	<item label="Print..."           order="100" shortcut="control Z"
+		mnemonic="P" actionClass="org.siberia.bar.action.NullAction">
+	</item>
+	<check label="Save as"            order="50"  shortcut="control A"    mnemonic="A" actionClass="org.siberia.bar.action.NullAction"/>
+    </items>
+    
+</typeMenu>

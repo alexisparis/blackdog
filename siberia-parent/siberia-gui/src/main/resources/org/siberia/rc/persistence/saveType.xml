@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cold-color blue="34" green="0" red="255" valid="true"
+    children-count="0" leaf="true" index-in-parent="-1">
+    <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">#FF0022</value>
+    <name>couleur</name>
+</cold-color>

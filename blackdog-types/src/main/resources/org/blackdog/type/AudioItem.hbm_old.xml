@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+    
+    <class name="org.blackdog.type.AudioItem" table="AUDIO_ITEM">
+	<id name="id" type="long" column="ID">
+	    <generator class="native"/>
+	</id>
+	<property name="moveable"        column="MOVEABLE"/>
+	<property name="name"            column="NAME"/>
+	<property name="nameCouldChange" column="NAME_CHANGE"/>
+	<property name="removable"       column="REMOVABLE"/>
+        
+	<property name="categoryValue" type="string" not-null="false" length="40"/>
+	
+	<property name="durationValue" not-null="false"/>
+	<property name="rateValue" type="integer" length="4" not-null="false"/>
+	
+	<property name="countPlayed"/>
+	<property name="lastTimePlayed"/>
+	<property name="creationDate"/>
+	
+	<property name="audioBytesLength"/>
+	
+	<property name="durationVerified"/>
+	
+	<property name="filePath"           column="PATH" type="string" length="500"/>
+	
+	<joined-subclass name="org.blackdog.type.AbstractSongItem" table="SONG_ITEM">
+	    <key column="SONG_ID"/>
+	    
+	    <discriminator column="EXTENSION" type="string" length="20"/>
+	    
+	    <property name="title" column="TITLE"/>
+	    <property name="artist" column="ARTIST"/>
+	    <property name="album" column="ALBUM"/>
+	    <property name="author" column="AUTHOR"/>
+	    <property name="leadArtist" column="LEAD_ARTIST"/>
+	    <property name="comment" column="COMMENT"/>
+	    <property name="lyrics" column="LYRICS"  length="500"/>
+	    <property name="trackNumber" column="TRACK_NUMBER"/>
+	    
+	    <property name="yearReleased" column="YEAR_RELEASED"/><!-- type="date"/-->
+	    
+	    <subclass name="org.blackdog.type.DefaultSongItem" discriminator-value="unknown">
+	    </subclass>
+	    
+	    <subclass name="org.blackdog.type.Mp3SongItem" discriminator-value="mp3">
+	    </subclass>
+	    
+	    <subclass name="org.blackdog.type.VorbisSongItem" discriminator-value="ogg">
+	    </subclass>
+	    
+	    <subclass name="org.blackdog.type.FlacSongItem" discriminator-value="flac">
+	    </subclass>
+	    
+	    <subclass name="org.blackdog.type.SpeexSongItem" discriminator-value="spx">
+	    </subclass>
+	
+	    <!--joined-subclass name="org.blackdog.type.DefaultSongItem" extends="org.blackdog.type.AbstractSongItem" table="DEFAULT_SONG_ITEM">
+		<key column="SONG_ID"/>
+		
+		<joined-subclass name="org.blackdog.type.AbstractTaggedSongItem" extends="org.blackdog.type.DefaultSongItem" table="ABSTRACT_TAGGED_SONG_ITEM">
+		    <key column="SONG_ID"/>
+		
+		    <joined-subclass name="org.blackdog.type.Mp3SongItem" extends="org.blackdog.type.AbstractTaggedSongItem" table="MP3_SONG_ITEM">
+			<key column="SONG_ID"/>
+
+		    </joined-subclass>
+		    <joined-subclass name="org.blackdog.type.VorbisSongItem" extends="org.blackdog.type.AbstractTaggedSongItem" table="VORBIS_SONG_ITEM">
+			<key column="SONG_ID"/>
+
+		    </joined-subclass>
+		    <joined-subclass name="org.blackdog.type.FlacSongItem" extends="org.blackdog.type.AbstractTaggedSongItem" table="FLAC_SONG_ITEM">
+			<key column="SONG_ID"/>
+
+		    </joined-subclass>
+		    
+		</joined-subclass>
+		
+	    </joined-subclass-->
+	    
+	</joined-subclass>
+	
+	<joined-subclass name="org.blackdog.type.RadioItem" table="RADIO_ITEM">
+	    <key column="SONG_ID"/>
+	    
+	</joined-subclass>
+	
+    </class> 
+
+</hibernate-mapping>

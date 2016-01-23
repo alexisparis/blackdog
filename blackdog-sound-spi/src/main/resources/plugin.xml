@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="blackdog-sound-spi" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="structure"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/blackdog/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="blackdog-types"    plugin-version="0.5.0"/>
+                <import plugin-id="blackdog-player"   plugin-version="0.5.0"/>
+                <import plugin-id="siberia-resources" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="blackdog-sound-spi-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+		
+		<library id="basicplayer"        path="libs/basicplayer-3.0.jar"        type="code"/>
+		<library id="tritonus-share"     path="libs/tritonus_share-0.3.6.jar"   type="code"/>
+		<library id="basic-player"       path="libs/basicplayer-3.0.jar"        type="code"/>
+		
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+        
+	<extension-point id="SpiAudioFileReader">
+            <parameter-def id="class">
+                <doc>
+                    <doc-text>
+			Define an audio file reader class related to a given audio extension like : 'mp3,ogg,flac'
+                    </doc-text>
+                </doc>
+            </parameter-def>
+            <parameter-def id="preferredExtensions" multiplicity="none-or-one">
+                <doc>
+                    <doc-text>
+			Define the preferred audio extensions managed by the reader :
+			indicate for example : 'mp3,ogg' or 'mp3' or empty to indicate that there are no preferred format
+                    </doc-text>
+                </doc>
+            </parameter-def>
+	</extension-point>
+        
+	<extension-point id="SpiFormatConversionProvider">
+            <parameter-def id="class">
+                <doc>
+                    <doc-text>
+			Define a format conversion provider class related to a given audio extension like : 'mp3,ogg,flac'
+                    </doc-text>
+                </doc>
+            </parameter-def>
+            <parameter-def id="preferredExtensions" multiplicity="none-or-one">
+                <doc>
+                    <doc-text>
+			Define the preferred audio extensions managed by the conversion provider :
+			indicate for example : 'mp3,ogg' or 'mp3' or empty to indicate that there are no preferred format
+                    </doc-text>
+                </doc>
+            </parameter-def>
+	</extension-point>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+             
+	<extension plugin-id="blackdog-player" point-id="Player" id="BlackdogBasicPlayer">
+            <parameter id="name"     value="Java sound"/>
+            <parameter id="class"    value="blackdog-basic-player::org.blackdog.sound.BlackdogBasicPlayer"/>
+            <parameter id="priority" value="10"/>
+	</extension>
+	
+	<!-- désactivé fout la merde lors du scan sur 
+	    Helene Grimaud, Elsa Pekka-Salonen - Arvo Part, Credo For Piano, Mixed Choir And Orchestra.wav  dans div2 et l'interrompt --> 
+	<!--extension plugin-id="blackdog-types" point-id="SongItemCustomizer" id="AudioFileFormatSongItemCustomizer">
+            <parameter id="class"    value="blackdog-sound-spi::org.blackdog.sound.customizer.AudioFileformatSongItemCustomizer"/>
+            <parameter id="priority" value="10"/>
+	</extension-->
+	
+	
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiAudioFileReader" id="WaveSpiAudioFileReader">
+            <parameter id="class"               value="com.sun.media.sound.WaveFileReader"/>
+            <parameter id="preferredExtensions" value="wav"/>
+	</extension>
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiAudioFileReader" id="AiffSpiAudioFileReader">
+            <parameter id="class"               value="com.sun.media.sound.AiffFileReader"/>
+            <parameter id="preferredExtensions" value="aiff"/>
+	</extension>
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiAudioFileReader" id="AuSpiAudioFileReader">
+            <parameter id="class"               value="com.sun.media.sound.AuFileReader"/>
+            <parameter id="preferredExtensions" value="au"/>
+	</extension>
+        
+</plugin>

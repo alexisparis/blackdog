@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+    
+    <class name="org.blackdog.type.PlayList" table="PLAYLIST">
+	<id name="id" type="long" column="ID_PL">
+	    <generator class="native"/>
+	</id>
+	
+	<property name="moveable"        column="MOVEABLE"/>
+	<property name="name"            column="NAME" unique-key="filepath" not-null="true"/>
+	<property name="nameCouldChange" column="NAME_CHANGE"/>
+	<property name="removable"       column="REMOVABLE"/>
+	
+	<property name="couldEdit"          column="EDIT_RIGHT"/>
+	<property name="couldCreate"        column="CREATE_RIGHT"/>
+	<property name="couldRemove"        column="REMOVE_RIGHT"/>
+	<property name="contentItemIsChild" column="ITEM_AS_CHILD"/>
+	
+	<property name="mainPlayList" column="MAIN"/>
+	
+	<list name="collection" table="PLAYLIST_ITEMS" fetch="select" lazy="false">
+	    <key column="ID_PL"/>
+            <index column="IDX"/>
+	    <many-to-many  column="ID" class="org.blackdog.type.AudioItem"/>
+	</list>
+	
+	<joined-subclass name="org.blackdog.type.ScannablePlayList" table="SCANNABLE_PLAYLIST">
+	    <key column="ID_PL"/>
+	</joined-subclass>
+	
+    </class> 
+
+</hibernate-mapping>

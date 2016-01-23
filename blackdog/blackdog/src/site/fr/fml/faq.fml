@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<faqs>
+
+  <part id="about">
+    <faq id="sup">
+      <question>Comment obtenir des informations supplementaires sur Blackdog?</question>
+      <answer>
+        <p>
+          Envoyer un mail a <a href="mailto:xixi31@users.sourceforge.net?subject=Awl">xixi31@users.sourceforge.net</a>.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

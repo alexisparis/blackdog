@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main tool declaration -->
+
+<toolbar xmlns="http://temp">
+    <items>
+	<button order="10"  tooltip="Create a new Project"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/New.png">
+		<parameter name="a">fre</parameter>
+	</button>
+	<button order="12"  tooltip="Open a new Project"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Open.png"/>
+	<button order="14"  tooltip="Save"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Save.png"/>
+	<button order="16"  tooltip="Print"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Print.png"/>
+
+	<separator order="25"/>
+
+	<button order="40"  tooltip="Cut"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Cut.png"/>
+	<button order="41"  tooltip="Copy"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Copy.png"/>
+	<button order="42"  tooltip="Paste"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Paste.png"/>
+	<button order="43"  tooltip="Delete"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Delete.png"/>
+
+	<separator order="60"/>
+
+	<button order="80"  tooltip="Undo"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Undo.png"/>
+	<button order="81"  tooltip="Redo"
+			    actionClass="org.siberia.ui.action.MenuItemsRefreshAction"
+			    icon="platform::img/Redo.png"/>
+    </items>
+            
+</toolbar>

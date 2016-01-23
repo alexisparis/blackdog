@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<repositories xmlns="http://alexis.paris.perso.cegetel.net">
+    
+    <urlRepositor><![CDATA[http://www.siberia.org/repository]]></urlRepositor>
+    <urlRepositor><![CDATA[ftp://www.blackdog.org/repository]]></urlRepositor>
+
+</repositories>

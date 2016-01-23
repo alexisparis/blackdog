@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Blackdog project">
+    
+    <!--bannerLeft>
+        <name>Maven</name>
+        <src>http://maven.apache.org/images/apache-maven-project.png</src>
+        <href>http://maven.apache.org/</href>
+    </bannerLeft>
+    <bannerRight>
+        <src>http://maven.apache.org/images/maven-small.gif</src>
+    </bannerRight-->
+    
+    <publishDate position="bottom" format="MM-dd-yy"/>
+    
+    <skin>
+        <groupId>org.blackdog</groupId>
+        <artifactId>blackdog-skin</artifactId>
+        <version>1.0.0</version>
+        <!--groupId>org.springframework.maven.skins</groupId>
+        <artifactId>maven-spring-skin</artifactId>
+        <version>1.0.3</version-->
+    </skin>
+    
+    <poweredBy>
+        <logo name="Build with Maven 2" href="http://maven.apache.org/"
+              img="images/russian_maven.png"/>
+        <logo name="Hosted on SourceForge.net" href="http://sourceforge.net"
+	      img="http://sflogo.sourceforge.net/sflogo.php?group_id=184785&amp;type=3"/>
+	      <!--img="images/source-forge-logo.gif"/-->
+	
+    </poweredBy>
+    
+    <body>
+        <links>
+            <item name="SF project" href="http://sourceforge.net/projects/awl-wizard"/>
+            <item name="Maven 2" href="http://maven.apache.org/"/>
+            <item name="Netbeans" href="http://www.netbeans.org/"/>
+        </links>
+        
+        <menu name="Blackdog">
+            <item name="Overview" href="index.html"/>
+            <item name="Features" href="functionnalities.html"/>
+            <item name="Screenshots" href="screenshots.html" />
+            <item name="Download" href="download.html"/>
+	    
+        </menu>
+        
+        <menu name="Miscellaneous">
+            <item name="Faq" href="faq.html"/>
+            <item name="Road Map" href="roadmap.html"/>
+        </menu>
+        
+        <menu ref="reports" name="Reports"/>
+        <menu ref="modules"/>
+        
+        <menu name="Traductions">
+            <item name="French" href="fr/index.html"/>
+        </menu>
+        
+    </body>
+    
+</project>

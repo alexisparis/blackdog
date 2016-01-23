@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        <title><h1>Road map</h1></title> 
+    </header> 
+    <body><br/>
+        <p>
+	    Future tasks are :
+	    <ul>
+		<li><b>last.fm</b> profile management.</li>
+		<li><b>Icecast servers</b> support.</li>
+		<li>Management of devices such as usb-key, IPods.</li>
+	    </ul>
+	
+            
+            <br/>
+	    For new feature, please go to <a href="http://sourceforge.net/tracker/?group_id=198785">"Feature Requests"</a> 
+	    section available in the sourceforge site of the project or send me an <a href="mailto:xixi31@users.sourceforge.net?subject=Blackdog">email</a>.
+	    
+	    <br/>
+	    <br/>
+	    Do not hesitate to contact me if you want to contribute :
+	    <ul>
+		<li>New plugin developments.</li>
+		<li>Artwork creations.</li>
+		<li>Add or update translations.</li>
+	    </ul>
+        </p>
+    </body>
+        
+</document>

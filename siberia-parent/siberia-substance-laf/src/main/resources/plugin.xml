@@ -1,0 +1,175 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-substance-laf" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="laf"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-laf" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-substance-laf-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+		<library id="laf-substance" path="libs/substance-4.0.0.jar" type="code">
+                    <export prefix="*"/>
+		</library>
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ###########################################################
+             ############### extension definitions #####################
+             ###########################################################
+             ########################################################### -->
+             
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="BusinessLaf">
+            <parameter id="name" value="Business"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.BusinessLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="BusinessBlueSteel">
+            <parameter id="name" value="Business blue steel"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.BusinessBlueSteelLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="BusinessBlackSteel">
+            <parameter id="name" value="Business black steel"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.BusinessBlackSteelLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Creme">
+            <parameter id="name" value="Creme"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.CremeLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Sahara">
+            <parameter id="name" value="Sahara"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.SaharaLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Moderate">
+            <parameter id="name" value="Moderate"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.ModerateLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="OfficeSilver2007">
+            <parameter id="name" value="Office silver"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.OfficeSilver2007LookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="RavenGraphite">
+            <parameter id="name" value="Raven graphite"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.RavenGraphiteLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="RavenGraphiteGlass">
+            <parameter id="name" value="Raven graphite glass"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.RavenGraphiteGlassLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Raven">
+            <parameter id="name" value="Raven"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.RavenLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Magma">
+            <parameter id="name" value="Magma"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.MagmaLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="ChallengerDeep">
+            <parameter id="name" value="Challenger deep"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.ChallengerDeepLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="EmeraldDusk">
+            <parameter id="name" value="Emerald"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.EmeraldDuskLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="OfficeBlue2007">
+            <parameter id="name" value="Office blue"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.OfficeBlue2007LookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="GreenMagic">
+            <parameter id="name" value="Green magic"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.GreenMagicLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Mango">
+            <parameter id="name" value="Mango"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.MangoLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="FindingNemo">
+            <parameter id="name" value="Finding Nemo"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.FindingNemoLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="FieldOfWheatLaf">
+            <parameter id="name" value="Field of wheat"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.FieldOfWheatLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	
+	<!-- vient de la version 4.1.0 -->
+	<!--extension plugin-id="siberia-laf" point-id="LookAndFeel" id="CremeCoffee">
+            <parameter id="name" value="Creme coffee"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.CremeCoffeeLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Ebony">
+            <parameter id="name" value="Ebony"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.EbonyHighContrastLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="MistAqua">
+            <parameter id="name" value="Mist aqua"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.MistAquaSkinLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="MistSilver">
+            <parameter id="name" value="Mist silver"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.MistSilverSkinLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Nebula">
+            <parameter id="name" value="Nebula"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.NebulaLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="NebulaBrickWall">
+            <parameter id="name" value="Nebula brick wall"/>
+            <parameter id="class" value="siberia-substance-laf::org.siberia.substance.NebulaBrickWallLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Automn">
+            <parameter id="name" value="Automn"/>
+            <parameter id="class" value="siberia-substance-laf::org.jvnet.substance.skin.SubstanceAutumnLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension-->
+	
+	
+</plugin>

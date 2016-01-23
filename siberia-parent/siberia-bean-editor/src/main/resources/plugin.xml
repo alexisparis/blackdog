@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-bean-editor" docs-path="../docs" version="0.0.5">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="editor"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-editor" plugin-version="0.0.5"/>
+                <import plugin-id="siberia-types" plugin-version="0.0.5"/>
+                <import plugin-id="siberia-resources" plugin-version="0.0.5"/>
+                <import plugin-id="siberia-basic-components" plugin-version="0.0.5"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-bean-editor-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+             
+	<extension plugin-id="siberia-editor" point-id="Editor" id="BeanEditor">
+            <parameter id="class" value="siberia-bean-editor::org.siberia.ui.editor.BeanEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+        
+</plugin>

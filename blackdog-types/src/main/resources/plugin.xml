@@ -1,0 +1,353 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="blackdog-types" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="structure"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/blackdog/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-types" plugin-version="0.5.0" exported="true"/>
+        </requires>
+        
+	<runtime>
+		<library id="blackdog-types-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+		<!--library id="jid3"        path="libs/jid3lib-0.5.4.jar"        type="code"/>
+		<library id="jogg"	  path="libs/jogg-0.0.7.jar"           type="code"/>
+		<library id="jorbis"	  path="libs/jorbis-0.0.15.jar"        type="code"/-->
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+	     
+	<extension-point id="SongItemCustomizer">
+            <parameter-def id="class">
+                <doc>
+                    <doc-text>
+			Define the class of a customizer to use when creating new SongItem
+                    </doc-text>
+                </doc>
+            </parameter-def>
+            <parameter-def id="priority">
+                <doc>
+                    <doc-text>
+			this will define the priority of a customizer.
+			After creating a new song item, all registered customizers will be ask to
+			customize the new object. the customizer registered with the highest priority
+			will be ask before all others customizers.
+                    </doc-text>
+                </doc>
+            </parameter-def>
+	</extension-point>
+        
+	<extension-point id="SongItemFactory">
+            <parameter-def id="extensions">
+                <doc>
+                    <doc-text>
+                        Define the extensions supported by the factory.
+                        Severall extensions can be declared with a coma separated string like : 'mp3,ogg,flac'
+                        The extension could also be 'default' which will indicate that the factory is a defaut SongItem factory
+                        and therefore, can be used if no specific factory is found for an extension.
+                        warning : if 'default' is declared as extensions, then the factory cannot be specific for a given extension.
+                                  so, if 'default,mp3' is found, then the factory will be considered as a default factory
+                                  and not as a specific mp3 factory.
+                    </doc-text>
+                </doc>
+            </parameter-def>
+            <parameter-def id="class">
+                <doc>
+                    <doc-text>
+                        Define the class reference of the factory. for example : 'blackdog-types::org.A.B.C'
+                    </doc-text>
+                </doc>
+            </parameter-def>
+	</extension-point>
+        
+	<extension-point id="AudioEntagger">
+            <parameter-def id="name">
+                <doc>
+                    <doc-text>
+			the name of the audio entagger
+                    </doc-text>
+                </doc>
+            </parameter-def>
+            <parameter-def id="class">
+                <doc>
+                    <doc-text>
+                        Define the class reference of the audio entagger. for example : 'blackdog-types::org.A.B.C'
+                    </doc-text>
+                </doc>
+            </parameter-def>
+	</extension-point>
+	     
+	<extension-point id="AudioExtensionSupported">
+            <parameter-def id="extension">
+                <doc>
+                    <doc-text>
+			Define the extension without the point (for example : 'mp3', 'ogg')
+                    </doc-text>
+                </doc>
+            </parameter-def>
+	</extension-point>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+	     
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="Mp1Extension">
+            <parameter id="extension" value="mp1"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="Mp2Extension">
+            <parameter id="extension" value="mp2"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="Mp3Extension">
+            <parameter id="extension" value="mp3"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="MpPlusExtension">
+            <parameter id="extension" value="mp+"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="OggExtension">
+            <parameter id="extension" value="ogg"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="FlacExtension">
+            <parameter id="extension" value="flac"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="SpeexExtension">
+            <parameter id="extension" value="spx"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="WavExtension">
+            <parameter id="extension" value="wav"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="WmaExtension">
+            <parameter id="extension" value="wma"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="AacExtension">
+            <parameter id="extension" value="aac"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="ApeExtension">
+            <parameter id="extension" value="ape"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="Ac3Extension">
+            <parameter id="extension" value="ac3"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="MpcExtension">
+            <parameter id="extension" value="mpc"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="MidiExtension">
+            <parameter id="extension" value="mid"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="MidiExtension2">
+            <parameter id="extension" value="midi"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="PcmExtension">
+            <parameter id="extension" value="pcm"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="GsmExtension">
+            <parameter id="extension" value="gsm"/>
+	</extension>
+	<extension plugin-id="blackdog-types" point-id="AudioExtensionSupported" id="AlawExtension">
+            <parameter id="extension" value="alaw"/>
+	</extension>
+        
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="Mp3AudioItemFactory">
+            <parameter id="extensions" value="mp1,mp2,mp3,aac,mp+"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.MpegSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="VorbisAudioItemFactory">
+            <parameter id="extensions" value="ogg"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.VorbisSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="FlacAudioItemFactory">
+            <parameter id="extensions" value="flac"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.FlacSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="SpeexAudioItemFactory">
+            <parameter id="extensions" value="spx"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.SpeexSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="WavAudioItemFactory">
+            <parameter id="extensions" value="wav"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.WavSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="WmaAudioItemFactory">
+            <parameter id="extensions" value="wma"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.WmaSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="MonkeyAudioItemFactory">
+            <parameter id="extensions" value="ape"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.MonkeySongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="Ac3SongItemFactory">
+            <parameter id="extensions" value="ac3"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.Ac3SongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="MusepackSongItemFactory">
+            <parameter id="extensions" value="mpc"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.MusepackSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="MidiAudioItemFactory">
+            <parameter id="extensions" value="midi,mid"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.MidiSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="PcmSongItemFactory">
+            <parameter id="extensions" value="pcm"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.PcmSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="GsmSongItemFactory">
+            <parameter id="extensions" value="gsm"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.GsmSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="AlawSongItemFactory">
+            <parameter id="extensions" value="alaw"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.AlawSongItemFactory"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemFactory" id="DefaultAudioItemFactory">
+            <parameter id="extensions" value="default"/>
+            <parameter id="class"      value="blackdog-types::org.blackdog.type.factory.DefaultSongItemFactory"/>
+	</extension>
+	
+             
+	<extension plugin-id="siberia-types" point-id="Type" id="MultimediaItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.MultimediaItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AudioItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.AudioItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="PlayList">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.PlayList"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="IgnoredDirectory">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.scan.IgnoredDirectory"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="ScannedDirectory">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.scan.ScannedDirectory"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="IgnoredDirectories">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.scan.IgnoredDirectories"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="ScannedDirectories">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.scan.ScannedDirectories"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="SongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.SongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="TaggedSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.TaggedSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AbstractSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.AbstractSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="DefaultSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.DefaultSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Mp1SongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.Mp1SongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Mp2SongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.Mp2SongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Mp3SongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.Mp3SongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="VorbisSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.VorbisSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="FlacSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.FlacSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="WavSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.WavSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="WmaSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.WmaSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AacSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.AacSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="MonkeySongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.MonkeySongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="MpPlusSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.MpPlusSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Ac3SongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.Ac3SongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="MpcSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.MpcSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="MidiSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.MidiSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="PcmSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.PcmSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="GsmSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.GsmSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AlawSongItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.AlawSongItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="RadioItem">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.RadioItem"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="ScanProperties">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.scan.ScanProperties"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="ScannablePlayList">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.ScannablePlayList"/>
+	</extension>
+        
+        <!-- devices -->
+	<extension plugin-id="siberia-types" point-id="Type" id="AbstractDevice">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.device.AbstractDevice"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="MassStorageDevice">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.device.MassStorageDevice"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="OpticalDevice">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.device.OpticalDevice"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="IPodDevice">
+            <parameter id="class" value="blackdog-types::org.blackdog.type.device.IPodDevice"/>
+	</extension>
+        
+</plugin>

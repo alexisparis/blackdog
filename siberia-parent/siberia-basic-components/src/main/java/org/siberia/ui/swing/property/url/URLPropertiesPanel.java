@@ -1,0 +1,239 @@
+/* 
+ * Siberia basic components : siberia plugin defining components supporting siberia types
+ *
+ * Copyright (C) 2008 Alexis PARIS
+ * Project Lead:  Alexis Paris
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this library;
+ * if not, write to the Free Software Foundation, Inc.,
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+ */
+package org.siberia.ui.swing.property.url;
+
+import java.awt.Component;
+import java.awt.event.FocusAdapter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javax.swing.JComponent;
+import javax.swing.SpinnerNumberModel;
+import org.siberia.ui.swing.TextFieldVerifier;
+
+/**
+ *
+ * @author  alexis
+ */
+public class URLPropertiesPanel extends javax.swing.JPanel
+{
+    /** last build url according to input */
+    private URL url = null;
+    
+    /** Creates new form URLPropertiesPanel */
+    public URLPropertiesPanel()
+    {
+	initComponents();
+	
+	ResourceBundle rb = ResourceBundle.getBundle(URLPropertiesPanel.class.getName());
+	
+	this.labelHost.setText(rb.getString("host"));
+	this.labelProtocol.setText(rb.getString("protocol"));
+	this.labelPort.setText(rb.getString("port"));
+	this.labelPath.setText(rb.getString("path"));
+	
+	this.labelHost.setToolTipText(rb.getString("hostTooltip"));
+	this.labelProtocol.setToolTipText(rb.getString("protocolTooltip"));
+	this.labelPort.setToolTipText(rb.getString("portTooltip"));
+	this.labelPath.setToolTipText(rb.getString("pathTooltip"));
+	
+	this.fieldHost.setToolTipText(rb.getString("hostTooltip"));
+	this.fieldProtocol.setToolTipText(rb.getString("protocolTooltip"));
+	this.fieldPort.setToolTipText(rb.getString("portTooltip"));
+	this.fieldPath.setToolTipText(rb.getString("pathTooltip"));
+	 
+	SpinnerNumberModel model = new SpinnerNumberModel(0, -1, 1000000, 1); 
+	this.fieldPort.setModel(model);
+
+	/** add a FieldVerifier on the fields */
+	TextFieldVerifier verifier = new TextFieldVerifier()
+	{
+	    /** inner url to check input consistence */
+	    private URL testUrl = null;
+	    
+	    public boolean applyValue(Component input, Object value)
+	    {
+		return true;
+	    }
+	    
+	    public boolean verify(JComponent input)
+	    {
+		
+		boolean result = true;
+		
+		try
+		{
+		    this.testUrl = createURL();
+		}
+		catch(MalformedURLException e)
+		{
+		    e.printStackTrace();
+		    result = false;
+		}
+		
+		return result;
+	    }
+	};
+	
+//	verifier.applyTo(this.fieldProtocol);
+//	verifier.applyTo(this.fieldHost);
+    }
+    
+    /** method that allow to create an URL according to the content of the component
+     *	@return an URL or null if information is missing to create a valid URL
+     *	@exception MalformedURLException if there is enough information to create an URL but this url is malformed
+     */
+    public URL createURL() throws MalformedURLException
+    {
+	URL url = null;
+	
+	String protocol = fieldProtocol.getText();
+	String host     = fieldHost.getText();
+	int    port     = 0;
+	String path     = fieldPath.getText();
+
+	try
+	{   
+	    port = ((Number)fieldPort.getValue()).intValue();
+	}
+	catch (Exception ex)
+	{   ex.printStackTrace(); }
+
+	if ( protocol != null && protocol.trim().length() > 0 && host != null && host.trim().length() > 0 )
+	{
+	    String stringUrl = protocol + "://" + host + (port >= 1 ? ":" + port : "") +
+			 (path == null ? "" : (path.startsWith("/") ? path : "/" + path));
+	    url = new URL(stringUrl);
+	}
+	
+	return url;
+    }
+    
+    /** initialize the content of the the components according to the given url
+     *	@param url an URL
+     */
+    public void setURL(URL url)
+    {
+	if ( url == null )
+	{
+	    this.fieldHost.setText("");
+	    this.fieldPath.setText("");
+	    this.fieldPort.setValue(-1);
+	    this.fieldProtocol.setText("");
+	}
+	else
+	{
+	    this.fieldHost.setText(url.getHost());
+	    this.fieldPath.setText(url.getPath());
+	    this.fieldPort.setValue(url.getPort());
+	    this.fieldProtocol.setText(url.getProtocol());
+	}
+    }
+    
+    /** return the content of the the components according to the given url
+     *	@return an URL
+     */
+    public URL getURL()
+    {
+	return this.url;
+    }
+    
+    /** This method is called from within the constructor to
+     * initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is
+     * always regenerated by the Form Editor.
+     */
+    // <editor-fold defaultstate="collapsed" desc=" Generated Code ">//GEN-BEGIN:initComponents
+    private void initComponents()
+    {
+        labelProtocol = new javax.swing.JLabel();
+        labelHost = new javax.swing.JLabel();
+        labelPort = new javax.swing.JLabel();
+        labelPath = new javax.swing.JLabel();
+        fieldHost = new javax.swing.JTextField();
+        fieldPath = new javax.swing.JTextField();
+        fieldProtocol = new javax.swing.JTextField();
+        fieldPort = new javax.swing.JSpinner();
+
+        labelProtocol.setText("protocol");
+
+        labelHost.setText("host");
+
+        labelPort.setText("port");
+
+        labelPath.setText("path");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(labelPort, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelPath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelProtocol, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                    .addComponent(labelHost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldHost, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                    .addComponent(fieldPath, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                    .addComponent(fieldProtocol, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                    .addComponent(fieldPort, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelProtocol)
+                    .addComponent(fieldProtocol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelHost)
+                    .addComponent(fieldHost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPort)
+                    .addComponent(fieldPort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPath)
+                    .addComponent(fieldPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+    }// </editor-fold>//GEN-END:initComponents
+    
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField fieldHost;
+    private javax.swing.JTextField fieldPath;
+    private javax.swing.JSpinner fieldPort;
+    private javax.swing.JTextField fieldProtocol;
+    private javax.swing.JLabel labelHost;
+    private javax.swing.JLabel labelPath;
+    private javax.swing.JLabel labelPort;
+    private javax.swing.JLabel labelProtocol;
+    // End of variables declaration//GEN-END:variables
+    
+}

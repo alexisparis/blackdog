@@ -1,0 +1,6 @@
+repository4 is used to test Module graph.
+
+There is a build a 0.0.1 which is standalone.
+Tehre is a build a 0.0.2 which depends on b 0.0.1.
+Tehre is a build a 0.0.3 which depends on b 0.0.1 and c 0.0.1.
+Tehre is a build a 0.0.3 which depends on b 0.0.2 and c 0.0.1 and b 0.0.2 depends on c 0.0.1.

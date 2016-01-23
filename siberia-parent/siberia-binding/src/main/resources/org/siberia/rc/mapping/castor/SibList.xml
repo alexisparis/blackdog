@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>SibList mapping</description>
+    <include href="SibCollection.xml"/>
+    <class name="org.siberia.type.SibList" extends="org.siberia.type.SibCollection">
+        <map-to xml="list"/>
+    </class>
+</mapping>

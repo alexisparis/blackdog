@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp" inherit="true">
+    <items>
+	<item i18nref="removeItem" order="40" actionClass="siberia-basic-components::org.siberia.ui.action.impl.RemovingTypeAction"/>
+	<separator order="42"/>
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">siberia-gui;1::menu/type/removeMenu.properties</i18nResource>
+	
+    </i18nResources>
+    
+</typeMenu>

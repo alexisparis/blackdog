@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-resource-editor" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="editor"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+	    
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-editor" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-types" plugin-version="0.5.0"/>
+                <import plugin-id="siberia" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-components" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-basic-components" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-resource-editor-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+	</runtime>
+	
+        <!-- tool menus -->
+             
+	<extension plugin-id="siberia-components" point-id="toolbar" id="siberia-resource-editor.resources-toolbar">
+            <parameter id="code" value="resources.management.toolbar"/>
+            <parameter id="filepath" value="siberia-resource-editor;1::tool/resources-toolbar.xml"/>
+	</extension>
+             
+	<extension plugin-id="siberia-editor" point-id="Editor" id="DefaultResourceEditor">
+            <parameter id="class" value="siberia-resource-editor::org.siberia.ui.editor.impl.DefaultResourceEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	<extension plugin-id="siberia-editor" point-id="Editor" id="ExtendedResourceEditor">
+            <parameter id="class" value="siberia-resource-editor::org.siberia.ui.editor.impl.ExtendedResourceEditor"/>
+            <parameter id="enabled" value="false"/>
+	</extension>
+        
+</plugin>

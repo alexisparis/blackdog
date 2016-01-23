@@ -1,0 +1,15 @@
+repository2 allows to test simple invalid use cases :
+
+It contains a plugin 'a' with 4 versions :
+    version 0.0.1 is declared by module but archive is missing
+    version 0.0.2 is declared by module but directory of the archive is missing
+    version 0.0.3 is declared by module, archive is well placed and valid but the md5 is wrong
+    version 0.0.4 is declared by module, archive is well placed and valid but the md5 is missing
+    version 0.0.5 is declared by module, archive is well placed and valid but the sha1 is wrong
+    version 0.0.6 is declared by module, archive is well placed and valid but the sha1 is missing
+
+It contains a plugin 'b' with no versions available : this shall not provoke errors
+
+It contains a plugin 'c' contains an invalid repository declaration.
+
+It contains a plugin 'd' contains no repository declaration.

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="siberia-utilities" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="utilities"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-resources" plugin-version="0.0.1"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-utilities-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+		<library id="ehcache"  path="libs/ehcache-1.3.0.jar" type="code">
+			<export prefix="*"/>
+                </library>
+		<library id="bouncy-castle" path="libs/bcprov-jdk15-124.jar"  type="code">
+			<export prefix="*"/>
+                </library>
+                
+	</runtime>
+        
+</plugin>

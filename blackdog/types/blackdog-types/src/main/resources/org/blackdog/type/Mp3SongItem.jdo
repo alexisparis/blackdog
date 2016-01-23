@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE jdo PUBLIC 
+    "-//Sun Microsystems, Inc.//DTD Java Data Objects Metadata 2.0//EN" 
+    "http://java.sun.com/dtd/jdo_2_0.dtd">
+<jdo>
+    <package name="org.blackdog.type">
+    <class name="Mp3SongItem" persistence-capable-superclass="org.blackdog.type.DefaultSongItem">
+            <inheritance strategy="super-class"/>
+        </class>
+    </package>
+</jdo>

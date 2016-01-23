@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://temp" 
+           xmlns="http://temp"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="swixConfiguration">
+        <xs:complexType>
+            <xs:all minOccurs="0">
+                <xs:element ref="converterGroup"/>
+                <xs:element ref="tagGroup"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="converterGroup">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="converter"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="tagGroup">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="tag"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="converter"            type="converterType"/>
+    <xs:element name="tag"                  type="tagType"/>
+    
+    <xs:complexType name="converterType">
+        <xs:attribute name="objClass"       type="xs:string" use="required"/>
+        <xs:attribute name="converterClass" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="tagType">
+        <xs:attribute name="tag"            type="xs:string" use="required"/>
+        <xs:attribute name="swingClass"     type="xs:string" use="required"/>
+    </xs:complexType>
+    
+</xs:schema>

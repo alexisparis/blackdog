@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<toolbar xmlns="http://temp">
+    <items>
+	<button label="Redo"       order="11"  mnemonic="R" actionClass="org.siberia.bar.action.NullAction"/>
+	<sizedSeparator order="45" height="4" width="7"/>
+	<separator order="30"/>
+	<button label="Print..."   order="100" mnemonic="P" actionClass="org.siberia.ui.action.NaaaullAction"/>
+    </items>
+    
+</toolbar>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<menubar xmlns="http://temp">
+    <menus>
+	<menu label="File" mnemonic="F" order="10">
+	    <item label="Save"               order="40"  shortcut="control S"    mnemonic="S" actionClass="org.siberia.ui.action.MenuItemsRefreshAction" icon="platform::img/Add.png">
+		    <parameter name="a">fre</parameter>
+	    </item>
+	    <item label="Save as"            order="50"  shortcut="control A"    mnemonic="A" actionClass="org.siberia.ui.action.NullAction"/>
+	    <separator order="60"/>
+	    <item label="Print..."           order="100" shortcut="control P"    mnemonic="P" actionClass="org.siberia.ui.action.NullAction"/>
+	    <separator order="150"/>
+	    <item label="Exit"               order="200" shortcut="control Q"    mnemonic="X" actionClass="siberia-gui::org.siberia.ui.action.impl.CloseApplicationAction"/>
+	</menu>
+	<menu label="Edit" order="20">
+	    <item label="Undo"               order="10"  shortcut="control Z"    mnemonic="U" actionClass="org.siberia.ui.action.NullAction"/>
+	    <item label="Redo"               order="11"  shortcut="control U"    mnemonic="R" actionClass="org.siberia.ui.action.NullAction"/>
+	    <separator order="30"/>
+	    <item label="Cut"                order="40"  shortcut="control X"    mnemonic="T" actionClass="org.siberia.ui.action.NullAction"/>
+	    <item label="Copy"               order="41"  shortcut="control C"    mnemonic="C" actionClass="org.siberia.ui.action.NullAction"/>
+	    <item label="Paste"              order="42"  shortcut="control V"    mnemonic="V" actionClass="org.siberia.ui.action.NullAction"/>
+	    <separator order="60"/>
+	    <item label="Select all"         order="80"  shortcut="control A"    mnemonic="A" actionClass="org.siberia.ui.action.NullAction"/>
+	    <separator order="90"/>
+	    <item label="Delete"             order="100" shortcut="SUPPR"        mnemonic="S" actionClass="org.siberia.ui.action.NullAction"/>
+	    <separator order="110"/>
+	    <item label="Properties"         order="130"                         mnemonic="P" actionClass="org.siberia.ui.action.NullAction"/>
+	</menu>
+	<menu label="Tools" mnemonic="T" order="100">
+	    <item label="Simple web browser" order="10"  shortcut="alt O"        mnemonic="B" actionClass="org.siberia.ui.action.impl.WebBrowserEditingAction"/>
+	    <item label="Debug console"      order="20"                          mnemonic="G" actionClass="org.siberia.ui.action.impl.DebugSessionEditingAction"/>
+	    <item label="Options"            order="30"                          mnemonic="O" actionClass="org.siberia.ui.action.impl.PropertiesEditingAction">
+		<parameter name="id">0</parameter>
+	    </item>
+	    <item label="Plugin manager"     order="100"                           mnemonic="U" actionClass="siberia-gui::org.siberia.ui.action.impl.PluginManagerAction"/>
+	</menu>
+	<menu label="Help" mnemonic="H" order="400">
+	    <item label="Documentation"      order="10"      shortcut="F1"                    actionClass="org.siberia.ui.action.NullAction"/>
+	    <item label="Javadoc"            order="20"                          mnemonic="J" actionClass="org.siberia.ui.action.NullAction"/>
+	    <item label="Help contents"      order="30"                          mnemonic="C" actionClass="org.siberia.ui.action.NullAction"/>
+	    <item label="About"              order="40"                          mnemonic="A" actionClass="org.siberia.ui.action.impl.AboutAction"/>
+	</menu>
+    </menus>
+    
+</menubar>

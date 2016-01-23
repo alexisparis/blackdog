@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<properties xmlns="http://temp" priority="7">
+    
+    <!--category repr="Kernel" icon="/org/siberia/rc/img/Kernel.png" order="2">
+        <label>Kernel</label>
+        <description>Kernel configuration</description>
+        
+    </category-->
+    
+    <category repr="blackdog" icon="blackdog;1::img/Music.png" order="2">
+        <label>Blackdog</label>
+        <description>Blackdog configuration</description>
+	
+	
+        <category repr="player.configuration" icon="" order="3">
+            <label>Player configuration</label>
+            <description>Player configuration</description>
+	
+	    <property editor="playerChoice" repr="player.choice" nature="string" renderer="combo" default=""
+		    validateAction="blackdog::org.blackdog.ui.properties.action.validate.ChangePlayerAction">
+		<label>Player choice</label>
+		<description>choose the player to use</description>
+	    </property>
+	    
+            <property editor="text" renderer="text" repr="player.volumeGain" nature="integer" default="500">
+                <label>volume gain [0, 1000]</label>
+                <description><![CDATA[<html>the volume gain to be applied at the launch of a new player<br>
+                                      <i>allowed values from 0 to 1000</i></html>]]></description>
+                <range>
+                    <minimum repr="0"/>
+                    <maximum repr="1000"/>
+                </range>
+            </property>
+	    
+	</category>
+        
+        <category repr="playlist.configuration" icon="" order="9">
+            <label>Playlist editor</label>
+            <description>Playlist editor</description>
+            
+            <category repr="playlist.configuration.filter" icon="" order="60">
+                <label>Filter</label>
+                <description>Filter</description>
+                
+                <property editor="check" renderer="text" repr="playlist.configuration.filter.searchEnabled"
+                          validateAction="blackdog::org.blackdog.ui.properties.action.validate.RefreshPlayListEditorAction"
+                          nature="boolean" default="true">
+                    <label>Search enabled</label>
+                    <description><![CDATA[<html>true to enabled search capabilities in the playlist editor</html>]]></description>
+                </property>
+
+                                
+                <property editor="check" renderer="text" repr="playlist.configuration.filter.artistAlbumFilterVisible"
+                          nature="boolean" default="true">
+                    <label>Show artist/album filters</label>
+                    <description><![CDATA[<html>true to show artist/album filters at launch</html>]]></description>
+                </property>
+                
+            </category>
+       
+	    <property editor="check" renderer="text" repr="playlist.main.editAtStartup"
+		      nature="boolean" default="true">
+		<label>Edit library at startup</label>
+		<description><![CDATA[<html>true to start the edition of the main<br>library at start up of Blackdog</html>]]></description>
+	    </property>
+            
+        </category>
+        
+        <category repr="radiolist.configuration" icon="" order="11">
+            <label>Radiolist editor</label>
+            <description>Radiolist editor</description>
+            
+            <category repr="radiolist.configuration.filter" icon="" order="60">
+                <label>Filter</label>
+                <description>Filter</description>
+                
+                <property editor="check" renderer="text" repr="radiolist.configuration.filter.searchEnabled"
+                          validateAction="blackdog::org.blackdog.ui.properties.action.validate.RefreshPlayListEditorAction"
+                          nature="boolean" default="true">
+                    <label>Search enabled</label>
+                    <description><![CDATA[<html>true to enabled search capabilities in the radiolist editor</html>]]></description>
+                </property>
+                
+            </category>
+       
+	    <property editor="check" renderer="text" repr="radiolist.main.editAtStartup"
+		      nature="boolean" default="false">
+		<label>Edit radio list at startup</label>
+		<description><![CDATA[<html>true to start the edition of the radio<br>list at start up of Blackdog</html>]]></description>
+	    </property>
+            
+        </category>
+	
+	<category repr="entagger" icon="" order="50">
+	    <label>Entagger</label>
+	    <description>Entagger parameters</description>
+        
+	    <property editor="entaggerChoice" repr="entagger.choice" nature="string" renderer="combo" default=""
+		    validateAction="blackdog::org.blackdog.ui.properties.action.validate.ChangeEntaggerAction">
+		<label>entagger choice</label>
+		<description>choose the entagger to use</description>
+	    </property>
+	</category>
+	
+	<category repr="cover.research" icon="" order="80">
+	    <label>Cover research</label>
+	    <description>Cover parameters</description>
+        
+	    <property editor="check" renderer="text" repr="cover.searcher.enabled"
+		      nature="boolean" default="true"
+		      validateAction="blackdog::org.blackdog.ui.properties.action.validate.ChangeImageSearcherAction">
+		<label>Search images on the web</label>
+		<description><![CDATA[<html>true to allow the use of image searcher</html>]]></description>
+	    </property>
+	    
+	    <property editor="imageSearcherChoice" repr="cover.searcher.choice" nature="string" renderer="combo" default=""
+		    validateAction="blackdog::org.blackdog.ui.properties.action.validate.ChangeImageSearcherAction">
+		<label>searcher choice</label>
+		<description>choose the image searcher to use</description>
+	    </property>
+	    
+	    <property editor="combo" repr="cover.searcher.image.size" nature="string" renderer="combo" default="medium"
+		    validateAction="blackdog::org.blackdog.ui.properties.action.validate.ChangeImageSearcherAction">
+		<label>image size</label>
+		<description>image size</description>
+		<values>
+		    <value repr="icon"/>
+		    <value repr="medium"/>
+		    <value repr="large"/>
+		    <value repr="huge"/>
+		    <value repr="all"/>
+		</values>
+	    </property>
+	    
+	    <property editor="text" repr="cover.searcher.image.maxRetrieve" nature="integer" default="5"
+		    validateAction="blackdog::org.blackdog.ui.properties.action.validate.ChangeImageSearcherAction">
+		<label>Max images retrieved</label>
+		<description>the maximum number of covers retrieved for an audio item</description>
+                <range>
+                    <minimum repr="1"/>
+                    <maximum repr="18"/>
+                </range>
+	    </property>
+	    
+	    <property editor="text" repr="cover.searcher.additionalCriterions" default="cover" nature="string"
+		    validateAction="blackdog::org.blackdog.ui.properties.action.validate.ChangeImageSearcherAction">
+		<label>additional criterions</label>
+		<description>additionals criterions for image research</description>
+	    </property>
+	    
+	</category>
+	    
+	<category repr="scan.report" icon="" order="100">
+	    <label>Scan report</label>
+	    <description>Scan report parameters</description>
+
+	    <property editor="combo" renderer="combo" repr="report.generator" order="10" nature="string"
+		      default="html" editable="true">
+		<label>report generation method</label>
+		<description><![CDATA[<html>Indicate which format to use for the generation</html>]]></description>
+		<values>
+		    <value repr="html"/>
+		</values>
+	    </property>
+
+	    <property editor="combo" renderer="combo" repr="report.view.method" order="30" nature="string"
+		      default="warning" editable="true">
+		<label>way to ask for report viewing</label>
+		<description><![CDATA[<html>Audio scanner can encounter some problems while scanning audio elements.<br>
+					    A report of the scan is always generated.<br>
+					    With this parameter, you choose the way you will be ask for viewing the report : <br>
+					    <ul>
+						<li>never   : blackdog will never ask you for viewing the report</li>
+						<li>always  : blackdog will always ask you for viewing the report</li>
+						<li>debug   : blackdog will ask only if the reports contains logs of level <i>debug</i></li>
+						<li>info    : blackdog will ask only if the reports contains logs of level <i>info</i></li>
+						<li>warning : blackdog will ask only if the reports contains logs of level <i>warning</i></li>
+						<li>error   : blackdog will ask only if the reports contains logs of level <i>error</i></li>
+					    </ul></html>]]></description>
+		<values>
+		    <value repr="never"/>
+		    <value repr="always"/>
+		    <value repr="debug"/>
+		    <value repr="info"/>
+		    <value repr="warning"/>
+		    <value repr="error"/>
+		</values>
+	    </property>
+
+	    <property editor="combo" renderer="combo" repr="report.view.status.threshold" order="50" nature="string"
+		      default="warning" editable="true">
+		<label>generation threshold status</label>
+		<description><![CDATA[<html>indicate the threshold of status for report generation.<br>
+					    if the threshold is 'warning', then the report will only contains warnings or errors.<br>
+					    Valid values are :
+					    <ul>
+						<li>debug   : blackdog will ask only if the reports contains logs of level <i>debug</i></li>
+						<li>info    : blackdog will ask only if the reports contains logs of level <i>info</i></li>
+						<li>warning : blackdog will ask only if the reports contains logs of level <i>warning</i></li>
+						<li>error   : blackdog will ask only if the reports contains logs of level <i>error</i></li>
+					    </ul></html>]]></description>
+		<values>
+		    <value repr="debug"/>
+		    <value repr="info"/>
+		    <value repr="warning"/>
+		    <value repr="error"/>
+		</values>
+	    </property>
+
+	</category>
+        
+    </category>
+    
+</properties>

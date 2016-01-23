@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document> 
+  <header> 
+  </header> 
+  <body>
+    <section id="intro" name="Applications basées sur Siberia">
+      <p>
+          <table>
+              <theader>
+                  <tr>
+                      <th>Application</th>
+                      <th>Description</th>
+                      <th>Site</th>
+                  </tr>
+              </theader>
+              <tbody>
+                  <tr>
+                      <td>Siberia Modelling</td>
+                      <td><![CDATA[Outil de modélisation permettant la manipulation et la génération de formalisme de modélisation]]></td>
+                      <td><a href="http://www.siberia-modelling.org">http://www.siberia-modelling.org</a></td>
+                  </tr>
+                  <tr>
+                      <td>SiberMusik</td>
+                      <td><![CDATA[Lecteur de fichier mp3, ogg... ayant des fonctionnalités avancés concernant la manipulation de fichiers m3u et la gestion de bibliothèques musicales.]]></td>
+                      <td><a href="http://www.sibermusik.org">http://www.sibermusik.org</a></td>
+                  </tr>
+              </tbody>
+          </table>
+      </p>
+      
+      <p>
+            Si vous aussi, vous avez développé une application basée sur Siberia, n'hésitez pas à 
+            <a HREF="mailto:alexis.paris@wanadoo.fr?subject=New Siberia based software">me contacter</a>
+            pour faire figurer votre application sur cette page.
+      </p>
+      
+    </section>
+    </body>
+</document>

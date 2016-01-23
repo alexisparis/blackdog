@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document> 
+  <header> 
+    <title><h1>Siberia bars</h1></title> 
+  </header> 
+  <body> 
+    <section id="general" name="Général">
+      <!--title>Introduction</title-->
+      <p>
+          Il est possible de définir différents items de barre, selon les cas,
+          JMenuItem, JCheckBoxItem, JButton, JCheckBox, JComboBox,  ...<br/>
+          
+          Généralement, on peut associer :<br/>
+          <ul>
+            <li>un type d'action à chaque item en spécifiant la classe à instancier.<br/>
+                Le comportement des actions peut être moduler via l'ajout de paramètres nommés.
+            </li>
+            <li>un libellé</li>
+            <li>un tooltip</li>
+            <li>l'emplacement d'une icône</li>
+            <li>un ordre permettant d'ordonner les éléments au sein d'une entité contenant plusieurs items</li>
+          </ul>
+          exemple : <br/>
+        <div class="source">
+            <pre><![CDATA[<item label="Redo" order="8" actionClass="actionClass" icon="appl::img/image.png">
+    <parameter name="param_1">value_1</parameter>
+    <parameter name="param_2">value_2</parameter>
+</item>
+]]></pre>
+        </div>
+        
+        Chaque macro déclaration, déclaration de barre de menu et de barre d'outils, possède un attribut <code>priority</code>.
+        Cet attribut permet de privilégier certaines déclarations. Prenons l'exemple de ces deux déclarations de menu :<br/>
+        
+        barre de menu menu_1 : <br/>
+        <div class="source">
+            <pre>
+<![CDATA[
+<menubar xmlns="http://temp">
+    <menu label="Edit" order="20">
+        <item label="Redo"       order="11" shortcut="control U"
+                    mnemonic="R" actionClass="org.siberia.ui.action.NullAction"/>
+        <item label="Select all" order="80" shortcut="control A"
+                    mnemonic="A" actionClass="org.siberia.ui.action.NullAction"/>
+        <separator order="30"/>
+    </menu>
+</menubar>]]></pre>
+        </div>
+          
+        barre de menu menu_2 : <br/>
+        <div class="source">
+            <pre>
+<![CDATA[
+<menubar xmlns="http://temp" priority="20">
+    <menu label="Edit" order="20">
+        <item label="Redo" order="15" shortcut="control alt O"
+                    mnemonic="R" actionClass="org.siberia.ui.action.NullAction"/>
+        <separator order="30"/>
+    </menu>
+</menubar>]]></pre>
+        </div>
+        
+        Chacune des déclarations définit un item 'Redo' dand un menu racine 'Edit' où seul le raccourci définit est différent.<br/>
+        Or, la déclaration menu_2 possèdeune priorité supérieure à celle de menu_1. Lors de la fusion, la déclaration de l'item Redo
+        de menu_2 sera privilégié par rapport à cell de menu_1 et donc, l'élément 'Redo' aura pour raccourci 'control alt O'.
+        
+        A noter d'ailleurs que les attributs 'shortcut' sont représentés sous la forme d'une chaîne de caractère qui sera utilisé comme
+        argument de la méthode : <br/>
+        <div class="source">
+            <pre><![CDATA[KeyStroke.getKeyStroke(String s)]]></pre>
+        </div>
+          
+      </p>
+    </section>
+
+    <section id="menubar" name="Barre de menu">
+      <p >
+          à venir...
+      </p>
+    </section>
+
+    <section id="toolbar" name="Barre d'outils">
+      <p>
+          à venir...
+      </p>
+    </section>
+  </body>
+</document>

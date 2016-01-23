@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<siberiaframe id="frame" title="Black dog" DefaultCloseOperation="JFrame.DO_NOTHING_ON_CLOSE" icon="blackdog;1::img/blackdog.png">
+    
+    <siberiamenubar id="menubar" code="main"/>
+    
+    <panel id="toolbarPanel" layout="borderlayout" constraints="BorderLayout.NORTH">
+        <siberiatoolbar id="toolbar" code="main" AlignmentX="1" orientation="HORIZONTAL"/>
+    </panel>
+    
+    <editorRootDockingPanel id="editorPanel" ConfigurationFilePath="blackdog;1::/docking/configuration.properties">
+    
+        <dockingSplitPane dividerLocation="0.3" orientation="HORIZONTAL">
+            
+            <dockingSplitPane dividerLocation="0.8" orientation="VERTICAL">
+                <dockingTabbedPane permanent="false"/>
+                <dockingTabbedPane permanent="false"/>
+            </dockingSplitPane>
+            <dockingTabbedPane permanent="false"/>
+            
+        </dockingSplitPane>
+    </editorRootDockingPanel>
+    
+    <defaultstatusbar id="statusBar" constraints="BorderLayout.SOUTH"/>
+    
+    <!--panel id="x" layout="borderlayout" constraints="BorderLayout.SOUTH">
+        <label id="w" LabelFor="tf" Font="Comic Sans MS-BOLD-12" Foreground="blue" text="Hello World!"/>
+        <textfield id="tf1" Columns="20" Text="Swixml"/>
+        <button id="z" Text="Click Here" Action="submit"/>
+    </panel-->
+</siberiaframe>

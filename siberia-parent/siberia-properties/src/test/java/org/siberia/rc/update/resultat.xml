@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<properties priority="9" xmlns="http://temp">
+    <category order="4" icon="siberia;1::img/Graphics.png" repr="graphic">
+        <label>Graphic</label>
+        <description>Graphic configuration</description>
+        <property renderer="combo" nature="string" id="1" editor="laf" applyAction="siberia::org.siberia.ui.properties.action.apply.ApplyLookAndFeelAction" repr="frame.main.lookandfeel">
+            <label>look and feel</label>
+            <description>look and feel to use</description>
+            <appliedValue>Metal</appliedValue>
+        </property>
+        <category order="3" icon="" repr="frame.main">
+            <label>frame positionning</label>
+            <description>frame parameters</description>
+            <property renderer="text" nature="boolean" id="2" editor="check" default="true" repr="frame.main.automaticpositioning">
+                <label>automatic</label>
+                <description>true if the all frame positions attributes have to be automatically saved</description>
+                <appliedValue>false</appliedValue>
+            </property>
+            <property renderer="text" nature="boolean" id="3" editor="check" dependAction="siberia::org.siberia.ui.action.impl.FramePositionsDependAction" default="true" repr="frame.main.maximized">
+                <label>maximized</label>
+                <description>true if the frame have to be maximized at launch</description>
+                <dependsOn repr="2"/>
+                <appliedValue>true</appliedValue>
+            </property>
+            <property renderer="text" nature="integer" id="4" editor="text" dependAction="siberia::org.siberia.ui.action.impl.FramePositionsDependAction" default="800" repr="frame.main.width">
+                <label>width</label>
+                <description>the width applied to frame at launch</description>
+                <dependsOn repr="3"/>
+                <range>
+                    <minimum repr="0"/>
+                    <maximum repr="1400"/>
+                </range>
+                <appliedValue>800</appliedValue>
+            </property>
+            <property renderer="text" nature="integer" id="5" editor="text" dependAction="siberia::org.siberia.ui.action.impl.FramePositionsDependAction" default="600" repr="frame.main.height">
+                <label>height</label>
+                <description>the height applied to frame at launch</description>
+                <dependsOn repr="3"/>
+                <range>
+                    <minimum repr="0"/>
+                    <maximum repr="1400"/>
+                </range>
+                <appliedValue>700</appliedValue>
+            </property>
+        </category>
+    </category>
+    <category order="6" icon="siberia;1::img/gnome-util.png" repr="editor">
+        <label>Viewer</label>
+        <description>External vsdfiewers</description>
+        <category order="1" icon="/org/siberia/rc/img/gnome-globe.png" repr="html">
+            <label>html</label>
+            <description>html viewer parameters</description>
+            <property renderer="text" manual="true" id="6" editor="text" default="" repr="html_viewer">
+                <label>html viewer</label>
+                <description>the path of an executable html viewer</description>
+                <appliedValue></appliedValue>
+            </property>
+        </category>
+        <category order="5" icon="/org/siberia/rc/img/stock_new-text.png" repr="rtf">
+            <label>rtf</label>
+            <description>rtf viewer parameters</description>
+            <property renderer="text" id="7" editor="text" default="" repr="rtf_viewer">
+                <label>rtf viewer</label>
+                <description>the path of an executable rtf viewer</description>
+                <appliedValue></appliedValue>
+            </property>
+            <property renderer="text" nature="string" id="8" editor="text" default="" repr="rtf_arguments">
+                <label>arguments</label>
+                <description>additional arguments to use when opening a rtf document</description>
+                <appliedValue></appliedValue>
+            </property>
+        </category>
+    </category>
+</properties>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>SibFloat mapping</description>
+    <include href="SibType.xml"/>
+    <class name="org.siberia.type.SibFloat" extends="org.siberia.type.SibType">
+        <map-to xml="coldFloat"/>
+        <field name="value" type="float">
+            <bind-xml name="value" node="text"/>
+        </field>
+    </class>
+</mapping>

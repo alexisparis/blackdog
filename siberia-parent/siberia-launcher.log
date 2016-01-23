@@ -1,0 +1,43 @@
+[INFO] Scanning for projects...
+[INFO] Searching repository for plugin with prefix: 'clean'.
+[INFO] ----------------------------------------------------------------------------
+[INFO] Building Siberia launcher
+[INFO]    task-segment: [clean:clean, install]
+[INFO] ----------------------------------------------------------------------------
+[INFO] [clean:clean]
+[INFO] Deleting directory /mnt/projects/siberia-launcher/target
+[INFO] Deleting directory /mnt/projects/siberia-launcher/target/classes
+[INFO] Deleting directory /mnt/projects/siberia-launcher/target/test-classes
+[INFO] Deleting directory /mnt/projects/siberia-launcher/target/site
+[INFO] [resources:resources]
+[INFO] Using default encoding to copy filtered resources.
+[INFO] [compiler:compile]
+[INFO] Compiling 6 source files to /mnt/projects/siberia-launcher/target/classes
+[INFO] [resources:testResources]
+[INFO] Using default encoding to copy filtered resources.
+[INFO] [compiler:testCompile]
+[INFO] Compiling 1 source file to /mnt/projects/siberia-launcher/target/test-classes
+[INFO] [surefire:test]
+[INFO] Surefire report directory: /mnt/projects/siberia-launcher/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.siberia.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] [jar:jar]
+[INFO] Building jar: /mnt/projects/siberia-launcher/target/siberia-launcher-0.0.1.jar
+[INFO] [install:install]
+[INFO] Installing /mnt/projects/siberia-launcher/target/siberia-launcher-0.0.1.jar to /mnt/projects/.m2/repository/org/siberia/siberia-launcher/0.0.1/siberia-launcher-0.0.1.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3 seconds
+[INFO] Finished at: Wed Feb 13 19:57:37 CET 2008
+[INFO] Final Memory: 11M/73M
+[INFO] ------------------------------------------------------------------------

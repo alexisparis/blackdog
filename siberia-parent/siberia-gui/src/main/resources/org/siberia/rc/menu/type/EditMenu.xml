@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp" inherit="true">
+    <items>
+	<item i18nref="editItem" order="15" actionClass="siberia-gui::org.siberia.ui.action.impl.DefaultTypeEditingAction"/>
+	<separator order="18"/>
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">siberia-gui;1::menu/type/editMenu.properties</i18nResource>
+	
+    </i18nResources>
+</typeMenu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<repository xmlns="http://alexis.paris.perso.cegetel.net" name="Siberia central repository"
+                                                          adminmail="alexis.paris@wanadoo.fr">
+    
+    <modules>
+        
+        <!-- indicate that this repository contains the plugin siberia-types
+             in directory siberia-types in which there is a module declaration named module.xml
+          -->
+        <moduleDeclaration name="siberia-types" category="system" active="true">
+            <location>siberia-types</location>
+            <declarationFileName>module.xml</declarationFileName>
+            <shortDescription>types for Siberia</shortDescription>
+            <longDescription>types for Siberia</longDescription>
+        </moduleDeclaration>
+        
+    </modules>
+        
+    <licenses>
+        
+        <!-- define the license used by the declared module -->
+        <license name="GPL">
+            the content of the license
+        </license>
+        
+    </licenses>
+    
+    <phantomRepositories>
+        
+        <!-- define two other repositories where we can found plugin dependencies
+             the content of phantom repositories should never be downloadable directly
+        -->
+        <repositoryDecl>http://www.siberia.org</repositoryDecl>
+        <repositoryDecl>ftp://perso.cegetel.net</repositoryDecl>
+        
+    </phantomRepositories>
+
+</repository>

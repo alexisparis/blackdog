@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta name="copyright" content="2008 by Alexis PARIS"/>
+	<meta name="robots" content="all"/>
+	<meta name="author" content="Alexis PARIS"/>
+	<meta name="subject" content="Java wizard assistant"/>
+	<meta name="topic" content="Metas"/>
+	<meta name="expires" content="never"/>
+	<meta name="keywords" content="Awl Java wizard assistant page"/>
+	
+	<title><h1>Bienvenu sur le site de Blackdog</h1></title>
+	
+    </header> 
+    <body>
+	<br/>
+	<section id="intro" name="Présentation">
+	    <p>
+		<table>
+		    <tr>
+			<td>
+			    <a href="screenshots.html"><img src="../images/screenshots/screenshot_1-thumb.png"/></a>
+			</td>
+			<td valign="top">
+			    
+			    <p>Blackdog est un lecteur/gestionnaire audio sous license <a href="license.html">GPL 2.0</a>.<br/>
+				Développé en Java, il est disponible sur plusieurs systèmes d'exploitation : Windows, Linux, Unix, etc..<br/><br/>
+				
+				Blackdog supporte différents flux audios : radio-web, mp3, ogg, flac, wav, wma, aac, mp4, etc...<br/><br/>
+				
+				Les intérêts de Blackdog sont les suivants :
+				<ul>
+				    <li>possibilité de scanner à tous moments un ensemble de répertoires prédéfinis à la recherche de nouveaux fichiers audio.</li>
+				    <li>gestion d'un ensemble de listes de lecture.</li>
+				    <li>interface graphique modulable.</li>
+				    <li>son <b>architecture</b> : Blackdog est basé sur un RCP Java qui offre :
+					<ul>
+					    <li>l'opportunité de développements modulaires.</li>
+					    <li>un <u>outil de mise à jour intégré</u> facilitant la diffusion des améliorations et autres corrections de bugs.</li>
+					</ul>
+				    </li>
+				    <li>nombreux look'and'feels disponibles.</li>
+				    <li>empreinte mémoire relativement faible.</li>
+				    <li>interface graphique dynamique.</li>
+				</ul>
+				
+				<br/>
+				
+				<a href="functionnalities.html">Liste des fonctionnalités...</a>
+				<br/>
+				<a href="screenshots.html">Capture d'écrans...</a>
+				<br/>
+				
+			    </p>
+			</td>
+		    </tr>
+		</table>
+	    </p>
+	</section>
+	
+	
+    </body>
+</document>

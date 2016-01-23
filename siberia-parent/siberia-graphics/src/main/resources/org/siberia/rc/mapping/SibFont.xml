@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>SibFont mapping</description>
+    <include href="SibConfigurable.xml"/>
+    <class name="org.siberia.type.SibFont" extends="org.siberia.type.SibConfigurable">
+        <map-to xml="coldFont"/>
+        <field name="font" type="string">
+            <bind-xml name="font" node="text"/>
+        </field>
+    </class>
+</mapping>

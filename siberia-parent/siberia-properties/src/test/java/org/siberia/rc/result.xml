@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<properties xmlns="http://temp" priority="99">
+    
+    
+    <category repr="Kernel" icon="/org/siberia/rc/img/Kernel.png" order="2">
+        <label>Kernel</label>
+        <description>Kernel configuration</description>
+        
+    </category>
+    
+    <category repr="graphic" icon="/org/siberia/rc/img/Graphics.png" order="4">
+        <label>Graphic</label>
+        <description>Graphic configuration</description>
+        
+        <category repr="frame" icon="" order="3" visible="true">
+            <label>frame positionning</label>
+            <description>frame parameters</description>
+            <property editor="text" renderer="text" repr="frame_x"      nature="integer" order="3" default="0" editable="true">
+                <label>x position</label>
+                <description>the x position applied to frame at launch</description>
+                <dependsOn repr="/graphic/frame/frame_width"/>
+                <range>
+                    <minimum repr="0"/>
+                </range>
+            </property>
+            <property editor="text" renderer="text" repr="frame_y"      nature="integer" order="6" default="0" visible="true">
+                <label>y position</label>
+                <description>the y position applied to frame at launch</description>
+                <range>
+                    <minimum repr="0"/>
+                </range>
+            </property>
+            <property editor="text" renderer="text" repr="frame_width"  nature="integer" order="9" default="800">
+                <label>width</label>
+                <description>the width applied to frame at launch</description>
+                <range>
+                    <minimum repr="0"/>
+                    <maximum repr="1600"/>
+                </range>
+            </property>
+            <property editor="text" renderer="text" repr="frame_height" nature="integer" order="12" default="600">
+                <label>height</label>
+                <description>the height applied to frame at launch</description>
+                <extendedRange>
+                    <excluded>
+                            <minimum repr="800"/>
+                            <maximum repr="900"/>
+                    </excluded>
+                    <excluded>
+                            <minimum repr="950"/>
+                            <maximum repr="1000"/>
+                    </excluded>
+                    <minimum repr="0"/>
+                    <maximum repr="1400"/>
+                </extendedRange>
+            </property>
+        </category>
+        
+    </category>
+    
+    <category repr="editor" icon="/org/siberia/rc/img/gnome-util.png" order="6">
+        <label>Viewer</label>
+        <description>External viewers</description>
+        
+    </category>
+</properties>

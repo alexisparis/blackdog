@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-properties" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="misc"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-xml" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-parser" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-resources" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-types" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-properties-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+		<library id="bsh"        path="libs/bsh-2.0b4.jar" type="code"/>
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+        
+	<extension-point id="Properties">
+            <parameter-def id="id"/>
+            <parameter-def id="path"/>
+	</extension-point>
+        
+        <!-- ###########################################################
+             ################## type definitions #######################
+             ########################################################### -->
+             
+	<extension plugin-id="siberia-types" point-id="Type" id="Properties">
+            <parameter id="class" value="siberia-properties::org.siberia.properties.SiberiaProperties"/>
+        </extension>
+        
+</plugin>

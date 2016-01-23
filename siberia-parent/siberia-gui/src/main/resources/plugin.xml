@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-gui" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="graphic"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-resources" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-xml" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-properties-ui" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-properties" plugin-version="0.5.0"/>
+                <import plugin-id="siberia" plugin-version="0.5.0" exported="true"/>
+                <import plugin-id="siberia-components" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-basic-components" plugin-version="0.5.0" exported="true"/>
+                <import plugin-id="siberia-types" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-utilities" plugin-version="0.5.0" exported="true"/>
+                <import plugin-id="siberia-editor" plugin-version="0.5.0"/>
+                <import plugin-id="transSiberia-ui" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-laf" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-gui-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+	</runtime>
+        
+        <!-- ###########################################################
+             ###########################################################
+             ############### extension definitions #####################
+             ###########################################################
+             ########################################################### -->
+             
+	<extension plugin-id="siberia-types" point-id="Type" id="ApplicationAbout">
+            <parameter id="class" value="siberia-gui::org.siberia.type.ApplicationAbout"/>
+	</extension>
+	
+	<extension plugin-id="siberia-editor" point-id="Editor" id="ApplicationAboutEditor">
+            <parameter id="class" value="siberia-gui::org.siberia.ui.editor.impl.ApplicationAboutEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	
+	<extension plugin-id="siberia-editor" point-id="Editor" id="MessageEditor">
+            <parameter id="class" value="siberia-gui::org.siberia.ui.editor.message.MessageEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	
+	<extension plugin-id="siberia-editor" point-id="Editor" id="TaskEditor">
+            <parameter id="class" value="siberia-gui::org.siberia.ui.editor.task.TaskEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+             
+	<extension plugin-id="siberia-properties" point-id="Properties" id="siberiaProperties">
+            <parameter id="id"   value="main"/>
+            <parameter id="path" value="siberia-gui;1::property/main.xml"/>
+	</extension>
+        
+	<extension plugin-id="siberia-properties-ui" point-id="PropertiesEditor" id="lafPropertiesRenderer">
+            <parameter id="nature" value="laf"/>
+            <parameter id="class"  
+            value="siberia-gui::org.siberia.ui.properties.editor.LafPropertyEditor"/>
+	</extension>
+        
+	<extension plugin-id="siberia-properties-ui" point-id="PropertiesEditor" id="BindingManagerEditor">
+            <parameter id="nature" value="bindingManager"/>
+            <parameter id="class"  
+            value="siberia-gui::org.siberia.ui.properties.editor.BindingManagerPropertyEditor"/>
+	</extension>
+             
+        <!-- components -->
+	<extension plugin-id="siberia-components" point-id="ComponentRegistration" id="status-bar-components">
+            <parameter id="filepath" value="siberia-gui;1::swix/config.xml"/>
+	</extension>
+                
+        <!-- context menus -->
+        
+	<!--extension plugin-id="siberia-components" point-id="contextmenu" id="importMenu">
+            <parameter id="class"    value="siberia-types::org.siberia.type.SibCollection"/>
+            <parameter id="filepath" value="siberia-gui;1::menu/type/ImportMenu.xml"/>
+	</extension-->
+        
+	<!--extension plugin-id="siberia-components" point-id="contextmenu" id="exportMenu">
+            <parameter id="class"    value="siberia-types::org.siberia.type.AbstractSibType"/>
+            <parameter id="filepath" value="siberia-gui;1::menu/type/ExportMenu.xml"/>
+	</extension-->
+        
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="editMenu">
+            <parameter id="class"    value="siberia-types::org.siberia.type.AbstractSibType"/>
+            <parameter id="filepath" value="siberia-gui;1::menu/type/EditMenu.xml"/>
+	</extension>
+        
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="addMenu">
+            <parameter id="class"    value="siberia-types::org.siberia.type.SibCollection"/>
+            <parameter id="filepath" value="siberia-gui;1::menu/type/AddMenu.xml"/>
+	</extension>
+        
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="removeMenu">
+            <parameter id="class"    value="siberia-types::org.siberia.type.AbstractSibType"/>
+            <parameter id="filepath" value="siberia-gui;1::menu/type/RemoveMenu.xml"/>
+	</extension>
+        
+</plugin>

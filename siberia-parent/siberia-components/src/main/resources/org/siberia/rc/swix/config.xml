@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- defines some converters and some additives tags that can be used by the platform -->
+
+<swixConfiguration xmlns="http://temp">
+    
+    <tagGroup>
+        <!-- tag represent the tag that could appear in ui description xml file -->
+        <!-- swingClass represent the class that should extends java.awt.Component and
+                represents a graphical object -->
+        <tag tag="siberiasplitpane"  swingClass="siberia-components::org.siberia.ui.swing.split.SplitPane"/>
+        <tag tag="siberiatree"       swingClass="siberia-components::org.siberia.ui.swing.tree.GenericTree"/>
+        <tag tag="siberiaframe"       swingClass="siberia-components::org.siberia.ui.swing.SiberiaFrame"/>
+        <tag tag="siberiamenubar"    swingClass="siberia-components::org.siberia.ui.swing.menu.SiberiaMenuBar"/>
+        <tag tag="siberiatoolbar"    swingClass="siberia-components::org.siberia.ui.swing.tool.SiberiaToolBar"/>
+        <!--tag tag="editorsarea"    swingClass="siberia-components::org.siberia.ui.component.attic.Editors"/>
+        <tag tag="resourcearea"   swingClass="siberia-components::org.siberia.ui.component.attic.ResourceArea"/>
+        <tag tag="treearea"       swingClass="siberia-components::org.siberia.ui.component.attic.TreeArea"/-->
+        
+    </tagGroup>
+    
+    <converterGroup>
+        <!-- objClass represent the class of the object to convert -->
+        <!-- converterClass represent the class implementing Converter -->
+        <converter objClass="java.lang.Class" converterClass="siberia-components::org.siberia.ui.swix.converter.ClassConverter"/>
+    </converterGroup>
+    
+</swixConfiguration>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>ColdBoolean mapping</description>
+    <include href="ColdType.xml"/>
+    <class name="org.siberia.type.ColdBoolean" extends="org.siberia.type.ColdType">
+        <map-to xml="coldBoolean"/>
+        <field name="value" type="boolean">
+            <bind-xml name="value" node="text"/>
+        </field>
+    </class>
+</mapping>

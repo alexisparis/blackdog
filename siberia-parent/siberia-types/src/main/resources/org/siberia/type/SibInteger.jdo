@@ -1,0 +1,12 @@
+<!DOCTYPE jdo PUBLIC "-//Sun Microsystems, Inc.//DTD Java Data Objects Metadata 2.0//EN" "jdo2.dtd">
+<jdo>
+    <package name="org.siberia.type">
+        <class name="SibInteger" persistence-capable-superclass="org.siberia.type.SibBaseType">
+            <inheritance strategy="subclass-table"/>
+            <field name="value">
+                <column jdbc-type="INTEGER" name="VALUE"/>
+            </field>
+        </class>
+    </package>
+
+</jdo>

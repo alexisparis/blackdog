@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp">
+    <items>
+	<menu label="menuA" order="1">
+	    <item label="itemA1" order="1" shortcut="a" mnemonic="A" actionClass="org.siberia.bar.action.NullAction"/>
+	</menu>
+	<item label="item2" order="2" shortcut="2" mnemonic="2" actionClass="org.siberia.bar.action.NullAction"/>
+	<separator order="3"/>
+    </items>
+    
+</typeMenu>

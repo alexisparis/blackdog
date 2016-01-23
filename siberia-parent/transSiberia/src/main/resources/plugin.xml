@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="transSiberia" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="system"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-xml" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-utilities" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-types" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-resources" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="transSiberia-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+	</runtime>
+        
+        <!-- ###########################################################
+             ################## type definitions #######################
+             ########################################################### -->
+             
+	<extension plugin-id="siberia-types" point-id="Type" id="Plugin">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.plugin.Plugin"/>
+        </extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="PluginStructure">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.plugin.PluginStructure"/>
+        </extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="PluginBuild">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.plugin.PluginBuild"/>
+        </extension>
+	
+	<extension plugin-id="siberia-types" point-id="Type" id="RepositoryLocation">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.repository.SiberiaRepositoryLocation"/>
+        </extension>
+	
+	<extension plugin-id="siberia-types" point-id="Type" id="TransSiberianContext">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.TransSiberianContext"/>
+        </extension>
+	
+	<extension plugin-id="siberia-types" point-id="Type" id="Repository">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.repository.SiberiaRepository"/>
+        </extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AbstractRepository">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.repository.AbstractSiberiaRepository"/>
+        </extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="DefaultRepository">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.repository.DefaultSiberiaRepository"/>
+        </extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="HttpRepository">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.repository.HttpSiberiaRepository"/>
+        </extension>
+	
+	<extension plugin-id="siberia-types" point-id="Type" id="PluginContainer">
+            <parameter id="class" value="transSiberia::org.siberia.trans.type.RepositoryPluginContainer"/>
+        </extension>
+        
+</plugin>

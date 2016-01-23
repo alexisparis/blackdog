@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<toolbar xmlns="http://temp" priority="300">
+    
+    <items>
+	<button i18nref="display.cover.previous" order="20" 
+		actionClass="blackdog::org.blackdog.action.impl.cover.DisplayPreviousCoverAction">
+	</button>
+	<button i18nref="display.cover.next" order="21"
+		actionClass="blackdog::org.blackdog.action.impl.cover.DisplayNextCoverAction"/>
+		
+	<button i18nref="save.cover" order="40"
+		actionClass="blackdog::org.blackdog.action.impl.cover.SaveCoverAction"/>
+		
+	<button i18nref="default.cover" order="60"
+		actionClass="blackdog::org.blackdog.action.impl.cover.SetDefaultCoverAction"/>
+		
+	<button i18nref="delete.cover" order="80"
+		actionClass="blackdog::org.blackdog.action.impl.cover.DeleteCoverAction"/>
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">blackdog;1::tool/coverSearch.properties</i18nResource>
+	
+    </i18nResources>
+    
+</toolbar>

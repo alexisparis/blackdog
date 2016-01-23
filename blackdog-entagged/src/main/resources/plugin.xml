@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="blackdog-entagged" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="structure"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/blackdog/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="blackdog-types"    plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="blackdog-entagged-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+		
+		<library id="entagged-audioformats" path="libs/entagged-audioformats-0.15.jar" type="code"/>
+                
+	</runtime>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemCustomizer" id="EntaggedSongItemCustomizer">
+            <parameter id="class"    value="blackdog-sound-spi::org.blackdog.entagged.customizer.EntaggedSongItemCustomizer"/>
+            <parameter id="priority" value="1000"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="AudioEntagger" id="EntaggedAudioEntagger">
+            <parameter id="name" value="Entagged"/>
+            <parameter id="class" value="blackdog-entagged::org.blackdog.entagged.entagger.EntaggedEntagger"/>
+	</extension>
+        
+        
+</plugin>

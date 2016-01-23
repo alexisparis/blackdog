@@ -1,0 +1,1000 @@
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item1 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using last playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item2 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item2 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item2
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item2 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item2 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using previous playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getPreviousPlayable(item2 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item2 : null) on the list  which size is 2
+DEBUG main org.siberia.type.SibList - id hashcode of 'item2 : null'=2654289
+DEBUG main org.siberia.type.SibList - item2 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item1 : null(id hashcode=12170552)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 1 which is item2 : null(id hashcode=2654289)
+DEBUG main org.siberia.type.SibList - item at 1 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item2 : null) return 1
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item2 : null is 1
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getPreviousPlayable(item2 : null) returns item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item2 : null, false, ALL)
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item24 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item1 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using next playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getNextPlayable(item1 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item1 : null) on the list  which size is 24
+DEBUG main org.siberia.type.SibList - id hashcode of 'item1 : null'=16868914
+DEBUG main org.siberia.type.SibList - item1 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item1 : null(id hashcode=16868914)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item1 : null) return 0
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item1 : null is 0
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getNextPlayable(item1 : null) returns item2 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item2 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item2
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item2 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item24 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item2 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using next playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getNextPlayable(item2 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item2 : null) on the list  which size is 24
+DEBUG main org.siberia.type.SibList - id hashcode of 'item2 : null'=14445175
+DEBUG main org.siberia.type.SibList - item2 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item1 : null(id hashcode=16868914)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 1 which is item2 : null(id hashcode=14445175)
+DEBUG main org.siberia.type.SibList - item at 1 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item2 : null) return 1
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item2 : null is 1
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getNextPlayable(item2 : null) returns item3 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item24 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item3 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using next playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getNextPlayable(item3 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item3 : null) on the list  which size is 24
+DEBUG main org.siberia.type.SibList - id hashcode of 'item3 : null'=13756574
+DEBUG main org.siberia.type.SibList - item3 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item1 : null(id hashcode=16868914)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 1 which is item2 : null(id hashcode=14445175)
+DEBUG main org.siberia.type.SibList - item at 1 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 2 which is item3 : null(id hashcode=13756574)
+DEBUG main org.siberia.type.SibList - item at 2 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item3 : null) return 2
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item3 : null is 2
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getNextPlayable(item3 : null) returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item4
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item24 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item4 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using next playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getNextPlayable(item4 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item4 : null) on the list  which size is 24
+DEBUG main org.siberia.type.SibList - id hashcode of 'item4 : null'=16713087
+DEBUG main org.siberia.type.SibList - item4 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item1 : null(id hashcode=16868914)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 1 which is item2 : null(id hashcode=14445175)
+DEBUG main org.siberia.type.SibList - item at 1 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 2 which is item3 : null(id hashcode=13756574)
+DEBUG main org.siberia.type.SibList - item at 2 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 3 which is item4 : null(id hashcode=16713087)
+DEBUG main org.siberia.type.SibList - item at 3 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item4 : null) return 3
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item4 : null is 3
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getNextPlayable(item4 : null) returns item5 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item5 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item5 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item5
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item5 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item5 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item0 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using next playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getNextPlayable(item0 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item0 : null) on the list  which size is 5
+DEBUG main org.siberia.type.SibList - id hashcode of 'item0 : null'=12710158
+DEBUG main org.siberia.type.SibList - item0 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item0 : null(id hashcode=12710158)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item0 : null) return 0
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item0 : null is 0
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getNextPlayable(item0 : null) returns item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item3 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item4
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item0 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using next playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getNextPlayable(item0 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item0 : null) on the list  which size is 5
+DEBUG main org.siberia.type.SibList - id hashcode of 'item0 : null'=12115695
+DEBUG main org.siberia.type.SibList - item0 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item0 : null(id hashcode=12115695)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item0 : null) return 0
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item0 : null is 0
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getNextPlayable(item0 : null) returns item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item3 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item1 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item0 : null, false, NONE)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item0 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item0 : null, false, NONE)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item0 : null, false, NONE)
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item0 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using last playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item4
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item0 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using last playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item4
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item4 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using previous playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getPreviousPlayable(item4 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item4 : null) on the list  which size is 5
+DEBUG main org.siberia.type.SibList - id hashcode of 'item4 : null'=1913643
+DEBUG main org.siberia.type.SibList - item4 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item0 : null(id hashcode=17459938)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 1 which is item1 : null(id hashcode=15674464)
+DEBUG main org.siberia.type.SibList - item at 1 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 2 which is item2 : null(id hashcode=4877503)
+DEBUG main org.siberia.type.SibList - item at 2 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 3 which is item3 : null(id hashcode=2730814)
+DEBUG main org.siberia.type.SibList - item at 3 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 4 which is item4 : null(id hashcode=1913643)
+DEBUG main org.siberia.type.SibList - item at 4 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item4 : null) return 4
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item4 : null is 4
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getPreviousPlayable(item4 : null) returns item3 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item3 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item4
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item4 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item0 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is item3 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item3 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item0 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is item3 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item0 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item4
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item4 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is item1 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item1 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is item3 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isFirstPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isFirstPlayable(item3 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - is current the first playable ? false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixPrevToCurrent : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - previous is null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using previous playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getPreviousPlayable(item3 : null)
+DEBUG main org.siberia.type.SibList - calling indexOfByReference(item3 : null) on the list  which size is 5
+DEBUG main org.siberia.type.SibList - id hashcode of 'item3 : null'=9319143
+DEBUG main org.siberia.type.SibList - item3 : null class : class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 0 which is item0 : null(id hashcode=28311783)
+DEBUG main org.siberia.type.SibList - item at 0 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 1 which is item1 : null(id hashcode=751354)
+DEBUG main org.siberia.type.SibList - item at 1 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 2 which is item2 : null(id hashcode=11541827)
+DEBUG main org.siberia.type.SibList - item at 2 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? false
+DEBUG main org.siberia.type.SibList - indexOfByReference consider item at 3 which is item3 : null(id hashcode=9319143)
+DEBUG main org.siberia.type.SibList - item at 3 is of class class org.blackdog.type.Mp3SongItem
+DEBUG main org.siberia.type.SibList - same reference ? true
+DEBUG main org.siberia.type.SibList - indexOfByReference(item3 : null) return 3
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - index of item3 : null is 3
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getPreviousPlayable(item3 : null) returns item2 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item2 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item2
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item2 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - played position is 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToPreviousPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 4
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item2 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item2 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 0
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 4
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item2 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 4
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item3 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 4
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item1
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item1 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item3 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 4
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item1 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item1 : null) returns false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : 2
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 4
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - getting playable from historic list
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : 3
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item4
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item4 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item1 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 4
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling isLastPlayable(item4 : null)
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getLastPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getLastPlayable() returns item4 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling isLastPlayable(item4 : null) returns true
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - fixNextToNull : false
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - using first playable
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - calling getFirstPlayable()
+DEBUG main org.blackdog.type.session.PlayListPlayableSession - end of calling getFirstPlayable() returns item0 : null
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - final playedPosition : -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item0
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item0 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item0 : null, false)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling goToNextPlayable(item4 : null, false, ALL)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 5
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.siberia.type.event.ContentChangeEvent - calling setPosition
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : null
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : item3
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(item3 : null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling setCurrentPlayable(null, true)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - setting current playable : null
+DEBUG main org.blackdog.type.session.AbstractPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(null, true)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of calling setCurrentPlayable(null)
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPlayedItemCount()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPlayedItemCount() returns 1
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - calling getPosition()
+DEBUG main org.blackdog.type.session.HistoricPlayableSession - end of getPosition() returns -1

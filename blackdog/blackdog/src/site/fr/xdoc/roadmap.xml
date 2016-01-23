@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        <title><h1>Road map</h1></title> 
+    </header> 
+    <body><br/>
+        <p>
+	    J'envisage dans les prochains mois certaines des fonctionnalités suivantes :
+	    <ul>
+		<li>Gestion d'un profil <b>last.fm</b>.</li>
+		<li>Communication avec des serveurs <b>icecast</b>.</li>
+		<li>Support de <b>périphériques</b> tels que clef-usb, baladeurs numériques.</li>
+	    </ul>
+	
+            
+            <br/>
+            Pour toute demande de nouvelles fonctionnalités, veuillez vous rendre dans la partie 
+            <a href="http://sourceforge.net/tracker/?group_id=198785">"Feature Requests"</a> accessible sur le site
+            Sourceforge du projet ou contactez moi directement par <a href="mailto:xixi31@users.sourceforge.net?subject=Blackdog">mail</a>.
+	    
+	    <br/>
+	    <br/>
+	    N'hésitez pas non plus à me contacter si vous souhaitez vous investir sur ce projet que ce soit en termes de :
+	    <ul>
+		<li>Développement de nouveaux plugins.</li>
+		<li>Création d'images.</li>
+		<li>Ajout de traductions.</li>
+	    </ul>
+        </p>
+    </body>
+        
+</document>

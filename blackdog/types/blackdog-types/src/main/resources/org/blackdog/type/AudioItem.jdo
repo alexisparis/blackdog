@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE jdo PUBLIC 
+    "-//Sun Microsystems, Inc.//DTD Java Data Objects Metadata 2.0//EN" 
+    "http://java.sun.com/dtd/jdo_2_0.dtd">
+<jdo>
+    <package name="org.blackdog.type">
+        <class name="AudioItem" persistence-capable-superclass="org.siberia.type.SibURL" table="AUDIO_ITEM">
+            <inheritance strategy="new-table"/>
+            <field name="category" column="CATEGORY" persistence-modifier="persistent" serialized="false">
+                <column sql-type="VARCHAR"/>
+            </field>
+        </class>
+    </package>
+</jdo>

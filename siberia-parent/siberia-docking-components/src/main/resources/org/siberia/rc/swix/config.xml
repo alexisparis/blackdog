@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- defines some converters and some additives tags that can be used by the platform -->
+
+<swixConfiguration xmlns="http://temp">
+    
+    <tagGroup>
+        <!-- tag represent the tag that could appear in ui description xml file -->
+        <!-- swingClass represent the class that should extends java.awt.Component and
+                represents a graphical object -->
+        
+        <!-- Docking components -->
+        <tag tag="dockingSplitPane"       swingClass="siberia-docking-components::org.siberia.ui.component.docking.DockingSplitPane"/>
+        <tag tag="rootDockingPanel"       swingClass="siberia-docking-components::org.siberia.ui.component.docking.RootDockingPanel"/>
+        <tag tag="editorRootDockingPanel" swingClass="siberia-docking-components::org.siberia.ui.component.docking.EditorRootDockingPanel"/>
+        <tag tag="dockingTabbedPane"      swingClass="siberia-docking-components::org.siberia.ui.component.docking.DockingTabbedPane"/>
+        
+    </tagGroup>
+    
+</swixConfiguration>

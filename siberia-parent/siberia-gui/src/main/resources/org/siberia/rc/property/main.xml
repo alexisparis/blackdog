@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<properties xmlns="http://temp" priority="7">
+    
+    <!--category repr="Kernel" icon="/org/siberia/rc/img/Kernel.png" order="2">
+        <label>Kernel</label>
+        <description>Kernel configuration</description>
+        
+    </category-->
+    
+    <category repr="graphic" icon="siberia-gui;1::img/Graphics.png" order="25">
+        <label>Graphic</label>
+        <description>Graphic configuration</description>
+        
+        <category repr="frame.main" icon="" order="3">
+            <label>frame positionning</label>
+            <description>frame parameters</description>
+            <property editor="check" renderer="text" repr="frame.main.automaticpositioning"      nature="boolean" default="true">
+                <label>automatic</label>
+                <description>true if all frame positions attributes have to be automatically saved when software exit</description>
+            </property>
+            <property editor="check" renderer="text" repr="frame.main.maximized"      nature="boolean" default="true" 
+			dependAction="siberia-gui::org.siberia.ui.properties.action.depend.FramePositionsDependAction">
+                <label>maximized</label>
+                <description>true if the frame have to be maximized at launch</description>
+                <dependsOn repr="/graphic/frame.main/frame.main.automaticpositioning"/>
+            </property>
+            <property editor="text" renderer="text" repr="frame.main.x"      nature="integer" default="0" dependAction="siberia-gui::org.siberia.ui.properties.action.depend.FramePositionsDependAction">
+                <label>x position</label>
+                <description><![CDATA[<html>the x position applied to frame at launch</html>]]></description>
+                <dependsOn repr="/graphic/frame.main/frame.main.maximized"/>
+                <range>
+                    <minimum repr="0"/>
+                </range>
+            </property>
+            <property editor="text" renderer="text" repr="frame.main.y"      nature="integer" default="0" 
+                      dependAction="siberia-gui::org.siberia.ui.properties.action.depend.FramePositionsDependAction">
+                <label>y position</label>
+                <description><![CDATA[<html>the y position applied to frame at launch</html>]]></description>
+                <dependsOn repr="/graphic/frame.main/frame.main.maximized"/>
+                <range>
+                    <minimum repr="0"/>
+                </range>
+            </property>
+            <property editor="text" renderer="text" repr="frame.main.width"  nature="integer" default="800"
+                      dependAction="siberia-gui::org.siberia.ui.properties.action.depend.FramePositionsDependAction">
+                <label>width</label>
+                <description><![CDATA[<html>the width applied to frame at launch<br><br>
+                                      <i>allowed values from 1 to 1600</i></html>]]></description>
+                <dependsOn repr="/graphic/frame.main/frame.main.maximized"/>
+                <range>
+                    <minimum repr="1"/>
+                    <maximum repr="1600"/>
+                </range>
+            </property>
+            <property editor="text" renderer="text" repr="frame.main.height" nature="integer" default="600"
+                      dependAction="siberia-gui::org.siberia.ui.properties.action.depend.FramePositionsDependAction">
+                <label>height</label>
+                <description><![CDATA[<html>the height applied to frame at launch<br>
+                                      <i>allowed values from 1 to 1400</i></i></html>]]></description>
+                <dependsOn repr="/graphic/frame.main/frame.main.maximized"/>
+                <range>
+                    <minimum repr="1"/>
+                    <maximum repr="1400"/>
+                </range>
+            </property>
+        </category>
+        
+        <property editor="laf" repr="frame.main.lookandfeel" nature="string" renderer="combo"
+                  applyAction="siberia-gui::org.siberia.ui.properties.action.apply.ApplyLookAndFeelAction" default="Metal">
+            <label>look and feel</label>
+            <description>look and feel to use</description>
+        </property>
+        
+    </category>
+    
+</properties>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<toolbar xmlns="http://temp" priority="300">
+    
+    <items>
+	<button i18nref="updatePlugins" order="10"
+		actionClass="transSiberia-ui::org.siberia.trans.ui.action.impl.UpdatePluginsAction"/>
+		
+	<button i18nref="downloadPlugins" order="20" 
+		actionClass="transSiberia-ui::org.siberia.trans.ui.action.impl.DownloadPluginAction">
+	</button>
+	<button i18nref="configureRepositories" order="25"
+		actionClass="transSiberia-ui::org.siberia.trans.ui.action.impl.EditRepositoriesAction"/>
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">transSiberia-ui;1::tool/pluginManagment.properties</i18nResource>
+	
+    </i18nResources>
+    
+</toolbar>

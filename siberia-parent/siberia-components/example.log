@@ -1,0 +1,180 @@
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@79717e
+DEBUG main org.siberia.ui.bar.customizer.PluginToolBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@10a2d64
+DEBUG main org.siberia.ui.bar.customizer.PluginMenuBarCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - entering setI18NResolver(I18NResolver)
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - changing i18n resolver from null to org.siberia.ui.bar.PluginI18NResolver@12a3722
+DEBUG main org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer - exiting setI18NResolver(I18NResolver)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default toolbar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultToolBarCustomizer@17ce4e7 to org.siberia.ui.bar.customizer.PluginToolBarCustomizer@982589
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultToolBarCustomizer(ToolBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default menubar customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultMenuBarCustomizer@c88440 to org.siberia.ui.bar.customizer.PluginMenuBarCustomizer@62937c
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultMenuBarCustomizer(MenuBarCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - entering setDefaultPopupMenuCustomizer(PopupMenuCustomizer)
+DEBUG main org.siberia.bar.factory.BarFactory - changing the default popup menu customizer of org.siberia.ui.bar.PluginBarFactory@89cf1e from org.siberia.bar.customizer.DefaultPopupMenuCustomizer@1c0e45a to org.siberia.ui.bar.customizer.PluginPopupMenuCustomizer@cfec48
+DEBUG main org.siberia.bar.factory.BarFactory - exiting setDefaultPopupMenuCustomizer(PopupMenuCustomizer)

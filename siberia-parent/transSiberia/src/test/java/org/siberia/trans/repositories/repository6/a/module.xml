@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module xmlns="http://alexis.paris.perso.cegetel.net">
+    
+    <!-- declare module builds -->
+    <build version="0.0.1" releaseDate="2002-09-24" license="GPL" active="true" check="none">
+        <dependency versionConstraint="0.0.1" name="b"/>
+    </build>
+    <build version="0.0.2" releaseDate="2002-09-24" license="GPL" active="true" check="none">
+        <dependency versionConstraint="0.0.a" name="b"/>
+    </build>
+    
+</module>

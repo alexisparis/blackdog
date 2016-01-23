@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-text" docs-path="../docs" version="0.0.1">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="name"           value="siberia-text"/>
+            <attribute id="generationDate" value="10-07-2006"/>
+            <attribute id="url"            value="http://perso.wanadoo.fr/alexis.paris"/>
+            <attribute id="license"        value="GPL"/>
+            <attribute id="image"          value="/org/siberia/rc/siberia_sunset.jpg"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-basic-components" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-types" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-editor" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-resources" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-lang" plugin-version="0.0.1"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-text-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+	</runtime>
+             
+	<extension plugin-id="siberia-editor" point-id="Editor" id="TextEditor">
+            <parameter id="class" value="siberia-text::org.siberia.ui.editor.impl.text.ColdTextEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+        
+</plugin>

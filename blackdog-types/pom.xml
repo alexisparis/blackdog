@@ -1,0 +1,208 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>siberia</groupId>
+        <artifactId>siberia_pom</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    
+    <groupId>org.blackdog</groupId>
+    <artifactId>blackdog-types</artifactId>
+    <packaging>jar</packaging>
+    <version>0.5.0</version>
+    <name>Black dog types</name>
+    <description>
+        <![CDATA[Project which declares Blackdog types]]>
+    </description>
+    <url>http://maven.apache.org</url>
+    
+    <developers>
+        <developer>
+            <id>ap</id>
+            <name>Alexis PARIS</name>
+            <email>alexis.paris@wanadoo.fr</email>
+            <url>perso.wanadoo.fr/alexis.paris</url>
+            <roles>
+                <role>administrator</role>
+            </roles>
+        </developer>
+    </developers>
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.9</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.siberia</groupId>
+            <artifactId>siberia-types</artifactId>
+            <version>0.5.0</version>
+            <!--scope>provided</scope-->
+            <!-- not provided anymore because it is not included while compiling and therefore, jdo process exited abnormally
+                 to manage jdo enhancement, siberia-types scope become compile and is ignored while assembling
+             -->
+        </dependency>
+	
+    </dependencies>
+    
+    <build>
+        <plugins>
+	    
+	    <!--plugin>
+		<artifactId>maven-antrun-plugin</artifactId>
+		<executions>                  
+		    <execution>
+			<id>Instrument domain classes</id>
+			<configuration>
+			    <tasks>
+				<taskdef name="instrument"
+					 classname="org.hibernate.tool.instrument.cglib.InstrumentTask">
+				    <classpath>
+					<path
+					    refid="maven.dependency.classpath" />
+					<path
+					    refid="maven.plugin.classpath" />
+				    </classpath>
+				</taskdef>
+				<instrument verbose="true">
+				    <fileset
+					dir="${project.build.outputDirectory}">
+					<include name="org/blackdog/type/**/*.class" />
+				    </fileset>
+				</instrument>
+			    </tasks>
+			</configuration>
+			<phase>process-classes</phase>
+			<goals>
+			    <goal>run</goal>
+			</goals>
+		    </execution>
+		</executions>
+		<dependencies>
+		    <dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate</artifactId>
+			<version>3.2.5.ga</version>
+		    </dependency>
+
+		    <dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>1.5.3</version>
+			<scope>compile</scope>
+		    </dependency>
+
+		    <dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm-attrs</artifactId>
+			<version>1.5.3</version>
+			<scope>compile</scope>
+		    </dependency>
+		    
+		</dependencies>
+	    </plugin-->
+            
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assemble/bin.xml</descriptor>
+                    </descriptors>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass></mainClass>
+                            <packageName>org.siberia</packageName>
+                            <addClasspath>true</addClasspath>
+                            <addExtensions/>
+                            <classpathPrefix>libs</classpathPrefix>
+                        </manifest>
+                        <manifestEntries>
+                            <mode>development</mode>
+                            <url>${pom.url}</url>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.siberia.ui.util.BarFactoryTest</mainClass>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!--forkMode>once</forkMode>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <childDelegation>true</childDelegation-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <!--plugin>
+                <groupId>jpox</groupId>
+                <artifactId>jpox-maven-plugin</artifactId>
+                <version>1.1.7</version>
+                <configuration>
+                    <verbose>true</verbose>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin-->
+            
+        </plugins>
+    </build>
+    
+</project>

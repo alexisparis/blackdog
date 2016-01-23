@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<menubar xmlns="http://temp">
+    <menus>
+	<menu label="Edit" order="20">
+	    <separator order="90"/>
+	    <item label="Undo"               order="10"  shortcut="control Z"    mnemonic="U" actionClass="org.siberia.bar.action.NullAction" icon="platform::img/Add.png"/>
+	    <item label="Properties"         order="130"                         mnemonic="P" actionClass="org.siberia.bar.action.NullAction"/>
+	</menu>
+	<menu label="Tools" mnemonic="T" order="100">
+	    <item label="Options"            order="30"                          mnemonic="O" actionClass="org.siberia.ui.action.impl.PropertiesEditingAction">
+		<parameter name="id">0</parameter>
+	    </item>
+	    <item label="Simple web browser" order="10"  shortcut="alt O"        mnemonic="B" actionClass="org.siberia.ui.action.impl.WebBrowserEditingAction"/>
+	    <item label="Debug console"      order="20"                          mnemonic="G" actionClass="org.siberia.ui.action.impl.DebugSessionEditingAction"/>
+	</menu>
+    </menus>
+    
+    <i18nResources>
+
+	<i18nResource prority="50">blackdog;1::menu/main.properties</i18nResource>
+	<i18nResource prority="70">blackdog;1::menu/main2.properties</i18nResource>
+	
+    </i18nResources>
+    
+</menubar>

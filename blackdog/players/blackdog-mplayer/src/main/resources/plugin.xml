@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="blackdog-mplayer" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="misc"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/blackdog/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="blackdog-player" plugin-version="0.5.0"/>
+                <import plugin-id="blackdog-types" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-resources" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-utilities" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="blackdog_player_classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                                                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+             
+	<extension plugin-id="blackdog-player" point-id="Player" id="BlackdogMPlayer">
+            <parameter id="name"  value="Mplayer"/>
+            <parameter id="class" value="blackdog-mplayer::org.blackdog.mplayer.BlackdogMPlayer"/>
+            <parameter id="priority" value="100"/>
+	</extension>
+        
+</plugin>

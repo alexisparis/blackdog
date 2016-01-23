@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-types" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="structure"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-resources" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-xml"       plugin-version="0.0.1"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-types-doc" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+		<!--library id="jdo2api"             path="libs/jdo2-api-2.0.jar"  type="code">
+                    <export prefix="*"/>
+                </library>
+                
+		<library id="geronimo"             path="libs/geronimo-spec-jta-1.0.1B-rc2.jar"  type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="cglib"       path="libs/cglib-2.1_3.jar"                 type="code">
+                    <export prefix="*"/>
+                </library-->
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+        
+	<extension-point id="Type">
+            <parameter-def id="class"/>
+	</extension-point>
+        
+        <!-- ###########################################################
+             ###########################################################
+             ############### extension definitions #####################
+             ###########################################################
+             ########################################################### -->
+        
+        <!-- ###########################################################
+             ################## type definitions #######################
+             ########################################################### -->
+             
+	<extension plugin-id="siberia-types" point-id="Type" id="Abstract">
+            <parameter id="class" value="siberia-types::org.siberia.type.AbstractSibType"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="String">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibString"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Boolean">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibBoolean"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Enumeration">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibEnumeration"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Float">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibFloat"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Integer">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibInteger"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="List">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibList"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Set">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibSet"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Url">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibURL"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="File">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibFile"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="Directory">
+            <parameter id="class" value="siberia-types::org.siberia.type.SibDirectory"/>
+	</extension>
+	
+	<!-- messages -->
+	
+	<extension plugin-id="siberia-types" point-id="Type" id="Message">
+            <parameter id="class" value="siberia-types::org.siberia.type.message.SibMessage"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="WaitingMessage">
+            <parameter id="class" value="siberia-types::org.siberia.type.message.SibWaitingMessage"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="ErrorMessage">
+            <parameter id="class" value="siberia-types::org.siberia.type.message.SibErrorMessage"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="InformationMessage">
+            <parameter id="class" value="siberia-types::org.siberia.type.message.SibInformationMessage"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="WarningMessage">
+            <parameter id="class" value="siberia-types::org.siberia.type.message.SibWarningMessage"/>
+	</extension>
+	
+	<!-- task -->
+	
+	<extension plugin-id="siberia-types" point-id="Type" id="Task">
+            <parameter id="class" value="siberia-types::org.siberia.type.task.SibTask"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AbstractTask">
+            <parameter id="class" value="siberia-types::org.siberia.type.task.AbstractSibTask"/>
+	</extension>
+        
+</plugin>

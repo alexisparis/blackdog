@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<faqs>
+
+  <part id="about">
+    <faq id="sup">
+      <question>Comment obtenir des informations supplémentaires sur le plugin bars?</question>
+      <answer>
+        <p>
+          Envoyer toutes vos questions et remarques à l'adresse mail de l'administrateur du projet
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

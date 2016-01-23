@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="blackdog" docs-path="../docs" version="0.5.0" class="org.blackdog.BlackdogApplication">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+	    
+            <attribute id="update-all-url" value="http://www.blackdog-project.org/updates/"/>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="software"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="kernel">
+                <attribute id="resource" value="sibermusik::org.blackdog.kernel.MusikKernelResources"/>
+                <!--attribute id="eventDispatcher" value="org.atom3.kernel.Atom3KernelResources"/-->
+                <!--attribute id="documentationRegistry" value="org.atom3.kernel.Atom3KernelResources"/-->
+            </attribute>
+            
+            <!--attribute id="graphic">
+                <attribute id="configuration" value="org.atom3.ui.config.Atom3InterfaceConfiguration"/>
+            </attribute-->
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/blackdog/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <!-- reverse-lookup to allow siberia-binding to see all types declared by blackdog -->
+                <import plugin-id="siberia" plugin-version="0.5.0" reverse-lookup="true"/>
+                <import plugin-id="siberia-gui" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-components" plugin-version="0.5.0"/>
+                <import plugin-id="blackdog-types" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-types" plugin-version="0.5.0"/>
+                <import plugin-id="blackdog-player" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-editor" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-resources" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-basic-components" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-utilities" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-properties" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-properties-ui" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-image-searcher" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="blackdog_classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                                                
+	</runtime>
+        
+	<extension plugin-id="siberia-properties-ui" point-id="PropertiesEditor" id="EntaggerChoicePropertiesEditor">
+            <parameter id="nature" value="entaggerChoice"/>
+            <parameter id="class"  
+            value="blackdog::org.blackdog.ui.properties.editor.EntaggerChoicePropertyEditor"/>
+	</extension>
+	
+	<extension plugin-id="siberia-properties-ui" point-id="PropertiesEditor" id="ImageSearcherPropertiesEditor">
+            <parameter id="nature" value="imageSearcherChoice"/>
+            <parameter id="class"  
+            value="blackdog::org.blackdog.ui.properties.editor.ImageSearcherPropertyEditor"/>
+	</extension>
+	
+	<extension plugin-id="siberia-properties-ui" point-id="PropertiesEditor" id="PlayerPropertiesEditor">
+            <parameter id="nature" value="playerChoice"/>
+            <parameter id="class"  
+            value="blackdog::org.blackdog.ui.properties.editor.PlayerPropertyEditor"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-types" point-id="SongItemCustomizer" id="SongItemPropertyCorrecterCustomizer">
+            <parameter id="class"    value="blackdog::org.blackdog.type.customizer.SongItemPropertyCorrecterCustomizer"/>
+            <parameter id="priority" value="999999999"/>
+	</extension>
+        
+	<extension plugin-id="siberia-basic-components" point-id="PropertyRenderer" id="AudioDurationRenderer">
+            <parameter id="class"       value="blackdog-types::org.blackdog.type.base.AudioDuration"/>
+            <parameter id="rendererClass" value="blackdog::org.blackdog.ui.property.AudioDurationCellRenderer"/>
+	</extension>
+	<extension plugin-id="siberia-basic-components" point-id="PropertyRenderer" id="RateRenderer">
+            <parameter id="class"       value="blackdog-types::org.blackdog.type.base.Rate"/>
+            <parameter id="rendererClass" value="blackdog::org.blackdog.ui.property.RatePropertyRenderer"/>
+	</extension>
+	<extension plugin-id="siberia-basic-components" point-id="PropertyEditor" id="RateEditor">
+            <parameter id="class"         value="blackdog-types::org.blackdog.type.base.Rate"/>
+            <parameter id="editorClass" value="blackdog::org.blackdog.ui.property.RatePropertyEditor"/>
+	</extension>
+             
+	<extension plugin-id="siberia-properties" point-id="Properties" id="blackdogProperties">
+            <parameter id="id"   value="main"/>
+            <parameter id="path" value="blackdog;1::property/main.xml"/>
+	</extension>
+	
+	<extension plugin-id="siberia-components" point-id="systray" id="blackdog.systray">
+            <parameter id="filepath" value="blackdog;1::menu/systray/systray.xml"/>
+	</extension>
+             
+	<extension plugin-id="siberia-components" point-id="menubar" id="menu-blackdog">
+            <parameter id="code" value="main"/>
+            <parameter id="filepath" value="blackdog;1::menu/main.xml"/>
+	</extension>
+             
+	<extension plugin-id="siberia-editor" point-id="Editor" id="AudioReader">
+            <parameter id="class" value="blackdog::org.blackdog.ui.AudioReader"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	<extension plugin-id="siberia-editor" point-id="Editor" id="PlayListEditor">
+            <parameter id="class" value="blackdog::org.blackdog.ui.PlayListEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	<extension plugin-id="siberia-editor" point-id="Editor" id="RadioListEditor">
+            <parameter id="class" value="blackdog::org.blackdog.ui.RadioListEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	<extension plugin-id="siberia-editor" point-id="Editor" id="CoverResearchEditor">
+            <parameter id="class" value="blackdog::org.blackdog.ui.cover.CoverResearchEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="scanMenu">
+            <parameter id="class"    value="blackdog-types::org.blackdog.type.Scannable"/>
+            <parameter id="filepath" value="blackdog;1::menu/type/ScanMenu.xml"/>
+	</extension>
+	
+	<!-- désactive pour le moment -->
+	<!--extension plugin-id="siberia-components" point-id="contextmenu" id="taggedSongItemMenu">
+            <parameter id="class"    value="blackdog-types::org.blackdog.type.TaggedSongItem"/>
+            <parameter id="filepath" value="blackdog;1::menu/type/TaggedSongItemMenu.xml"/>
+	</extension-->
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="copyOrMoveSongItemMenu">
+            <parameter id="class"    value="blackdog-types::org.blackdog.type.SongItem"/>
+            <parameter id="filepath" value="blackdog;1::menu/type/CopyOrMoveSongItemMenu.xml"/>
+	</extension>
+        
+	<extension plugin-id="siberia-types" point-id="Type" id="AudioResources">
+            <parameter id="class" value="blackdog::org.blackdog.type.AudioResources"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="RadioList">
+            <parameter id="class" value="blackdog::org.blackdog.type.RadioList"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="PlayListList">
+            <parameter id="class" value="blackdog::org.blackdog.type.PlayListList"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="DeviceList">
+            <parameter id="class" value="blackdog::org.blackdog.type.DeviceList"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="CoverSearch">
+            <parameter id="class" value="blackdog::org.blackdog.type.cover.CoverSearch"/>
+	</extension>
+	
+        <!-- tool menus -->
+             
+	<extension plugin-id="siberia-components" point-id="toolbar" id="conver.toolbar-plugin-management">
+            <parameter id="code" value="toolbar.cover"/>
+            <parameter id="filepath" value="blackdog;1::tool/coverSearch.xml"/>
+	</extension>
+        
+        
+</plugin>

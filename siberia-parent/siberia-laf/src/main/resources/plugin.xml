@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-laf" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="laf"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+        </attributes>
+        
+        <!--requires>
+                <import plugin-id="siberia-gui" plugin-version="0.0.1"/>
+        </requires-->
+        
+	<runtime>
+		<library id="siberia-laf-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+        
+	<extension-point id="LookAndFeel">
+            <parameter-def id="name"/>
+            <parameter-def id="class"/>
+            <!-- pattern which allow to determine according to os if the look and feel can be applied
+                    The pattern is used with the string in lower case representing the os name
+                example : "linux|unix", "win", "none", "" to tell that the laf coudl be used anywhere
+            -->
+            <parameter-def id="osPattern"/>
+	</extension-point>
+        
+        <!-- ###########################################################
+             ###########################################################
+             ############### extension definitions #####################
+             ###########################################################
+             ########################################################### -->
+             
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Gtk">
+            <parameter id="name" value="Gtk"/>
+            <parameter id="class" value="siberia-laf::com.sun.java.swing.plaf.gtk.GTKLookAndFeel"/>
+            <parameter id="osPattern" value="linux|unix"/>
+            
+	</extension>
+             
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Windows">
+            <parameter id="name" value="Windows"/>
+            <parameter id="class" value="siberia-laf::com.sun.java.swing.plaf.windows.WindowsLookAndFeel"/>
+            <parameter id="osPattern" value="win"/>
+	</extension>
+             
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Metal">
+	    <!-- the name of this look and feel could not be changed
+		 since it is the default look and feel and it is hardcoded
+		 in UIManager class -->
+            <parameter id="name" value="Metal"/>
+            <parameter id="class" value="siberia-laf::javax.swing.plaf.metal.MetalLookAndFeel"/>
+            <parameter id="osPattern" value=""/>
+	</extension>
+             
+	<extension plugin-id="siberia-laf" point-id="LookAndFeel" id="Motif">
+            <parameter id="name" value="Motif"/>
+            <parameter id="class" value="siberia-laf::com.sun.java.swing.plaf.motif.MotifLookAndFeel"/>
+            <parameter id="osPattern" value="linux|unix"/>
+	</extension>
+        
+</plugin>

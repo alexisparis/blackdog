@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document> 
+  <header> 
+    <title><h1>Welcome to Siberia platform site</h1></title> 
+  </header> 
+  <body> 
+    <section id="intro" name="introduction">
+      <p>TransSiberia is a library related to Siberia platform
+          <ul>
+            <li>graphical interfaces</li>
+            <li>persistence problems</li>
+            <li>whatever you want...</li>
+          </ul>
+      </p>
+    </section>
+
+    <section id="examples" name="examples">
+      <title>Using examples as templates</title>
+      <p>
+        This demo site has many examples. See the menu at the left.
+        The sources for these examples are in the directory
+        <code>src/documentation/content/xdocs/</code>
+      </p>
+      <p>
+        The sources for the Apache Forrest website are also included
+        in your distribution at <code>$FORREST_HOME/site-author/</code>
+      </p>
+      <p>You can also extend the functionality of Forrest via 
+      <a href="site:plugins">plugins</a>,
+      these will often come with more samples for you to out.</p>
+    </section>
+  </body>
+</document>

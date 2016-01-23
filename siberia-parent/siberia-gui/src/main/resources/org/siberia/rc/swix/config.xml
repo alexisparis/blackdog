@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- defines some converters and some additives tags that can be used by the platform -->
+
+<swixConfiguration xmlns="http://temp">
+    
+    <tagGroup>
+        <!-- tag represent the tag that could appear in ui description xml file -->
+        <!-- swingClass represent the class that should extends java.awt.Component and
+                represents a graphical object -->
+        
+        <!-- Docking components -->
+        <tag tag="defaultstatusbar" swingClass="siberia-gui::org.siberia.ui.status.DefaultStatusBar"/>
+        
+    </tagGroup>
+    
+</swixConfiguration>

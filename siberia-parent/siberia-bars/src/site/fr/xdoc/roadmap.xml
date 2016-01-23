@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document> 
+  <header> 
+    <title><h1>Siberia bars</h1></title> 
+  </header> 
+  <body> 
+    <section id="todo" name="Fonctionnalités prévues">
+      <p>
+          <ul>
+              <li>Implémenter la construction des JComboBox</li>
+              <li>Prendre en compte l'internalisation des libellés et tooltips</li>
+              <li>Création d'une architecture pour les menus contextuels</li>
+          </ul>
+      </p>
+    </section>
+  </body>
+</document>

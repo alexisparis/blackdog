@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<toolbar xmlns="http://temp" priority="300">
+    <items>
+	<button label="Save"       order="40"  mnemonic="S" actionClass="org.siberia.bar.action.NullAction">
+		<parameter name="a">fre</parameter>
+	</button>
+	<check label="Save as"    order="1"  mnemonic="A" actionClass="org.siberia.bar.action.NullAction"/>
+	<separator order="60"/>
+	<button label="Select all" order="9"  mnemonic="A" actionClass="org.siberia.bar.action.NullAction"/>
+	<combo label="Exit"       order="200" mnemonic="X" actionClass="org.siberia.bar.action.NullAction"/>
+    </items>
+    
+</toolbar>

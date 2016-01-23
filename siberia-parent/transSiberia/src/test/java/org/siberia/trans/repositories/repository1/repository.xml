@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<repository xmlns="http://alexis.paris.perso.cegetel.net" name="alexis's repository"
+                                                          adminmail="alexis.paris@wanadoo.fr">
+
+    <modules>
+        
+        <!-- indicate that this repository contains the plugin siberia-types
+             in directory siberia-types in which there is a module declaration named module.xml
+          -->
+        <moduleDeclaration name="a" category="system" active="true">
+            <location>a</location>
+            <declarationFileName>module.xml</declarationFileName>
+            <shortDescription>module a</shortDescription>
+            <longDescription>module a</longDescription>
+        </moduleDeclaration>
+        
+    </modules>
+
+</repository>

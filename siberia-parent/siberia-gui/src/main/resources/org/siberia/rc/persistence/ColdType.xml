@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>ColdType mapping</description>
+    <class name="org.siberia.type.ColdType">
+        <field name="name" type="string">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="leaf" type="boolean">
+            <bind-xml name="leaf" node="attribute"/>
+        </field>
+        <field name="nameCouldChange" type="boolean" get-method="nameCouldChange">
+            <bind-xml name="namable" node="attribute"/>
+        </field>
+    </class>
+</mapping>

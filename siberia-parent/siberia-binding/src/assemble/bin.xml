@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+  <id></id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+      
+    <fileSet>
+      <directory>target/classes</directory>
+      <outputDirectory>/classes</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>target/classes</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>plugin.xml</include>
+        <include>license.txt</include>
+      </includes>
+    </fileSet>
+    
+  </fileSets>
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>/libs</outputDirectory>
+      <unpack>false</unpack>
+      <scope>runtime</scope>
+      <excludes>
+          <exclude>jpox:jpox-testframework</exclude>
+          <exclude>geronimo-spec:geronimo-spec-jta</exclude>
+          <exclude>javax.jdo:jdo2-api</exclude>
+	  <exclude>junit:junit</exclude>
+	  <exclude>cglib:cglib</exclude>
+      </excludes>
+    </dependencySet>
+  </dependencySets>
+</assembly>

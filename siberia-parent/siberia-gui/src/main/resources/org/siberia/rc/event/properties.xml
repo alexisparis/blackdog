@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventdeclaration>
+    <eventcontext type="org.siberia.kernel.eventsystem.EntityMovedContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <eventcontext type="org.siberia.kernel.eventsystem.EntityModificationContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <eventcontext type="org.siberia.kernel.eventsystem.CurrentEntityChangedContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+    <eventcontext type="org.siberia.kernel.eventsystem.StructureModificationContext" active="true">
+        <source item="kernel"/>
+        <listener item="this"/>
+    </eventcontext>
+</eventdeclaration>

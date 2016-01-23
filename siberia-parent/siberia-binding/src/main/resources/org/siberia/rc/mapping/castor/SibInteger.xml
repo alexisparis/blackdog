@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>SibInteger mapping</description>
+    <include href="SibType.xml"/>
+    <class name="org.siberia.type.SibInteger" extends="org.siberia.type.SibType">
+        <map-to xml="integer"/>
+        <field name="value" type="integer">
+            <bind-xml name="value" node="text"/>
+        </field>
+    </class>
+</mapping>

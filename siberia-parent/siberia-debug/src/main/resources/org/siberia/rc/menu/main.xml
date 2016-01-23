@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<menubar xmlns="http://temp">
+    <menus>
+	<menu i18nref="debug" order="300">
+	    
+	    <item i18nref="callGC" order="1" actionClass="siberia-debug::org.siberia.ui.action.CallGCAction"/>	
+	    
+	    <menu i18nref="sendMessage" order="5">
+		<item i18nref="infoMessage"     order="1" actionClass="siberia-debug::org.siberia.ui.action.SendInformationMessageAction"/>	
+		<item i18nref="warningMessage"  order="2" actionClass="siberia-debug::org.siberia.ui.action.SendWarningMessageAction"/>	
+		<item i18nref="errorMessage"    order="3" actionClass="siberia-debug::org.siberia.ui.action.SendErrorMessageAction"/>
+		<item i18nref="longInfoMessage" order="4" actionClass="siberia-debug::org.siberia.ui.action.SendLongInformationMessageAction"/>
+	    </menu>
+	    
+	    <menu i18nref="task" order="10">
+		<item i18nref="defaultTask"     order="1" actionClass="siberia-debug::org.siberia.ui.action.DefaultLaunchTaskAction"/>	
+	    </menu>
+		
+	    <item i18nref="debugTree"     order="30" actionClass="siberia-debug::org.siberia.ui.action.DebugTreeAction"/>
+	    
+	    <item i18nref="debugTable"     order="40" actionClass="siberia-debug::org.siberia.ui.action.DebugTableAction"/>
+	    <item i18nref="debugTable2"    order="41" actionClass="siberia-debug::org.siberia.ui.action.DebugTableAction"/>
+	    <item i18nref="debugTreeTable" order="50" actionClass="siberia-debug::org.siberia.ui.action.DebugTreeTableAction"/>
+	    <item i18nref="debugTreeTable2" order="51" actionClass="siberia-debug::org.siberia.ui.action.DebugTreeTableAction"/>
+	</menu>
+    </menus>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">siberia-debug;1::menu/main.properties</i18nResource>
+	
+    </i18nResources>
+    
+</menubar>

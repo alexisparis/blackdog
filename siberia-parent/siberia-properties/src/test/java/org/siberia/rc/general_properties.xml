@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<properties priority="99" xmlns="http://temp">
+    <category order="6" icon="/org/siberia/rc/img/gnome-util.png" repr="editor">
+        <label>Viewer</label>
+        <description>External viewers</description>
+        <property renderer="text" nature="string" editor="text" default="chainedecaractere" order="9" repr="test_string">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+            <appliedValue>value_5</appliedValue>
+        </property>
+        <property renderer="text" nature="boolean" editor="text" default="true" order="9" repr="test_boolean">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+            <appliedValue>false</appliedValue>
+        </property>
+    </category>
+    <category order="4" icon="/org/siberia/rc/img/Graphics.png" repr="graphic">
+        <label>Graphic</label>
+        <description>Graphic configuration</description>
+        <property renderer="text" nature="integer" editor="text" default="800" order="9" repr="test_integer">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+            <range>
+                <minimum repr="0"/>
+                <maximum repr="1600"/>
+            </range>
+            <appliedValue>484</appliedValue>
+        </property>
+        <property renderer="text" nature="double" editor="text" default="90000.25632" order="9" repr="test_double">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+            <range>
+                <minimum repr="0"/>
+                <maximum repr="1600"/>
+            </range>
+            <appliedValue>854.0</appliedValue>
+        </property>
+        <property renderer="text" nature="float" editor="text" default="6.5" order="12" repr="test_float">
+            <label>height</label>
+            <description>the height applied to frame at launch</description>
+            <extendedRange>
+                <minimum repr="0"/>
+                <maximum repr="1400"/>
+                <excluded>
+                    <minimum repr="800"/>
+                    <maximum repr="900"/>
+                </excluded>
+                <excluded>
+                    <minimum repr="950"/>
+                    <maximum repr="1000"/>
+                </excluded>
+            </extendedRange>
+            <appliedValue>925</appliedValue>
+        </property>
+    </category>
+</properties>

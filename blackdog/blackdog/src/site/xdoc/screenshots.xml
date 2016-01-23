@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    
+    <header>
+            <title><h1>Screenshots</h1></title> 
+    </header> 
+    
+    <body><br/>
+    
+	<table>
+	    <tr>
+		<td>
+		    <a href="screenshots/screenshot_1.html"><img src="images/screenshots/screenshot_1-thumb.png"/></a>
+		</td>
+		<td>
+		    <a href="screenshots/screenshot_2.html"><img src="images/screenshots/screenshot_2-thumb.png"/></a>
+		</td>
+	    </tr>
+	    <tr>
+		<td colSpan="2" height="10">
+		    <spacer height="8" type="block"/>
+		</td>
+	    </tr>
+	    <tr>
+		<td>
+		    <a href="screenshots/screenshot_3.html"><img src="images/screenshots/screenshot_3-thumb.png"/></a>
+		</td>
+		<td>
+		    <a href="screenshots/screenshot_4.html"><img src="images/screenshots/screenshot_4-thumb.png"/></a>
+		</td>
+	    </tr>
+	    
+	</table>
+        
+        <br/><br/>
+        
+    </body>
+    
+</document>

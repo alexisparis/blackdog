@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<menubar xmlns="http://temp">
+    <menus>
+	<menu i18nref="file" order="10">
+
+	    <!--item i18nref="save" order="40" actionClass="siberia-components::org.siberia.bar.action.NullAction">
+		    <parameter name="a">fre</parameter>
+	    </item>
+	    <item i18nref="saveAs" order="50"  actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+
+	    <separator order="60"/-->
+
+	    <item i18nref="createPlaylist" order="65" actionClass="blackdog::org.blackdog.ui.action.impl.CreateNewPlayList"/>
+
+	    <separator order="70"/>
+
+	    <!-- désactivé pour le moment -->
+	    <!--item i18nref="mountIPod" order="75" actionClass="blackdog::org.blackdog.ui.action.impl.CreateNewIPodDevice"/>
+	    <item i18nref="mountCdrom" order="80" actionClass="blackdog::org.blackdog.ui.action.impl.CreateNewOpticalDevice"/>
+	    <item i18nref="mountUsbDrive" order="85" actionClass="blackdog::org.blackdog.ui.action.impl.CreateNewMassStorageDevice"/>
+
+	    <separator order="90"/-->
+	    
+	    <!--item i18nref="print" order="100" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <separator order="150"/-->
+	    <item i18nref="exit"  order="200" actionClass="siberia-gui::org.siberia.ui.action.impl.CloseApplicationAction"/>
+	    
+	</menu>
+	<!--menu i18nref="edit" order="20">
+	    <item i18nref="undo" order="10" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <item i18nref="redo" order="11" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <separator order="30"/>
+	    <item i18nref="cut" order="40" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <item i18nref="copy" order="41" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <item i18nref="paste" order="42" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <separator order="60"/>
+	    <item i18nref="selectAll" order="80" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <separator order="90"/>
+	    <item i18nref="delete" order="100" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <separator order="110"/>
+	    <item i18nref="properties" order="130" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	</menu-->
+	<menu i18nref="view" order="50">
+	    <item i18nref="playlists" order="10" actionClass="blackdog::org.blackdog.ui.action.impl.ViewPlayListsAction"/>
+	    <item i18nref="scanning" order="20" actionClass="blackdog::org.blackdog.ui.action.impl.ViewScanningParametersAction"/>
+	    <separator order="110"/>
+	    <item i18nref="properties" order="200" actionClass="siberia-gui::org.siberia.ui.action.impl.ViewProperties"/>
+	    <item i18nref="coverSearch" order="250" actionClass="blackdog::org.blackdog.action.impl.ViewCoverSearch"/>
+	</menu>
+	<menu i18nref="tools" order="100">
+	    <item i18nref="scanLibrary" order="5" actionClass="blackdog::org.blackdog.action.impl.LaunchScanAction"/>
+	    <separator order="6"/>
+	    
+	    <!-- désactivé pour le moment -->
+	    <!--item i18nref="debugConsole" order="20" actionClass="siberia-gui::org.siberia.ui.action.impl.DebugSessionEditingAction"/-->
+	    <item i18nref="options" order="30" actionClass="siberia-gui::org.siberia.ui.action.impl.PropertiesEditingAction">
+		<parameter name="id">main</parameter>
+	    </item>
+	    <item i18nref="pluginManager" order="100" actionClass="siberia-gui::org.siberia.ui.action.impl.PluginManagerAction"/>
+	    
+	    <separator order="899"/>
+	    <menu i18nref="data" order="900">
+		<item i18nref="resetData" order="5" actionClass="blackdog::org.blackdog.action.impl.ResetTablesAction"/>
+	    </menu>
+	</menu>
+	<menu i18nref="help" order="400">
+	    
+	    <!-- désactivé pour le moment -->
+	    <!--item i18nref="documentation" order="10" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <item i18nref="javadoc" order="20" actionClass="siberia-components::org.siberia.bar.action.NullAction"/>
+	    <item i18nref="helpContents" order="30" actionClass="siberia-components::org.siberia.bar.action.NullAction"/-->
+	    <item i18nref="about" order="40" actionClass="siberia-gui::org.siberia.ui.action.impl.AboutAction"/>
+	</menu>
+    </menus>
+    
+    <i18nResources>
+
+	<i18nResource priority="50">blackdog;1::menu/main.properties</i18nResource>
+	
+    </i18nResources>
+    
+</menubar>

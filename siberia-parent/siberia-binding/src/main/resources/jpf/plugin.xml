@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<plugin id="siberia-binding" name="SiberiaBinding" provider-name="Siberia">
+    
+    <!---extension point="org.jpox.classloader_resolver">
+        <class-loader-resolver name="jdo" class-name="org.siberia.binding.impl.db.jpox.SiberiaClassLoaderResolver"/>
+    </extension-->
+	
+</plugin>

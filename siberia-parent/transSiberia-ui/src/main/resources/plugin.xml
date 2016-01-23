@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="transSiberia-ui" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="graphic"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/trans/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="transSiberia" plugin-version="0.5.0"/>
+                <import plugin-id="siberia" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-editor" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-components" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-types" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-basic-components" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-resources" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-utilities" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="siberia-gui-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+	</runtime>
+        
+        <!-- ###########################################################
+             ###########################################################
+             ############### extension definitions #####################
+             ###########################################################
+             ########################################################### -->
+	     
+	<extension plugin-id="siberia-editor" point-id="Editor" id="UpdateManager">
+            <parameter id="class" value="transSiberia-ui::org.siberia.trans.ui.editor.impl.PluginManagerEditor"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+	
+        <!-- tool menus -->
+             
+	<extension plugin-id="siberia-components" point-id="toolbar" id="transSiberia-ui.toolbar-plugin-management">
+            <parameter id="code" value="plugin.managment"/>
+            <parameter id="filepath" value="transSiberia-ui;1::tool/pluginManagment.xml"/>
+	</extension>
+                
+        <!-- context menus -->
+        
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="repositoryContainerMail">
+            <parameter id="class"    value="transSiberia::org.siberia.trans.type.RepositoryPluginContainer"/>
+            <parameter id="filepath" value="transSiberia-ui;1::menu/type/RepositoryAdministratorMail.xml"/>
+	</extension>
+        
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="repositoryMail">
+            <parameter id="class"    value="transSiberia::org.siberia.trans.type.repository.SiberiaRepository"/>
+            <parameter id="filepath" value="transSiberia-ui;1::menu/type/RepositoryAdministratorMail.xml"/>
+	</extension>
+        
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="httpRepositoryMail">
+            <parameter id="class"    value="transSiberia::org.siberia.trans.type.repository.SiberiaRepositoryLocation"/>
+            <parameter id="filepath" value="transSiberia-ui;1::menu/type/RepositoryAdministratorMail.xml"/>
+	</extension>
+                
+        <!-- properties editor and renderer -->
+        
+	<extension plugin-id="siberia-basic-components" point-id="PropertyRenderer" id="ModuleCategoryRenderer">
+            <parameter id="class"         value="transSiberia::org.siberia.xml.schema.pluginarch.ModuleCategory"/>
+            <parameter id="rendererClass" value="transSiberia-ui::org.siberia.trans.ui.property.ModuleCategoryPropertyRenderer"/>
+	</extension>
+        
+	<extension plugin-id="siberia-basic-components" point-id="PropertyEditor" id="ModuleCategoryEditor">
+            <parameter id="class"       value="transSiberia::org.siberia.xml.schema.pluginarch.ModuleCategory"/>
+            <parameter id="editorClass" value="transSiberia-ui::org.siberia.trans.ui.property.ModuleCategoryPropertyEditor"/>
+	</extension>
+        
+	<extension plugin-id="siberia-basic-components" point-id="PropertyRenderer" id="VersionChoiceRenderer">
+            <parameter id="class"         value="transSiberia::org.siberia.trans.type.plugin.VersionChoice"/>
+            <parameter id="rendererClass" value="transSiberia-ui::org.siberia.trans.ui.property.VersionChoicePropertyRenderer"/>
+	</extension>
+        
+	<extension plugin-id="siberia-basic-components" point-id="PropertyEditor" id="VersionChoiceEditor">
+            <parameter id="class"       value="transSiberia::org.siberia.trans.type.plugin.VersionChoice"/>
+            <parameter id="editorClass" value="transSiberia-ui::org.siberia.trans.ui.property.VersionChoicePropertyEditor"/>
+	</extension>
+        
+</plugin>

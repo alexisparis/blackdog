@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document> 
+  <header> 
+    <title><h1>Bienvenu sur le site de Siberia bars</h1></title> 
+  </header> 
+  <body> 
+    <section id="intro" name="Introduction">
+      <!--title>Introduction</title-->
+      <p>Siberia bars est un plugin Siberia facilitant la mise en place de barre de menu et d'outils dans une application.</p>
+    </section>
+
+    <section id="desc" name="Description">
+      <!--title>Fonctionnalités</title-->
+      <p>
+        Siberia bars définis des extensions pour les objets swing JToolBar et JMenuBar : respectivement
+        ColdMenuBar et ColdToolBar.<br/>
+        A chacune de ces entités est attaché un identifiant. Par exemple, la barre de menu général
+        d'une application Siberia est généralement caractérisé par l'identifiant 'main'.<br/>
+        Une application peut donc définir le menu de base qu'elle utilisera via la rédaction d'un fichier xml
+        décrivant l'ensemble des items du menu.<br/>
+        Un quelconque plugin venant se greffer sur cette application peut, lui-aussi, aisément
+        définir ses propres entrées au menu et ainsi, le menu de l'application résultera
+        d'une fusion des items définis à la fois par l'application et par les différents plugins
+        que l'application possède.<br/>
+        Ceci permet simplement, pour un quelconque plugin de customiser les barres existantes dans l'interface utilisateur
+        et de proposer un mécanisme d'extension relativement avancé et simple à mettre en oeuvre.<br/>
+      </p>
+      <p>
+        Il en va de même pour la définition de barre d'outils.<br/>
+      </p>
+    </section>
+
+    <section id="advanced" name="Description avancée">
+      <p>
+        Siberia bars s'appuie sur les points d'extension définis si besoin par l'application.
+        
+        <div class="source">
+            <pre>
+<![CDATA[<extension-point id="menubar">
+    <parameter-def id="code"/>
+    <parameter-def id="filepath"/>
+</extension-point>
+
+<extension-point id="toolbar">
+    <parameter-def id="code"/>
+    <parameter-def id="filepath"/>
+</extension-point>]]></pre>
+        </div>
+      </p>
+      
+      Chacun de ces points d'extension déclare deux paramètres : <br/>
+      <table>
+          <thead><tr><td>Paramètres</td><td>description</td></tr></thead>
+          <tbody>
+          <tr><td><b>code</b></td><td>représente le code associé à l'objet graphique résultant</td></tr>
+          <tr><td><b>filepath</b></td><td>représente le code désignant la déclaration xml correspondante.<br/>
+                Pour plus de détails, veuillez vous référer à la partie concernant la désignation des ressources sous la plateforme Siberia</td></tr>
+          </tbody>
+      </table>
+      
+      <br/>
+      
+      Il est ainsi possible de définir dans la déclaration de l'application ou d'un plugin une extension déclarant les éléments à ajouter au
+      menu général :
+        <div class="source">
+            <pre>
+<![CDATA[<extension plugin-id="siberia-app" point-id="menubar" id="siberia-app.main">
+    <parameter id="code" value="main"/>
+    <parameter id="filepath" value="siberia-app;1::menu/main.xml"/>
+</extension>]]></pre>
+        </div>
+        
+        Techniquement, lors de la création d'une barre de menu ou d'une barre d'outils, l'ensemble des déclarations de plugins est lu
+        de manière à retrouver toutes les extensions définies.<br/>
+        Un processus de fusion permet ensuite de construire l'ensemble des éléments nécessaires et suffisant au fonctionnement de l'application.
+    </section>
+    
+    <section id="use" name="Utilisation">
+        
+        Il existe différentes façons d'utiliser les fonctionnalités proposées par ce plugin : <br/>
+        
+        <ul>
+            <li>Ce plugin déclare les deux objets ColdMenuBar et ColdToolBar de manière à ce que le développeur puisse les utiliser 
+                dans le fichier de configuration de l'interface graphique : 
+                <div class="source">
+                    <pre>
+<![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<frame id="frame" title="Siberia" DefaultCloseOperation="JFrame.EXIT_ON_CLOSE">
+    
+    <coldmenubar id="menubar" code="main"/>
+    
+    <panel id="g" layout="borderlayout" constraints="BorderLayout.NORTH">
+        <coldtoolbar id="toolbar" code="main" AlignmentX="1" orientation="HORIZONTAL"/>
+    </panel>
+    
+    ...
+    
+</frame>]]></pre>
+                </div>
+                
+                On remarque que les balises <code>&lt;coldmenubar&gt;</code> et <code>&lt;coldtoolbar&gt;</code> dispose d'un attribut
+                <i>code</i> permettant de référencer des points d'extension de type 'menubar' et 'toolbar' qui ont même code.
+            </li>
+            <li>Ecrire directement du code Java créant le type de barre souhaitée et appeler la méthode : <br/>
+                <div class="source">
+                    <pre>
+<![CDATA[public void setCode(String code)]]></pre>
+                </div>
+            
+            </li>
+        </ul>
+    </section>
+    
+  </body>
+</document>

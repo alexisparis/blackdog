@@ -1,0 +1,469 @@
+package org.atom3.ui.swing.text;
+
+import java.awt.Dimension;
+import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JComponent;
+import javax.swing.JEditorPane;
+import javax.swing.JScrollPane;
+import javax.swing.KeyStroke;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
+import javax.swing.event.UndoableEditEvent;
+import javax.swing.event.UndoableEditListener;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
+import javax.swing.text.View;
+import javax.swing.undo.UndoableEditSupport;
+import org.atom3.ui.swing.text.numbered.ForcableView;
+import org.atom3.ui.swing.text.numbered.NumberedEditorKit;
+import org.atom3.ui.swing.text.util.SpellChecker;
+
+
+
+/**
+ *
+ * @author alexis
+ */
+public class UndoableEditorPane extends JEditorPane implements UndoableEditListener,
+                                                               CaretListener,
+                                                               AdjustmentListener,
+                                                               ComponentListener
+{
+    /** reference to its own UndoManager */
+    private UndoEditorManager undoManager     = null; // edit
+    
+    /** String representing the tab sequence */
+    private String            tab             = "   "; // edit
+    
+    /** String representing a comment sequence */
+    private String            commentSequence = ""; // edit
+    
+    private JScrollPane       scrollPane      = null;
+    
+    public static short       NUMBERS_WIDTH   = 0; // edit
+    
+    public static short       preferredWidth  = 0; // edit
+    
+    public int                scrollWidth     = 0; // edit
+    
+    protected SpellChecker    spellChecker    = null; // edit
+    
+    private   boolean         widthLimited    = false; // edit
+    
+    /** Creates a new instance of UndoableEditorPane */
+    public UndoableEditorPane()
+    {   super();
+        
+        this.undoManager = new UndoEditorManager();
+        
+        if ( this.getDocument() != null )
+        {   this.getDocument().addUndoableEditListener( this ); }
+        
+        Action printSentence = new AbstractAction()
+        {
+            public void actionPerformed(ActionEvent e)
+            {   System.out.println("sentence : " + UndoableEditorPane.this.getCurrentSentence()); }
+        };
+        this.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_R, InputEvent.CTRL_MASK), "pre");
+        this.getActionMap().put("pre", printSentence);
+    }
+
+    /** Overrides <code>processKeyEvent</code> to process events. **/
+    protected void processKeyEvent(KeyEvent e)
+    {   boolean doDefault = true;
+        if ( this.spellChecker != null )
+        {   if ( this.spellChecker.isRunning() )
+            {
+                if ( e.getModifiers() == 0 )
+                {   
+                    if ( e.getID() == KeyEvent.KEY_PRESSED )
+                    {   
+                        if ( e.getKeyCode() == KeyEvent.VK_UP )
+                        {   doDefault = false;
+                            this.spellChecker.selectPrevious();
+                        }
+                        else if ( e.getKeyCode() == KeyEvent.VK_DOWN )
+                        {   doDefault = false;
+                            this.spellChecker.selectNext();
+                        }
+                        else if ( e.getKeyCode() == KeyEvent.VK_PAGE_UP )
+                        {   doDefault = false;
+                            this.spellChecker.previousPage();
+                        }
+                        else if ( e.getKeyCode() == KeyEvent.VK_PAGE_DOWN )
+                        {   doDefault = false;
+                            this.spellChecker.nextPage();
+                        }
+                    }
+                }
+            }
+        }
+        
+        if ( doDefault )
+            super.processKeyEvent(e);
+    }
+    
+    /** Creates a new instance of UndoableEditorPane */
+    public UndoableEditorPane(boolean widthLimited) // edit
+    {   this();
+        
+        this.setWidthLimited(widthLimited);
+    }   
+    
+    public short getNumberWidth() // edit
+    {   return this.NUMBERS_WIDTH; }
+    
+    public void setNumberWidth(short width) // edit
+    {   this.NUMBERS_WIDTH = width; }
+    
+    public void linkWithScrollPane(JScrollPane scrollPane) // edit
+    {   if ( this.scrollPane != null )
+        {   
+            this.scrollPane.addComponentListener(this);
+            this.scrollPane.getHorizontalScrollBar().removeAdjustmentListener(this);
+        }
+        
+        this.scrollPane = scrollPane;
+        
+        this.scrollPane.addComponentListener(this);
+        this.scrollPane.getHorizontalScrollBar().addAdjustmentListener(this);
+        
+        boolean alreadyAdded = false;
+        
+        for (int i = 0; i < this.getCaretListeners().length; i++)
+        {   if ( this.getCaretListeners()[i] == this )
+                alreadyAdded = true;
+        }
+         
+        if ( ! alreadyAdded )
+            this.addCaretListener(this);
+    }
+    
+    private String getCurrentToken(String delimiter)
+    {   int position = this.getCaretPosition();
+        
+        String currentChar = null;
+        int startPosition = position - 1;
+        
+        try
+        {   currentChar = this.getText(startPosition, 1);
+            while( ( ! currentChar.equals(delimiter)) && startPosition > 0 )
+            {   startPosition --;
+
+                currentChar = this.getText(startPosition, 1);
+            
+            }
+            int tmp = startPosition == 0 ? 0 : startPosition + 1;
+            return this.getText(tmp, position - tmp);
+        }
+        catch(BadLocationException e) { return ""; }
+    }
+    
+    private String getCurrentSentence()
+    {   return this.getCurrentToken("\n"); }
+    
+    private String getCurrentWord()
+    {   String currentSentence = this.getCurrentSentence();
+        if ( currentSentence == null ) return null;
+        
+        int lastSpaceIndex = currentSentence.lastIndexOf(" ");
+        
+        return currentSentence.substring(lastSpaceIndex == -1 ? 0 : lastSpaceIndex);
+    }
+    
+    public void setSpellChecker(SpellChecker spellChecker) // edit
+    {   if ( spellChecker == null ) return;
+        
+        this.spellChecker = spellChecker;
+        this.spellChecker.setInvoker(this);
+        
+        // call spell checker
+        Action spellAction = new AbstractAction("Spell")
+        {   public void actionPerformed(ActionEvent evt) 
+            {   
+                if ( UndoableEditorPane.this.spellChecker == null ) return;
+                
+                if ( ! UndoableEditorPane.this.spellChecker.isRunning() )
+                {   UndoableEditorPane.this.spellChecker.run(
+                            UndoableEditorPane.this.getCurrentToken(UndoableEditorPane.this.spellChecker.getSentenceDelimiter()),
+                            UndoableEditorPane.this.getCompletionPosition());
+                }
+            }
+        };
+        
+        this.getActionMap().put("Spell", spellAction);
+        this.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE,  InputEvent.CTRL_MASK), "Spell");
+        
+        Object key = UndoableEditorPane.this.getInputMap().get(KeyStroke.getKeyStroke(KeyEvent.VK_DOWN, 0));
+        
+        Action selectNext = new SwitchingAction(this.getActionMap().get(key))
+        {   
+            public void actionPerformed(ActionEvent e)
+            {   boolean doDefaultAction = true;
+                
+                if ( UndoableEditorPane.this.spellChecker != null )
+                {   if ( UndoableEditorPane.this.spellChecker.isRunning() )
+                        doDefaultAction = false;
+                }
+                
+                if ( doDefaultAction )
+                    this.getDefaultAction().actionPerformed(e);
+                else
+                    UndoableEditorPane.this.spellChecker.selectNext();
+            }
+        };
+        
+        key = UndoableEditorPane.this.getInputMap().get(KeyStroke.getKeyStroke(KeyEvent.VK_DOWN, 0));
+        
+        Action selectPrevious = new SwitchingAction(this.getActionMap().get(key))
+        {   
+            public void actionPerformed(ActionEvent e)
+            {   boolean doDefaultAction = true;
+                
+                if ( UndoableEditorPane.this.spellChecker != null )
+                {   if ( UndoableEditorPane.this.spellChecker.isRunning() )
+                        doDefaultAction = false;
+                }
+                
+                if ( doDefaultAction )
+                    this.getDefaultAction().actionPerformed(e);
+                else
+                    UndoableEditorPane.this.spellChecker.selectPrevious();
+            }
+        };
+//        
+//        this.getActionMap().put("Next", selectNext);
+//        this.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_DOWN, 0), "Next");
+//        
+//        this.getActionMap().put("Previous", selectPrevious);
+//        this.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_UP, 0), "Previous");
+    }
+    
+    /** return the position where the completion popup has to be displayed
+     *  @return a Point
+     */
+    public Point getCompletionPosition()
+    {   Point point = null;
+        if ( this.getCaret().getMagicCaretPosition() != null )
+            point = (Point)this.getCaret().getMagicCaretPosition().clone();
+        else
+        {   point = (Point)this.getLocation().clone();
+            point.translate(this.getInsets().left + this.NUMBERS_WIDTH, this.getInsets().top);
+        }
+        
+        point.translate(this.getLocation().x,
+                        this.getLocation().y + 14);
+        return point;
+    }
+    
+    public boolean getScrollableTracksViewportWidth() // edit
+    {   return this.isWidthLimited(); }
+    
+    public Dimension getPreferredSize() // edit
+    {   Dimension d = super.getPreferredSize();
+        
+        if ( d.width < this.scrollWidth )//this.scrollPane.getPreferredSize().width )
+            d.width = this.scrollWidth;//this.scrollPane.getPreferredSize().width;
+        return d;
+    }
+    
+    public String getTab() // edit
+    {   return this.tab; }
+    
+    public void setCommentSequence(String commentSequence) // edit
+    {   this.commentSequence = commentSequence; }
+    
+    public String getCommentSequence() // edit
+    {   return this.commentSequence; }
+    
+    public void refreshEditorAppearance() // edit
+    {   /** refresh insets of all view */
+        //System.out.println("refreshEditor : " + NUMBERS_WIDTH);
+        View view = this.getUI().getRootView(this);
+        
+        for(int i = 0; i < view.getViewCount(); i++)
+        {   View current = view.getView(i);
+            if ( current instanceof ForcableView )
+            {   if ( ((ForcableView)current).isLineNumbersDisplayed() )
+                    ((ForcableView)current).forceSetInsets();
+            }
+            
+            for (int j = 0; j < current.getViewCount(); j++)
+            {   
+                if ( current.getView(j) instanceof ForcableView )
+                {   if ( ((ForcableView)current.getView(j)).isLineNumbersDisplayed() )
+                        ((ForcableView)current.getView(j)).forceSetInsets();
+                }
+            }   
+        }
+    }
+    
+    /** return the given instance responsible of undo and redo action on JEditorPane
+     *  @return an UndoEditorManager
+     */
+    public UndoEditorManager getUndoManager() // edit
+    {   return this.undoManager; }
+    
+    /** link the editor with a new document
+     *  @param doc a new document
+     */
+    public void setDocument(Document doc) // edit
+    {   //System.out.println("setDocument : " + doc);
+        if( this.getDocument() != null ) this.getDocument().removeUndoableEditListener( this );
+        
+        super.setDocument(doc);
+        
+        if( this.getDocument() != null ) this.getDocument().addUndoableEditListener( this );
+        
+        if ( this.getUndoManager() != null )
+            this.getUndoManager().discardAllEdits();
+        
+//        if ( ! (this.getEditorKit() instanceof NumberedEditorKit) )
+//            this.setEditorKit(new NumberedEditorKit());
+    }
+    
+    /** return the length from the current paragraph to the caret position
+     *  @return an integer
+     */
+    public int getCurrentParagraphLength() // edit
+    {   int position = this.getCaretPosition();
+        
+        int positionTmp = position;
+        
+        int length = -1;
+        
+        while( positionTmp >= 0 )
+        {   try
+            {
+                if ( this.getText(positionTmp, 1 ).equals("\n") )
+                    return length;
+            }
+            catch(BadLocationException e){  return position; }
+            positionTmp --;
+            length ++;
+        }
+        return position;
+    }
+    
+    /* #########################################################################
+     * ################## UndoableEditListener implementation ##################
+     * ######################################################################### */
+    
+    public void undoableEditHappened( UndoableEditEvent evt) 
+    {   this.getUndoManager().addEdit(evt.getEdit()); }
+
+    /* #########################################################################
+     * ###################### CaretListener implementation #####################
+     * ######################################################################### */
+    
+    public void caretUpdate(CaretEvent e)
+    {   
+        int viewPosX =  this.scrollPane.getViewport().getViewPosition().x;
+        if ( this.spellChecker != null )
+        {   if ( this.spellChecker.isRunning() )
+            {   /** modify the position of the popup menu */
+                this.spellChecker.updatePosition(UndoableEditorPane.this.getCompletionPosition());
+                this.spellChecker.updateList(this.getCurrentToken(this.spellChecker.getSentenceDelimiter()));
+            }
+        }
+        
+        if ( ! (this.getEditorKit() instanceof NumberedEditorKit) ) return;
+        
+        if ( this.getCurrentParagraphLength() < 5 )
+        {   if ( this.scrollPane != null )
+            {   System.out.println("scrollbar en 0");
+                
+                this.scrollPane.getHorizontalScrollBar().setValue(0);
+            }
+        }
+        
+        if ( viewPosX <= this.NUMBERS_WIDTH )
+        {   //System.out.println("appel à refreshEditorAppearance .................");
+            this.refreshEditorAppearance();
+        }
+    }
+ 
+    /* #########################################################################
+     * #################### AdjustmentListener implementation ##################
+     * ######################################################################### */
+    
+    public void adjustmentValueChanged(AdjustmentEvent e)
+    {   
+        if ( e.getValue() < this.NUMBERS_WIDTH  )
+        {   
+//            System.out.println("appel à repaint");
+//            System.out.println("xxx             : " + this.scrollPane.getViewport().getViewPosition().x);
+            //System.out.println("appel à repaint ...............................");
+//            this.repaint();
+        }
+    }
+    
+    public void setPreferredSize(Dimension dim)
+    {   //System.out.println("appel à setPreferredSize avec : " + dim);
+        super.setPreferredSize(dim);
+    }
+    
+    public void setSize(Dimension dim)
+    {   
+        new Exception().printStackTrace();
+        Dimension dime = this.getSize();
+        dime.width = this.getPreferredSize().width;
+        
+        if ( dime.height == 0 )
+            dime.height = this.scrollPane.getHeight();
+        
+        System.out.println("                     : " + dime);
+        
+        super.setSize(dime);
+    }
+ 
+    /* #########################################################################
+     * #################### ComponentListener implementation ###################
+     * ######################################################################### */
+    
+    public void componentResized(ComponentEvent e)
+    {   // -1 to avoid double Horizontal scrollbars .... hummmmm!!!!
+        this.scrollWidth = this.scrollPane.getViewport().getSize().width - 1;
+//        System.out.println("taille actuelle : " + this.getSize().width);
+//        System.out.println("taille pref : " + this.scrollWidth);
+    }
+
+    public void componentMoved(ComponentEvent e)
+    {   }
+
+    public void componentShown(ComponentEvent e)
+    {   }
+
+    public void componentHidden(ComponentEvent e)
+    {   }
+
+    public boolean isWidthLimited()
+    {   return widthLimited; }
+
+    public void setWidthLimited(boolean widthLimited)
+    {   this.widthLimited = widthLimited; }
+    
+    /** private class for special actions */
+    private abstract class SwitchingAction extends AbstractAction
+    {
+        private Action oldAction = null;
+        
+        public SwitchingAction(Action a)
+        {   super();
+            
+            this.oldAction = a;
+        }
+        
+        public Action getDefaultAction()
+        {   return this.oldAction; }
+    }
+}

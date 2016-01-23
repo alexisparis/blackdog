@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="blackdog-lyrics" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="utilities"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/blackdog/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-types" plugin-version="0.5.0"/>
+                <import plugin-id="blackdog-types" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-editor" plugin-version="0.5.0"/>
+                <import plugin-id="siberia-components"   plugin-version="0.5.0"/>
+                <import plugin-id="siberia-gui"   plugin-version="0.5.0"/>
+                <import plugin-id="siberia-utilities" plugin-version="0.5.0"/>
+        </requires>
+        
+	<runtime>
+		<library id="blackdog_lyrics_classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+		<library id="commons-httpclient" path="libs/commons-httpclient-3.0.1.jar" type="code"/>
+		<library id="commons-codec"      path="libs/commons-codec-1.2.jar"        type="code"/>
+                                                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+             
+        <!-- type -->
+             
+	<extension plugin-id="siberia-types" point-id="Type" id="Lyrics">
+            <parameter id="class" value="blackdog-lyrics::org.blackdog.lyrics.type.Lyrics"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AbstractLyrics">
+            <parameter id="class" value="blackdog-lyrics::org.blackdog.lyrics.type.AbstractLyrics"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="AbstractThreadedLyrics">
+            <parameter id="class" value="blackdog-lyrics::org.blackdog.lyrics.type.AbstractThreadedLyrics"/>
+	</extension>
+	<extension plugin-id="siberia-types" point-id="Type" id="LeoLyrics">
+            <parameter id="class" value="blackdog-lyrics::org.blackdog.lyrics.type.LeoLyrics"/>
+	</extension>
+                
+        <!-- editor -->
+             
+	<extension plugin-id="siberia-editor" point-id="Editor" id="LyricsViewer">
+            <parameter id="class" value="blackdog-lyrics::org.blackdog.lyrics.editor.LyricsViewer"/>
+            <parameter id="enabled" value="true"/>
+	</extension>
+                
+        <!-- context menus -->
+        
+	<extension plugin-id="siberia-components" point-id="contextmenu" id="lyricsMenu">
+            <parameter id="class"    value="blackdog-types::org.blackdog.type.AudioItem"/>
+            <parameter id="filepath" value="blackdog-lyrics;1::menu/type/LyricsMenu.xml"/>
+	</extension>
+        
+</plugin>

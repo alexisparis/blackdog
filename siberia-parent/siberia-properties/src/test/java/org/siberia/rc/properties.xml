@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<properties xmlns="http://temp" priority="99">
+    
+    
+    <category repr="editor" icon="/org/siberia/rc/img/gnome-util.png" order="6">
+        <label>Viewer</label>
+        <description>External viewers</description>
+        <property editor="text" renderer="text" repr="test_string"  order="9" nature="string" default="chainedecaractere">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+        </property>
+        <property editor="text" renderer="text" repr="test_boolean"  order="9" nature="boolean" default="true">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+        </property>
+        
+    </category>
+    <category repr="graphic" icon="/org/siberia/rc/img/Graphics.png" order="4">
+        <label>Graphic</label>
+        <description>Graphic configuration</description>
+        
+        <property editor="text" renderer="text" repr="test_integer"  order="9" nature="integer" default="800">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+            <range>
+                <minimum repr="0"/>
+                <maximum repr="1600"/>
+            </range>
+        </property>
+        <property editor="text" renderer="text" repr="test_double"  order="9" nature="double" default="90000.25632">
+            <label>width</label>
+            <description>the width applied to frame at launch</description>
+            <range>
+                <minimum repr="0"/>
+                <maximum repr="1600"/>
+            </range>
+        </property>
+        <property editor="text" renderer="text" repr="test_float" order="12" nature="float" default="6.5">
+            <label>height</label>
+            <description>the height applied to frame at launch</description>
+            <extendedRange>
+                <excluded>
+                        <minimum repr="800"/>
+                        <maximum repr="900"/>
+                </excluded>
+                <excluded>
+                        <minimum repr="950"/>
+                        <maximum repr="1000"/>
+                </excluded>
+                <minimum repr="0"/>
+                <maximum repr="1400"/>
+            </extendedRange>
+        </property>
+        
+    </category>
+</properties>

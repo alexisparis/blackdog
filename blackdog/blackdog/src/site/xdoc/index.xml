@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta name="copyright" content="2008 by Alexis PARIS"/>
+	<meta name="robots" content="all"/>
+	<meta name="author" content="Alexis PARIS"/>
+	<meta name="subject" content="Java wizard assistant"/>
+	<meta name="topic" content="Metas"/>
+	<meta name="expires" content="never"/>
+	<meta name="keywords" content="Awl Java wizard assistant page"/>
+	
+	<title><h1>Welcome on the Blackdog website</h1></title>
+	
+    </header> 
+    <body>
+	<br/>
+	<section id="intro" name="Presentation">
+	    <p>
+		<table>
+		    <tr>
+			<td>
+			    <a href="screenshots.html"><img src="images/screenshots/screenshot_1-thumb.png"/></a>
+			</td>
+			<td valign="top">
+			    
+			    <p>Blackdog is an audio player and manager under license <a href="license.html">GPL 2.0</a>.<br/>
+				Developed in Java programming language, it is available under severall operating systems : Windows, Linux, Unix, etc..<br/><br/>
+				
+				Blackdog currently supports severall audio streams such as web-radio, mp3, ogg, flac, wav, wma, aac, mp4, etc...<br/><br/>
+				
+				The advantages of blackdog are :
+				<ul>
+				    <li>launch in predefined directories an automatic search for new audio files.</li>
+				    <li>Manage playlists.</li>
+				    <li>Docking windows user interface.</li>
+				    <li>its <b>architecture</b> : Blackdog is based on a Java RCP which allows :
+					<ul>
+					    <li>scalability and plugins development.</li>
+					    <li>an <u>integrated automatic update tool</u> which allow to provide the last plugins version without manual installations.</li>
+					</ul>
+				    </li>
+				    <li>severall look'and'feels availables.</li>
+				    <li>relative small footprint.</li>
+				    <li>dynamic user interface.</li>
+				</ul>
+				
+				<br/>
+				
+				<a href="functionnalities.html">Features...</a>
+				<br/>
+				<a href="screenshots.html">Screenshots...</a>
+				<br/>
+				
+			    </p>
+			</td>
+		    </tr>
+		</table>
+	    </p>
+	</section>
+	
+	
+    </body>
+</document>

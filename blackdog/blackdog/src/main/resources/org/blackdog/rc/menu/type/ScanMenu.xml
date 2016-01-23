@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp" inherit="true">
+    <items>
+	<item i18nref="scanPlaylist" order="2" actionClass="blackdog::org.blackdog.ui.action.impl.ScanPlayListAction"/>
+	<separator order="5"/>
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">blackdog;1::menu/type/scanMenu.properties</i18nResource>
+	
+    </i18nResources>
+    
+</typeMenu>

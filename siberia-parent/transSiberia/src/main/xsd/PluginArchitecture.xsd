@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="unqualified"
+           targetNamespace="http://alexis.paris.perso.cegetel.net"
+           xmlns="http://alexis.paris.perso.cegetel.net">
+               
+<!--xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://temp" 
+           xmlns="http://temp"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"-->
+    
+  <!-- ##################################################################### -->
+  <!-- ##################################################################### -->
+  <!-- ######################### REPOSITORIES ############################## -->
+  <!-- ##################################################################### -->
+  <!-- ##################################################################### -->
+    
+  <xs:element name="repositories">
+    <xs:annotation>
+      <xs:documentation source="version">3.0.0+</xs:documentation>
+      <xs:documentation source="description">
+    </xs:documentation>
+    </xs:annotation>
+      <xs:complexType>
+          <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="urlRepository" type="urlRepository"/>
+          </xs:sequence>
+	  
+	  <xs:attribute name="automaticLocalBackUp" type="xs:boolean" use="optional" default="true"/>
+	
+      </xs:complexType>
+      
+  </xs:element>
+  
+  <xs:complexType name="urlRepository">
+      <xs:simpleContent>
+          <xs:extension base="xs:string">
+          </xs:extension>
+      </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:element name="repositoryDecl">
+      <xs:complexType>
+          <xs:simpleContent>
+              <xs:extension base="xs:string">
+                  <xs:attribute name="name" type="xs:string"/>
+              </xs:extension>
+          </xs:simpleContent>
+      </xs:complexType>
+  </xs:element>
+  
+  <!-- ##################################################################### -->
+  <!-- ##################################################################### -->
+  <!-- ############################ MODULE ################################# -->
+  <!-- ##################################################################### -->
+  <!-- ##################################################################### -->
+  
+  <xs:element name="module">
+    <xs:annotation>
+      <xs:documentation source="version">3.0.0+</xs:documentation>
+      <xs:documentation source="description">
+    </xs:documentation>
+    </xs:annotation>
+      <xs:complexType>
+          <xs:sequence maxOccurs="unbounded" minOccurs="0">
+              <xs:element ref="build"/>
+          </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+  
+  <!-- ##################################################################### -->
+  <!-- ########################### Modules ################################# -->
+  <!-- ##################################################################### -->
+  
+  <xs:element name="build" type="moduleBuild"/>
+  
+  <xs:complexType name="moduleBuild">
+      <xs:sequence>
+          <xs:annotation>
+              <xs:documentation>
+                  define the modules required by this build.
+                  This module will be searched in the current repository and in its declared phantom repository
+              </xs:documentation>
+          </xs:annotation>
+	  <xs:sequence>
+	      <xs:element minOccurs="0" maxOccurs="unbounded" ref="dependency"/>
+	  </xs:sequence>
+      </xs:sequence>
+      <xs:attributeGroup ref="moduleBuildAttributes"/>
+  </xs:complexType>
+  
+  <xs:element name="dependency" type="moduleDependency"/>
+  
+  <xs:complexType name="moduleDependency">
+      <xs:attribute name="name"       type="xs:string"/>
+      <xs:attribute name="versionConstraint" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:attributeGroup name="moduleBuildAttributes">
+      <xs:attribute name="version"      type="xs:string"/>
+      <xs:attribute name="releaseDate"  type="xs:date"/>
+      <xs:attribute name="license"      type="xs:string"/>
+      <xs:attribute name="active"       type="xs:boolean" use="optional" default="true"/>
+      <xs:attribute name="check"        type="checkType" use="optional" default="sha1"/>
+      <xs:attribute name="rebootNeeded" type="xs:boolean" use="optional" default="false"/>
+  </xs:attributeGroup>
+  
+  
+  <xs:simpleType name="checkType">
+      <xs:restriction base="xs:string">
+          <xs:enumeration value="none"/>
+          <xs:enumeration value="md5"/>
+          <xs:enumeration value="sha1"/>
+      </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- ##################################################################### -->
+  <!-- ##################################################################### -->
+  <!-- ########################## REPOSITORY ############################### -->
+  <!-- ##################################################################### -->
+  <!-- ##################################################################### -->
+  
+  <xs:element name="modules">
+      <xs:complexType>
+	  <xs:sequence>
+	      <xs:element minOccurs="0" maxOccurs="unbounded" ref="moduleDeclaration"/>
+	  </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="licenses">
+      <xs:complexType>
+	  <xs:sequence>
+	      <!--xs:element minOccurs="0" maxOccurs="unbounded" ref="license"/-->
+	      <xs:element minOccurs="0" maxOccurs="unbounded" ref="licenseLink"/>
+	  </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+
+  <xs:element name="phantomRepositories">
+      <xs:complexType>
+	  <xs:sequence>
+	      <xs:element minOccurs="0" maxOccurs="unbounded" ref="repositoryDecl"/>
+	  </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+
+  <xs:element name="repository">
+    <xs:annotation>
+      <xs:documentation source="version">3.0.0+</xs:documentation>
+      <xs:documentation source="description">
+    </xs:documentation>
+    </xs:annotation>
+      <xs:complexType>
+          <xs:all minOccurs="0">
+              <xs:element ref="modules"/>
+              <xs:element ref="licenses"/>
+              <xs:element ref="phantomRepositories"/>
+          </xs:all>
+          <xs:attribute name="adminmail" type="xs:string" use="required">
+              <xs:annotation>
+                  <xs:documentation>
+                      provide a valid mail adress to warn repository administrator about download error
+                        - invalid file signatures
+                        - unavailable dependencies
+                  </xs:documentation>
+              </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="name" type="xs:string" use="required">
+              <xs:annotation>
+                  <xs:documentation>
+                      provide a name for this repository
+                  </xs:documentation>
+              </xs:annotation>
+          </xs:attribute>
+      </xs:complexType>
+  </xs:element>
+  
+  <!-- ##################################################################### -->
+  <!-- ########################### Modules ################################# -->
+  <!-- ##################################################################### -->
+  
+  <xs:element name="moduleDeclaration">
+      <xs:complexType>
+          <xs:all minOccurs="0">
+              <xs:element ref="location"/>
+              <xs:element ref="declarationFileName"/>
+              <xs:element ref="shortDescription"/>
+              <xs:element ref="longDescription"/>
+          </xs:all>
+          <xs:attributeGroup ref="moduleDeclarationAttributes"/>
+      </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="location">
+      <xs:complexType>
+	  <xs:simpleContent>
+	      <xs:extension base="xs:string"/>
+	  </xs:simpleContent>
+      </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="declarationFileName">
+      <xs:complexType>
+	  <xs:simpleContent>
+	      <xs:extension base="xs:string"/>
+	  </xs:simpleContent>
+      </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="shortDescription"    type="xs:string"/>
+  <xs:element name="longDescription"     type="xs:string"/>
+
+  <xs:attributeGroup name="moduleDeclarationAttributes">
+      <xs:attribute name="name"             type="xs:string"/>
+      <xs:attribute name="category"         type="moduleCategory" use="optional" default="misc"/>
+      <xs:attribute name="active"           type="xs:boolean" use="optional" default="true"/>
+  </xs:attributeGroup>
+  
+  <!-- update the properties file ModuleCategory in org.siberia.rc.i18n when adding or removing 
+	an item of the enumeration
+    -->
+  <xs:simpleType name="moduleCategory">
+      <xs:restriction base="xs:string">
+          <xs:enumeration value="unknown"/>
+          <xs:enumeration value="software"/>
+          <xs:enumeration value="system"/>
+          <xs:enumeration value="laf"/>
+          <xs:enumeration value="graphic"/>
+          <xs:enumeration value="persistence"/>
+          <xs:enumeration value="misc"/>
+          <xs:enumeration value="xml-persistence"/>
+          <xs:enumeration value="editor"/>
+          <xs:enumeration value="utilities"/>
+          <xs:enumeration value="structure"/>
+      </xs:restriction>
+  </xs:simpleType>
+  
+  
+  <!-- ##################################################################### -->
+  <!-- ########################### License ################################# -->
+  <!-- ##################################################################### -->
+  
+  <xs:element  name="license">
+      <xs:complexType>
+          <xs:simpleContent>
+              <xs:extension base="xs:string">
+                  <xs:attribute name="name" type="xs:string"/>
+              </xs:extension>
+          </xs:simpleContent>
+      </xs:complexType>
+  </xs:element>
+  
+  <xs:element  name="licenseLink">
+      <xs:complexType>
+          <xs:simpleContent>
+              <xs:extension base="xs:string">
+                  <xs:attribute name="name" type="xs:string"/>
+              </xs:extension>
+          </xs:simpleContent>
+      </xs:complexType>
+  </xs:element>
+  
+  
+</xs:schema>

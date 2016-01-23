@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp" inherit="true">
+    <items>
+	
+	<separator order="98"/>
+	
+	<menu i18nref="lyrics" order="99">
+	    <item i18nref="showLeoLyrics" order="1" 
+		    actionClass="blackdog-lyrics::org.blackdog.lyrics.action.LeoLyricsEditingAction"/>
+	</menu>
+	
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">blackdog-lyrics;1::menu/type/lyricsMenu.properties</i18nResource>
+	
+    </i18nResources>
+    
+</typeMenu>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+    
+    <class name="org.blackdog.type.RadioItem" table="RADIO_ITEM">
+	<id name="id" type="long" column="ID">
+	    <generator class="native"/>
+	</id>
+	<property name="moveable"        column="MOVEABLE"/>
+	<property name="name"            column="NAME"/>
+	<property name="nameCouldChange" column="NAME_CHANGE"/>
+	<property name="removable"       column="REMOVABLE"/>
+        
+	<property name="categoryValue" type="string" not-null="false" length="40"/>
+	
+	<property name="rateValue" type="integer" length="4" not-null="false"/>
+	
+	<property name="countPlayed"/>
+	<property name="lastTimePlayed"/>
+	<property name="creationDate"/>
+	
+	<property name="filePath"           column="PATH" type="string" length="500"/>
+	
+    </class> 
+
+</hibernate-mapping>

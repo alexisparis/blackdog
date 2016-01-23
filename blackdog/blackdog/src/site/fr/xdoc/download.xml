@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+        <title><h1>Téléchargement de Blackdog</h1></title> 
+    </header> 
+    <body><br/>
+        <p>
+            <!--a href="http://sourceforge.net/project/showfiles.php?group_id=184785">Accéder à la page de téléchargement</a>
+            <br/><br/-->
+        
+	    L'installeur peut être téléchargé <a href="http://downloads.sourceforge.net/blackdog/blackdog-installer-0.5.0.jar?use_mirror=ovh">ici</a>.
+        </p>
+    </body>
+        
+</document>

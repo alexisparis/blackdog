@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<ns2:module xmlns:ns2="http://alexis.paris.perso.cegetel.net">
+    <ns2:build version="0.0.1" releaseDate="2007-11-11T20:30:52.000+01:00" license="GPL">
+        <ns2:dependency versionConstraint="toto" name="a"/>
+        <ns2:dependency versionConstraint="tata" name="b"/>
+    </ns2:build>
+</ns2:module>

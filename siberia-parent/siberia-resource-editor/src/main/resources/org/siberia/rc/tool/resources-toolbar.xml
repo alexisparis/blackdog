@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<toolbar xmlns="http://temp" priority="300">
+    
+    <items>
+	<button i18nref="new" order="20" actionClass="siberia-components::org.siberia.bar.action.NullAction">
+	</button>
+	<button i18nref="open" order="25" actionClass="siberia-components::org.siberia.bar.action.NullAction">
+	</button>
+
+	<separator order="30"/>
+
+	<button i18nref="save" order="35" actionClass="siberia-components::org.siberia.bar.action.NullAction">
+	</button>
+	<button i18nref="saveAs" order="40" actionClass="siberia-components::org.siberia.bar.action.NullAction">
+	</button>
+
+	<separator order="45"/>
+
+	<button i18nref="close" order="50" actionClass="siberia-components::org.siberia.bar.action.NullAction">
+	</button>
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">siberia-resource-editor;1::tool/resources-toolbar.properties</i18nResource>
+	
+    </i18nResources>
+    
+</toolbar>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp">
+    <items>
+	<menu label="Edit" order="20">
+	    <separator order="90"/>
+	    <item label="Undo"               order="10"  shortcut="control Z"    mnemonic="U" actionClass="org.siberia.bar.action.NullAction" icon="platform::img/Add.png"/>
+	    <item label="Properties"         order="130"                         mnemonic="P" actionClass="org.siberia.bar.action.NullAction"/>
+	</menu>
+
+	<item label="Options"            order="30"                          mnemonic="O" actionClass="org.siberia.ui.action.impl.PropertiesEditingAction">
+	    <parameter name="id">0</parameter>
+	</item>
+	<check label="Simple web browser" order="10"  shortcut="alt O"        mnemonic="B" actionClass="org.siberia.ui.action.impl.WebBrowserEditingAction"/>
+	<item label="Debug console"      order="19"                          mnemonic="G" actionClass="org.siberia.ui.action.impl.DebugSessionEditingAction"/>
+    </items>
+    
+</typeMenu>

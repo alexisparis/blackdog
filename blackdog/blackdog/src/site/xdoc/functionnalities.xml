@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+    <header>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+	<meta name="copyright" content="2008 by Alexis PARIS"/>
+	<meta name="robots" content="all"/>
+	<meta name="author" content="Alexis PARIS"/>
+	<meta name="subject" content="Java wizard assistant"/>
+	<meta name="topic" content="Metas"/>
+	<meta name="expires" content="never"/>
+	<meta name="keywords" content="Awl Java wizard assistant page"/>
+	
+	<title><h1>Features of Blackdog</h1></title>
+	
+    </header> 
+    <body>
+	<br/>
+	<section id="functionnalities" name="">
+	    <p>
+		<ul>
+		    <li><b><u>Audios</u></b> :
+			<ul>
+			    <li>Management of the main audio formats (mp3, ogg, flac, etc...).</li>
+			    <li>Management of web radios.</li>
+			    <li>Information about a song :
+				<ul>
+				    <li>Rate</li>
+				    <li>Date of creation</li>
+				    <li>Date when the song was last played.</li>
+				    <li>Number of time an item was played.</li>
+				</ul>
+
+				and of course the traditional pieces of information :
+				<ul>
+				    <li>Title</li>
+				    <li>Artist</li>
+				    <li>Album</li>
+				    <li>Catégory</li>
+				    <li>Track number</li>
+				    <li>Author</li>
+				    <li>Comment</li>
+				</ul>
+				Those informations are presents and can be modified even if the format does not supports tags.
+			    </li>
+			    <li>Modify the caracteristics of song without opening a dialog window.</li>
+			    <li>Modify caracteristics of several items at a time.</li>
+			    <li>Real-time modifications of the tags of audio files.</li>
+			    <li>Move/copy a group of items to another directory.</li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Readers</u></b> :
+			<ul>
+			    <li>Could chose the reader to use. Currently, there are two available readers :
+				<ul>
+				    <li>MPlayer based reader which is the default one.</li>
+				    <li>Reader based on the Java audio framework (only allows to play the most commons audio formats).</li>
+				</ul>
+			    </li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Editors</u></b> :
+			<ul>
+			    <li>Playlist editor :
+				<ul>
+				    <li>Allow to filter on the items of a playlist by entering criterions : allow to find a song fast.</li>
+				    <li>Choose which information of the item you want to see in the editor (track number, rate, etc..).</li>
+				    <li>Sorting (allow, for example, to sort items according to their rate).</li>
+				    <li>Complete playlists by using drag'n drop.</li>
+				</ul>
+			    </li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Tools</u></b> :
+			<ul>
+			    
+			    <li>Editor which allow to visualize images relative to the item currently played :
+				<ul>
+				    <li>Use the images in the directory of the item.</li>
+				    <li>Could indicate the default image to use for a song.</li>
+				    <li>Search for new images on the web :
+					<ul>
+					    <li>Get in real-time images found by using the caracteristics of the song.</li>
+					    <li>Allow to save images on the directory of the song.</li>
+					    <li>Choose the search engine; today, only one plugin is available : it searchs images using Google search engine.<br/>
+						Some others search engines will be added in the next months.
+					    </li>
+					</ul>
+
+					Available parameters :
+					<ul>
+					    <li>Maximum images found.</li>
+					    <li>Choose the size of the images downloaded.</li>
+					</ul>
+				    </li>
+				</ul>
+			    </li>
+			    
+			    <li>Tools that allow to search for the lyrics of a song according to the database of <a href="http://www.leoslyrics.com/">leo'lyrics</a>.<br/>
+				As image searchers, anothers lyrics providers will be added later.
+			    </li>
+			</ul>
+		    </li>
+		    
+		    <li><b><u>Scan</u></b> : <br/>Blackdog only needs to know the directory where you have the habit to store your audio files.<br/>
+			When it knows it, you only have to launch another scan and blackdog will automatically adds new items in your audio library.
+		    </li>
+		</ul>
+		
+	    </p>
+	</section>
+    </body>
+</document>

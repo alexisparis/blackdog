@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<repository xmlns="http://alexis.paris.perso.cegetel.net" name="alexis's repository"
+                                                          adminmail="alexis.paris@wanadoo.fr">
+
+    <modules>
+        
+        <!-- indicate that this repository contains the plugin siberia-types
+             in directory siberia-types in which there is a module declaration named module.xml
+          -->
+        <moduleDeclaration name="d" category="system" active="true">
+            <location>d</location>
+            <declarationFileName>module.xml</declarationFileName>
+            <shortDescription>module d</shortDescription>
+            <longDescription>module d</longDescription>
+        </moduleDeclaration>
+        
+    </modules>
+    
+    <phantomRepositories>
+        
+        <!-- define two other repositories where we can found plugin dependencies
+             the content of phantom repositories should never be downloadable directly
+        -->
+        <repositoryDecl>http://alexis.paris.perso.cegetel.net/test_transsiberia/repository6</repositoryDecl>
+	
+    </phantomRepositories>
+
+</repository>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>SibType mapping</description>
+    <class name="org.siberia.type.SibType" verify-constructable="false">
+        <field name="name" type="string">
+            <bind-xml name="name" node="attribute"/>
+        </field>
+        <field name="nameCouldChange" type="boolean" get-method="nameCouldChange">
+            <bind-xml name="namable" node="attribute"/>
+        </field>
+        <field name="readonly" type="boolean" get-method="isReadOnly">
+            <bind-xml name="readonly" node="attribute"/>
+        </field>
+        <field name="moveable" type="boolean" get-method="canBeMoved">
+            <bind-xml name="moveable" node="attribute"/>
+        </field>
+    </class>
+</mapping>

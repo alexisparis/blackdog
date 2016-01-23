@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="blackdog-sound-spi-libs" docs-path="../docs" version="0.5.0">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="structure"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/blackdog/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="blackdog-sound-spi" plugin-version="0.5.0" exported="true"/>
+        </requires>
+        
+	<runtime>
+		<library id="blackdog-sound-spi-libs-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+		<library id="jflac"           path="libs/jflac-1.2.jar"            type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="jl"	      path="libs/jl-1.0.jar"               type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="jogg"	      path="libs/jogg-0.0.7.jar"           type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="jorbis"	      path="libs/jorbis-0.0.15.jar"        type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="jspeex"	      path="libs/jspeex-0.9.7.jar"        type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="mp3spi"          path="libs/mp3spi-1.9.4.jar"         type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="tritonus-share"  path="libs/tritonus_share-0.3.6.jar" type="code">
+                    <export prefix="*"/>
+                </library>
+		<library id="vorbisspi"       path="libs/vorbisspi-1.0.2.jar"      type="code">
+                    <export prefix="*"/>
+                </library>
+                
+	</runtime>
+        
+        <!-- ###########################################################
+             ################# extension points ########################
+             ########################################################### -->
+            
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiAudioFileReader" id="MpegSpiAudioFileReader">
+            <parameter id="class"               value="blackdog-sound-spi-libs::javazoom.spi.mpeg.sampled.file.MpegAudioFileReader"/>
+            <parameter id="preferredExtensions" value="mp3"/>
+	</extension>
+            
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiAudioFileReader" id="VorbisSpiAudioFileReader">
+            <parameter id="class"               value="blackdog-sound-spi-libs::javazoom.spi.vorbis.sampled.file.VorbisAudioFileReader"/>
+            <parameter id="preferredExtensions" value="ogg"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiAudioFileReader" id="FlacSpiAudioFileReader">
+            <parameter id="class"               value="blackdog-sound-spi-libs::org.kc7bfi.jflac.sound.spi.FlacAudioFileReader"/>
+            <parameter id="preferredExtensions" value="flac"/>
+	</extension>
+            
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiAudioFileReader" id="SpeexSpiAudioFileReader">
+            <parameter id="class"               value="blackdog-sound-spi-libs::org.xiph.speex.spi.SpeexAudioFileReader"/>
+            <parameter id="preferredExtensions" value="spx"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiFormatConversionProvider" id="MpegSpiFormatConversionProvider">
+            <parameter id="class"               value="blackdog-sound-spi-libs::javazoom.spi.mpeg.sampled.convert.MpegFormatConversionProvider"/>
+            <parameter id="preferredExtensions" value="mp3"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiFormatConversionProvider" id="VorbisSpiFormatConversionProvider">
+            <parameter id="class"               value="blackdog-sound-spi-libs::javazoom.spi.vorbis.sampled.convert.VorbisFormatConversionProvider"/>
+            <parameter id="preferredExtensions" value="ogg"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiFormatConversionProvider" id="FlacSpiFormatConversionProvider">
+            <parameter id="class"               value="blackdog-sound-spi-libs::org.kc7bfi.jflac.sound.spi.FlacFormatConvertionProvider"/>
+            <parameter id="preferredExtensions" value="flac"/>
+	</extension>
+	
+	<extension plugin-id="blackdog-sound-spi" point-id="SpiFormatConversionProvider" id="SpeexSpiFormatConversionProvider">
+            <parameter id="class"               value="blackdog-sound-spi-libs::org.xiph.speex.spi.SpeexFormatConvertionProvider"/>
+            <parameter id="preferredExtensions" value="spx"/>
+	</extension>
+	
+	
+        
+</plugin>

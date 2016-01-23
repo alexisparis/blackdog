@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>ColdColor mapping</description>
+    <include href="ColdType.xml"/>
+    <class name="org.siberia.type.ColdColor" extends="org.siberia.type.ColdType">
+        <map-to xml="coldColor"/>
+        <field name="red" type="integer">
+            <bind-xml name="red" node="attribute"/>
+        </field>
+        <field name="green" type="integer">
+            <bind-xml name="green" node="attribute"/>
+        </field>
+        <field name="blue" type="integer">
+            <bind-xml name="blue" node="attribute"/>
+        </field>
+    </class>
+</mapping>

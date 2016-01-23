@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<ns2:repository name="alexis's repository" adminmail="toto@sdjkf.fr" xmlns:ns2="http://alexis.paris.perso.cegetel.net">
+    <ns2:modules>
+        <ns2:moduleDeclaration name="toto" category="system" active="false">
+            <ns2:shortDescription>short desc</ns2:shortDescription>
+            <ns2:longDescription>long desc</ns2:longDescription>
+        </ns2:moduleDeclaration>
+    </ns2:modules>
+</ns2:repository>

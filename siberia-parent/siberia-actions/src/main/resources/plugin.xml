@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 0.4" "http://jpf.sourceforge.net/plugin_0_4.dtd">
+<plugin id="siberia-actions" docs-path="../docs" version="0.0.1">
+    
+        <doc caption="doc_caption">
+            <doc-ref path="fg" caption="rter"/>
+            <doc-text>blabla</doc-text>
+        </doc>
+        
+        <attributes>
+            
+            <attribute id="plugini18nDeclaration" value="plugin"/>
+            
+            <attribute id="category" value="system"/>
+            
+            <attribute id="authors">
+                <attribute id="author"         value="Alexis PARIS"/>
+            </attribute>
+            
+            <attribute id="resources">
+                <attribute id="1" value="org/siberia/rc"/>
+            </attribute>
+            
+        </attributes>
+        
+        <requires>
+                <import plugin-id="siberia-resources" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-types" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-utilities" plugin-version="0.0.1"/>
+                <!--import plugin-id="siberia-xml" plugin-version="0.0.1"/>
+                <import plugin-id="siberia-actions" plugin-version="0.0.1"/-->
+        </requires>
+        
+	<runtime>
+		<library id="siberia-actions-classes" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc"/>
+			</doc>
+			<export prefix="*"/>
+		</library>
+                
+	</runtime>
+        
+</plugin>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module xmlns="http://perso.wanadoo.fr/alexis.paris">
+    <groupId>org.siberia</groupId>
+    <artifactId>siberia-graphics</artifactId>
+    <version>0.0.1</version>
+    <description><![CDATA[Plugin that defines a set of graphical types]]></description>
+    <name>siberia parsers</name>
+    <url>http://perso.wanadoo.fr/alexis.paris/project/siberia-graphics.html</url>
+    <checksum>sha1</checksum>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.siberia</groupId>
+            <artifactId>siberia-types</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+    
+    <repositories>
+        <repository>
+            <id>siberia</id>
+            <name>siberia repository</name>
+            <url>http://perso.wanadoo.fr/alexis.paris/siberia</url>
+        </repository>
+    </repositories>
+
+</module>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- main menu declaration -->
+
+<typeMenu xmlns="http://temp" inherit="true">
+    <items>
+	<separator order="349"/>
+	<item i18nref="sendRepositoryAdministratorAMail" order="350" 
+	      actionClass="transSiberia-ui::org.siberia.trans.ui.action.impl.MailRepositoryAdministratorAction"/>
+    </items>
+    
+    <i18nResources>
+
+	<i18nResource priority="500">transSiberia-ui;1::menu/type/repositoryAdministratorMail.properties</i18nResource>
+	
+    </i18nResources>
+    
+</typeMenu>

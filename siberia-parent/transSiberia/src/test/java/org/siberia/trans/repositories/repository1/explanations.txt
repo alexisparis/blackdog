@@ -1,0 +1,3 @@
+repository1 allows to test simple valid use cases :
+
+It contains a plugin 'a' with 4 versions that test all check modes on local.

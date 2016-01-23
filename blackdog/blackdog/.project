@@ -1,0 +1,28 @@
+<projectDescription>
+  <name>blackdog</name>
+  <comment>Java audio reader and library manager. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>blackdog-player</project>
+    <project>blackdog-types</project>
+    <project>siberia</project>
+    <project>siberia-basic-components</project>
+    <project>siberia-binding</project>
+    <project>siberia-components</project>
+    <project>siberia-editor</project>
+    <project>siberia-gui</project>
+    <project>siberia-image-searcher</project>
+    <project>siberia-properties</project>
+    <project>siberia-properties-ui</project>
+    <project>siberia-resources</project>
+    <project>siberia-types</project>
+    <project>siberia-utilities</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

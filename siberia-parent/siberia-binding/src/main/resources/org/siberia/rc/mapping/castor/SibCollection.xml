@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>SibCollection mapping</description>
+    <include href="SibConfigurable.xml"/>
+    <class name="org.siberia.type.SibCollection" extends="org.siberia.type.SibConfigurable" verify-constructable="false">
+        <map-to xml="collection"/>
+        <field name="editAuthorized" type="boolean">
+            <bind-xml name="edit" node="attribute" get-method="isEditAuthorized" 
+                                                   set-method="setEditAuthorization"/>
+        </field>
+        <field name="createAuthorized" type="boolean">
+            <bind-xml name="add" node="attribute" get-method="isCreateAuthorized" 
+                                                  set-method="setCreateAuthorization"/>
+        </field>
+        <field name="removeAuthorized" type="boolean">
+            <bind-xml name="remove" node="attribute" get-method="isRemoveAuthorized" 
+                                                     set-method="setRemoveAuthorization"/>
+        </field>
+        <field name="allowedClass" type="string" handler="org.siberia.binding.impl.xml.handler.ClassHandler">
+            <bind-xml name="class" node="attribute"/>
+        </field>
+        
+        <field name="content" collection="collection" type="org.siberia.type.SibType" set-method="add" get-method="get">
+            <bind-xml auto-naming="deriveByClass" node="element"/><!-- location="content" name="item" -->
+        </field>
+    </class>
+</mapping>

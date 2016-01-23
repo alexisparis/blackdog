@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+    <description>SibSet mapping</description>
+    <include href="SibCollection.xml"/>
+    <class name="org.siberia.type.SibSet" extends="org.siberia.type.SibCollection">
+        <map-to xml="set"/>
+    </class>
+</mapping>
